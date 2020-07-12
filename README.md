@@ -10,4 +10,8 @@ To run the tool write:
    java -jar FOKI.jar shop.owl shop_FOKI.owl
 
 The tool will read the input ontology (here: shop.owl) and write the result of its translation to FOKI and reverse (OWL2 --> FOKI --> OWL2) under the output_ontology_path using the functional syntax.
-Additionally, the tool will write the input ontology without annotations to the test.owl file (in the current directory) for comparison. 
+The tool will write the input ontology without annotations to the test.owl file (in the current directory) for comparison. 
+
+Additionally, the project contains the results of tests undertaken for the tool:
+- ontology_test_WA.owl - contains the testing ontology without annotations written in functional syntax
+- ontology_FOKI.owl - contains the result of translation (OWL2 --> FOKI --> OWL2)
