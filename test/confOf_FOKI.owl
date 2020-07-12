@@ -1,0 +1,517 @@
+Prefix(:=<http://confOf#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://confOf>
+
+Declaration(Class(:Administrative_event))
+Declaration(Class(:Administrator))
+Declaration(Class(:Assistant))
+Declaration(Class(:Author))
+Declaration(Class(:Banquet))
+Declaration(Class(:Camera_Ready_event))
+Declaration(Class(:Chair_PC))
+Declaration(Class(:City))
+Declaration(Class(:Company))
+Declaration(Class(:Conference))
+Declaration(Class(:Contribution))
+Declaration(Class(:Country))
+Declaration(Class(:Event))
+Declaration(Class(:Member))
+Declaration(Class(:Member_PC))
+Declaration(Class(:Organization))
+Declaration(Class(:Paper))
+Declaration(Class(:Participant))
+Declaration(Class(:Person))
+Declaration(Class(:Poster))
+Declaration(Class(:Reception))
+Declaration(Class(:Registration_of_participants_event))
+Declaration(Class(:Regular))
+Declaration(Class(:Reviewing_event))
+Declaration(Class(:Reviewing_results_event))
+Declaration(Class(:Scholar))
+Declaration(Class(:Science_Worker))
+Declaration(Class(:Short_paper))
+Declaration(Class(:Social_event))
+Declaration(Class(:Student))
+Declaration(Class(:Submission_event))
+Declaration(Class(:Topic))
+Declaration(Class(:Trip))
+Declaration(Class(:Tutorial))
+Declaration(Class(:University))
+Declaration(Class(:Volunteer))
+Declaration(Class(:Working_event))
+Declaration(Class(:Workshop))
+Declaration(Class(owl:Thing))
+Declaration(ObjectProperty(:dealsWith))
+Declaration(ObjectProperty(:employedBy))
+Declaration(ObjectProperty(:expertOn))
+Declaration(ObjectProperty(:follows))
+Declaration(ObjectProperty(:hasAdministrativeEvent))
+Declaration(ObjectProperty(:hasCity))
+Declaration(ObjectProperty(:hasCountry))
+Declaration(ObjectProperty(:hasTopic))
+Declaration(ObjectProperty(:parallel_with))
+Declaration(ObjectProperty(:reviewes))
+Declaration(ObjectProperty(:studyAt))
+Declaration(ObjectProperty(:writes))
+Declaration(ObjectProperty(:writtenBy))
+Declaration(DataProperty(:abstract))
+Declaration(DataProperty(:contactEmail))
+Declaration(DataProperty(:defaultChoice))
+Declaration(DataProperty(:earlyRegistration))
+Declaration(DataProperty(:ends_on))
+Declaration(DataProperty(:hasEmail))
+Declaration(DataProperty(:hasFax))
+Declaration(DataProperty(:hasFirstName))
+Declaration(DataProperty(:hasHomePage))
+Declaration(DataProperty(:hasKeyword))
+Declaration(DataProperty(:hasPhone))
+Declaration(DataProperty(:hasPostalCode))
+Declaration(DataProperty(:hasStreet))
+Declaration(DataProperty(:hasSurname))
+Declaration(DataProperty(:hasTitle))
+Declaration(DataProperty(:hasVAT))
+Declaration(DataProperty(:has_short_title))
+Declaration(DataProperty(:has_title))
+Declaration(DataProperty(:location))
+Declaration(DataProperty(:maxChoice))
+Declaration(DataProperty(:minChoice))
+Declaration(DataProperty(:remark))
+Declaration(DataProperty(:starts_on))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://confOf#dealsWith> (<http://confOf#dealsWith>)
+
+ObjectPropertyDomain(:dealsWith :Contribution)
+ObjectPropertyRange(:dealsWith :Topic)
+
+# Object Property: <http://confOf#employedBy> (<http://confOf#employedBy>)
+
+ObjectPropertyDomain(:employedBy :Person)
+ObjectPropertyRange(:employedBy :Organization)
+
+# Object Property: <http://confOf#expertOn> (<http://confOf#expertOn>)
+
+ObjectPropertyDomain(:expertOn :Member_PC)
+ObjectPropertyRange(:expertOn :Topic)
+
+# Object Property: <http://confOf#follows> (<http://confOf#follows>)
+
+TransitiveObjectProperty(:follows)
+ObjectPropertyDomain(:follows :Administrative_event)
+ObjectPropertyRange(:follows :Administrative_event)
+
+# Object Property: <http://confOf#hasAdministrativeEvent> (<http://confOf#hasAdministrativeEvent>)
+
+ObjectPropertyDomain(:hasAdministrativeEvent :Working_event)
+ObjectPropertyRange(:hasAdministrativeEvent :Administrative_event)
+
+# Object Property: <http://confOf#hasCity> (<http://confOf#hasCity>)
+
+ObjectPropertyDomain(:hasCity ObjectUnionOf(:Organization :Person))
+ObjectPropertyRange(:hasCity :City)
+
+# Object Property: <http://confOf#hasCountry> (<http://confOf#hasCountry>)
+
+FunctionalObjectProperty(:hasCountry)
+ObjectPropertyDomain(:hasCountry ObjectUnionOf(:Organization :Person))
+ObjectPropertyRange(:hasCountry :Country)
+
+# Object Property: <http://confOf#hasTopic> (<http://confOf#hasTopic>)
+
+ObjectPropertyDomain(:hasTopic :Working_event)
+ObjectPropertyRange(:hasTopic :Topic)
+
+# Object Property: <http://confOf#parallel_with> (<http://confOf#parallel_with>)
+
+SymmetricObjectProperty(:parallel_with)
+ReflexiveObjectProperty(:parallel_with)
+ObjectPropertyDomain(:parallel_with :Administrative_event)
+ObjectPropertyRange(:parallel_with :Administrative_event)
+
+# Object Property: <http://confOf#reviewes> (<http://confOf#reviewes>)
+
+ObjectPropertyDomain(:reviewes :Member_PC)
+ObjectPropertyRange(:reviewes :Contribution)
+
+# Object Property: <http://confOf#studyAt> (<http://confOf#studyAt>)
+
+ObjectPropertyDomain(:studyAt :Scholar)
+ObjectPropertyRange(:studyAt :University)
+
+# Object Property: <http://confOf#writes> (<http://confOf#writes>)
+
+InverseObjectProperties(:writes :writtenBy)
+ObjectPropertyDomain(:writes :Author)
+ObjectPropertyRange(:writes :Contribution)
+
+# Object Property: <http://confOf#writtenBy> (<http://confOf#writtenBy>)
+
+ObjectPropertyDomain(:writtenBy :Contribution)
+ObjectPropertyRange(:writtenBy :Author)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://confOf#abstract> (<http://confOf#abstract>)
+
+FunctionalDataProperty(:abstract)
+DataPropertyDomain(:abstract :Contribution)
+DataPropertyRange(:abstract xsd:string)
+
+# Data Property: <http://confOf#contactEmail> (<http://confOf#contactEmail>)
+
+DataPropertyDomain(:contactEmail :Contribution)
+DataPropertyRange(:contactEmail xsd:string)
+
+# Data Property: <http://confOf#defaultChoice> (<http://confOf#defaultChoice>)
+
+FunctionalDataProperty(:defaultChoice)
+DataPropertyDomain(:defaultChoice ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:defaultChoice xsd:positiveInteger)
+
+# Data Property: <http://confOf#earlyRegistration> (<http://confOf#earlyRegistration>)
+
+FunctionalDataProperty(:earlyRegistration)
+DataPropertyDomain(:earlyRegistration :Participant)
+DataPropertyRange(:earlyRegistration xsd:boolean)
+
+# Data Property: <http://confOf#ends_on> (<http://confOf#ends_on>)
+
+FunctionalDataProperty(:ends_on)
+DataPropertyDomain(:ends_on :Event)
+DataPropertyRange(:ends_on xsd:string)
+
+# Data Property: <http://confOf#hasEmail> (<http://confOf#hasEmail>)
+
+DataPropertyDomain(:hasEmail :Person)
+DataPropertyRange(:hasEmail xsd:string)
+
+# Data Property: <http://confOf#hasFax> (<http://confOf#hasFax>)
+
+DataPropertyDomain(:hasFax :Person)
+DataPropertyRange(:hasFax xsd:string)
+
+# Data Property: <http://confOf#hasFirstName> (<http://confOf#hasFirstName>)
+
+FunctionalDataProperty(:hasFirstName)
+DataPropertyDomain(:hasFirstName :Person)
+DataPropertyRange(:hasFirstName xsd:string)
+
+# Data Property: <http://confOf#hasHomePage> (<http://confOf#hasHomePage>)
+
+DataPropertyDomain(:hasHomePage :Person)
+DataPropertyRange(:hasHomePage xsd:string)
+
+# Data Property: <http://confOf#hasKeyword> (<http://confOf#hasKeyword>)
+
+DataPropertyDomain(:hasKeyword :Contribution)
+DataPropertyRange(:hasKeyword xsd:string)
+
+# Data Property: <http://confOf#hasPhone> (<http://confOf#hasPhone>)
+
+DataPropertyDomain(:hasPhone :Person)
+DataPropertyRange(:hasPhone xsd:string)
+
+# Data Property: <http://confOf#hasPostalCode> (<http://confOf#hasPostalCode>)
+
+DataPropertyDomain(:hasPostalCode ObjectUnionOf(:Organization :Person))
+DataPropertyRange(:hasPostalCode xsd:string)
+
+# Data Property: <http://confOf#hasStreet> (<http://confOf#hasStreet>)
+
+DataPropertyDomain(:hasStreet ObjectUnionOf(:Organization :Person))
+DataPropertyRange(:hasStreet xsd:string)
+
+# Data Property: <http://confOf#hasSurname> (<http://confOf#hasSurname>)
+
+FunctionalDataProperty(:hasSurname)
+DataPropertyDomain(:hasSurname :Person)
+DataPropertyRange(:hasSurname xsd:string)
+
+# Data Property: <http://confOf#hasTitle> (<http://confOf#hasTitle>)
+
+FunctionalDataProperty(:hasTitle)
+DataPropertyDomain(:hasTitle :Contribution)
+DataPropertyRange(:hasTitle xsd:string)
+
+# Data Property: <http://confOf#hasVAT> (<http://confOf#hasVAT>)
+
+FunctionalDataProperty(:hasVAT)
+DataPropertyDomain(:hasVAT ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:hasVAT xsd:string)
+
+# Data Property: <http://confOf#has_short_title> (<http://confOf#has_short_title>)
+
+FunctionalDataProperty(:has_short_title)
+DataPropertyDomain(:has_short_title ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:has_short_title xsd:string)
+
+# Data Property: <http://confOf#has_title> (<http://confOf#has_title>)
+
+FunctionalDataProperty(:has_title)
+DataPropertyDomain(:has_title ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:has_title xsd:string)
+
+# Data Property: <http://confOf#location> (<http://confOf#location>)
+
+DataPropertyDomain(:location ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:location xsd:string)
+
+# Data Property: <http://confOf#maxChoice> (<http://confOf#maxChoice>)
+
+FunctionalDataProperty(:maxChoice)
+DataPropertyDomain(:maxChoice ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:maxChoice xsd:positiveInteger)
+
+# Data Property: <http://confOf#minChoice> (<http://confOf#minChoice>)
+
+DataPropertyDomain(:minChoice ObjectUnionOf(:Social_event :Working_event))
+DataPropertyRange(:minChoice xsd:positiveInteger)
+
+# Data Property: <http://confOf#remark> (<http://confOf#remark>)
+
+DataPropertyDomain(:remark :Contribution)
+DataPropertyRange(:remark xsd:string)
+
+# Data Property: <http://confOf#starts_on> (<http://confOf#starts_on>)
+
+FunctionalDataProperty(:starts_on)
+DataPropertyDomain(:starts_on :Event)
+DataPropertyRange(:starts_on xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://confOf#Administrative_event> (<http://confOf#Administrative_event>)
+
+SubClassOf(:Administrative_event :Event)
+DisjointClasses(:Administrative_event :Social_event)
+DisjointClasses(:Administrative_event :Working_event)
+
+# Class: <http://confOf#Administrator> (<http://confOf#Administrator>)
+
+SubClassOf(:Administrator :Person)
+
+# Class: <http://confOf#Assistant> (<http://confOf#Assistant>)
+
+SubClassOf(:Assistant :Person)
+
+# Class: <http://confOf#Author> (<http://confOf#Author>)
+
+SubClassOf(:Author :Person)
+SubClassOf(:Author ObjectSomeValuesFrom(:writes :Contribution))
+SubClassOf(:Author ObjectAllValuesFrom(:writes :Contribution))
+
+# Class: <http://confOf#Banquet> (<http://confOf#Banquet>)
+
+SubClassOf(:Banquet :Social_event)
+DisjointClasses(:Banquet :Reception)
+DisjointClasses(:Banquet :Trip)
+
+# Class: <http://confOf#Camera_Ready_event> (<http://confOf#Camera_Ready_event>)
+
+SubClassOf(:Camera_Ready_event :Administrative_event)
+DisjointClasses(:Camera_Ready_event :Registration_of_participants_event)
+DisjointClasses(:Camera_Ready_event :Reviewing_event)
+DisjointClasses(:Camera_Ready_event :Reviewing_results_event)
+DisjointClasses(:Camera_Ready_event :Submission_event)
+
+# Class: <http://confOf#Chair_PC> (<http://confOf#Chair_PC>)
+
+SubClassOf(:Chair_PC :Person)
+
+# Class: <http://confOf#City> (<http://confOf#City>)
+
+DisjointClasses(:City :Contribution)
+DisjointClasses(:City :Event)
+DisjointClasses(:City :Organization)
+DisjointClasses(:City :Person)
+DisjointClasses(:City :Topic)
+
+# Class: <http://confOf#Company> (<http://confOf#Company>)
+
+SubClassOf(:Company :Organization)
+DisjointClasses(:Company :University)
+
+# Class: <http://confOf#Conference> (<http://confOf#Conference>)
+
+SubClassOf(:Conference :Working_event)
+DisjointClasses(:Conference :Tutorial)
+DisjointClasses(:Conference :Workshop)
+
+# Class: <http://confOf#Contribution> (<http://confOf#Contribution>)
+
+SubClassOf(:Contribution owl:Thing)
+SubClassOf(:Contribution ObjectSomeValuesFrom(:dealsWith :Topic))
+SubClassOf(:Contribution ObjectAllValuesFrom(:dealsWith :Topic))
+SubClassOf(:Contribution DataMinCardinality(1 :contactEmail))
+SubClassOf(:Contribution DataMinCardinality(1 :hasKeyword))
+SubClassOf(:Contribution DataExactCardinality(1 :abstract))
+SubClassOf(:Contribution DataExactCardinality(1 :hasTitle))
+DisjointClasses(:Contribution :Country)
+DisjointClasses(:Contribution :Event)
+DisjointClasses(:Contribution :Organization)
+DisjointClasses(:Contribution :Person)
+DisjointClasses(:Contribution :Topic)
+
+# Class: <http://confOf#Country> (<http://confOf#Country>)
+
+DisjointClasses(:Country :Event)
+DisjointClasses(:Country :Organization)
+DisjointClasses(:Country :Person)
+DisjointClasses(:Country :Topic)
+
+# Class: <http://confOf#Event> (<http://confOf#Event>)
+
+DisjointClasses(:Event :Organization)
+DisjointClasses(:Event :Person)
+DisjointClasses(:Event :Topic)
+
+# Class: <http://confOf#Member> (<http://confOf#Member>)
+
+SubClassOf(:Member :Participant)
+
+# Class: <http://confOf#Member_PC> (<http://confOf#Member_PC>)
+
+SubClassOf(:Member_PC :Person)
+SubClassOf(:Member_PC ObjectSomeValuesFrom(:expertOn :Topic))
+SubClassOf(:Member_PC ObjectSomeValuesFrom(:reviewes :Contribution))
+SubClassOf(:Member_PC ObjectAllValuesFrom(:expertOn :Topic))
+SubClassOf(:Member_PC ObjectAllValuesFrom(:reviewes :Contribution))
+
+# Class: <http://confOf#Organization> (<http://confOf#Organization>)
+
+DisjointClasses(:Organization :Person)
+DisjointClasses(:Organization :Topic)
+
+# Class: <http://confOf#Paper> (<http://confOf#Paper>)
+
+SubClassOf(:Paper :Contribution)
+DisjointClasses(:Paper :Poster)
+DisjointClasses(:Paper :Short_paper)
+
+# Class: <http://confOf#Participant> (<http://confOf#Participant>)
+
+SubClassOf(:Participant :Person)
+
+# Class: <http://confOf#Person> (<http://confOf#Person>)
+
+SubClassOf(:Person owl:Thing)
+SubClassOf(:Person ObjectSomeValuesFrom(:employedBy :Organization))
+SubClassOf(:Person ObjectSomeValuesFrom(:hasCity :City))
+SubClassOf(:Person ObjectSomeValuesFrom(:hasCountry :Country))
+SubClassOf(:Person ObjectAllValuesFrom(:employedBy :Organization))
+SubClassOf(:Person DataMinCardinality(1 :hasEmail))
+SubClassOf(:Person DataMinCardinality(1 :hasPostalCode))
+SubClassOf(:Person DataMinCardinality(1 :hasStreet))
+SubClassOf(:Person DataExactCardinality(1 :hasFirstName))
+SubClassOf(:Person DataExactCardinality(1 :hasSurname))
+DisjointClasses(:Person :Topic)
+
+# Class: <http://confOf#Poster> (<http://confOf#Poster>)
+
+SubClassOf(:Poster :Contribution)
+DisjointClasses(:Poster :Short_paper)
+
+# Class: <http://confOf#Reception> (<http://confOf#Reception>)
+
+SubClassOf(:Reception :Social_event)
+DisjointClasses(:Reception :Trip)
+
+# Class: <http://confOf#Registration_of_participants_event> (<http://confOf#Registration_of_participants_event>)
+
+SubClassOf(:Registration_of_participants_event :Administrative_event)
+DisjointClasses(:Registration_of_participants_event :Reviewing_event)
+DisjointClasses(:Registration_of_participants_event :Reviewing_results_event)
+DisjointClasses(:Registration_of_participants_event :Submission_event)
+
+# Class: <http://confOf#Regular> (<http://confOf#Regular>)
+
+SubClassOf(:Regular :Participant)
+
+# Class: <http://confOf#Reviewing_event> (<http://confOf#Reviewing_event>)
+
+SubClassOf(:Reviewing_event :Administrative_event)
+DisjointClasses(:Reviewing_event :Reviewing_results_event)
+DisjointClasses(:Reviewing_event :Submission_event)
+
+# Class: <http://confOf#Reviewing_results_event> (<http://confOf#Reviewing_results_event>)
+
+SubClassOf(:Reviewing_results_event :Administrative_event)
+DisjointClasses(:Reviewing_results_event :Submission_event)
+
+# Class: <http://confOf#Scholar> (<http://confOf#Scholar>)
+
+SubClassOf(:Scholar :Person)
+SubClassOf(:Scholar ObjectSomeValuesFrom(:studyAt :University))
+SubClassOf(:Scholar ObjectAllValuesFrom(:studyAt :University))
+
+# Class: <http://confOf#Science_Worker> (<http://confOf#Science_Worker>)
+
+SubClassOf(:Science_Worker :Person)
+
+# Class: <http://confOf#Short_paper> (<http://confOf#Short_paper>)
+
+SubClassOf(:Short_paper :Contribution)
+
+# Class: <http://confOf#Social_event> (<http://confOf#Social_event>)
+
+SubClassOf(:Social_event :Event)
+SubClassOf(:Social_event DataExactCardinality(1 :defaultChoice))
+SubClassOf(:Social_event DataExactCardinality(1 :has_title))
+SubClassOf(:Social_event DataExactCardinality(1 :location))
+DisjointClasses(:Social_event :Working_event)
+
+# Class: <http://confOf#Student> (<http://confOf#Student>)
+
+SubClassOf(:Student :Participant)
+
+# Class: <http://confOf#Submission_event> (<http://confOf#Submission_event>)
+
+SubClassOf(:Submission_event :Administrative_event)
+
+# Class: <http://confOf#Trip> (<http://confOf#Trip>)
+
+SubClassOf(:Trip :Social_event)
+
+# Class: <http://confOf#Tutorial> (<http://confOf#Tutorial>)
+
+SubClassOf(:Tutorial :Working_event)
+DisjointClasses(:Tutorial :Workshop)
+
+# Class: <http://confOf#University> (<http://confOf#University>)
+
+SubClassOf(:University :Organization)
+
+# Class: <http://confOf#Volunteer> (<http://confOf#Volunteer>)
+
+SubClassOf(:Volunteer :Person)
+
+# Class: <http://confOf#Working_event> (<http://confOf#Working_event>)
+
+SubClassOf(:Working_event :Event)
+SubClassOf(:Working_event ObjectSomeValuesFrom(:hasTopic :Topic))
+SubClassOf(:Working_event ObjectAllValuesFrom(:hasTopic :Topic))
+SubClassOf(:Working_event DataExactCardinality(1 :defaultChoice))
+SubClassOf(:Working_event DataExactCardinality(1 :has_title))
+SubClassOf(:Working_event DataExactCardinality(1 :location))
+
+# Class: <http://confOf#Workshop> (<http://confOf#Workshop>)
+
+SubClassOf(:Workshop :Working_event)
+
+
+)

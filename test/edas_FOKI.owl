@@ -1,0 +1,1837 @@
+Prefix(:=<http://edas#>)
+Prefix(p1:=<http://www.owl-ontologies.com/assert.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://edas>
+
+Declaration(Class(:AcademiaOrganization))
+Declaration(Class(:AcademicEvent))
+Declaration(Class(:AcceptRating))
+Declaration(Class(:AcceptedPaper))
+Declaration(Class(:AccommodationPlace))
+Declaration(Class(:AccpetIfRoomRating))
+Declaration(Class(:ActivePaper))
+Declaration(Class(:AntennasTopic))
+Declaration(Class(:Attendee))
+Declaration(Class(:Author))
+Declaration(Class(:BreakEvent))
+Declaration(Class(:CADTopic))
+Declaration(Class(:Call))
+Declaration(Class(:CallForManuscripts))
+Declaration(Class(:CallForPapers))
+Declaration(Class(:CallForReviews))
+Declaration(Class(:ClosingTalk))
+Declaration(Class(:CoffeeBreak))
+Declaration(Class(:CommunicationTheoryTopic))
+Declaration(Class(:CommunicationsTopic))
+Declaration(Class(:ComputerArchitectureTopic))
+Declaration(Class(:ComputerNetworksAapplicationsTopic))
+Declaration(Class(:ComputerNetworksEnterpriseTopic))
+Declaration(Class(:ComputerNetworksManagementTopic))
+Declaration(Class(:ComputerNetworksMeasurementsTopic))
+Declaration(Class(:ComputerNetworksOpticalTopic))
+Declaration(Class(:ComputerNetworksSecurityTopic))
+Declaration(Class(:ComputerNetworksSensorTopic))
+Declaration(Class(:ComputerNetworksSwitchingTopic))
+Declaration(Class(:ComputerNetworksTopic))
+Declaration(Class(:Conference))
+Declaration(Class(:ConferenceChair))
+Declaration(Class(:ConferenceDinner))
+Declaration(Class(:ConferenceEvent))
+Declaration(Class(:ConferenceSession))
+Declaration(Class(:ConferenceVenuePlace))
+Declaration(Class(:ContactInformation))
+Declaration(Class(:Country))
+Declaration(Class(:CryptographyTopic))
+Declaration(Class(:DiningPlace))
+Declaration(Class(:Document))
+Declaration(Class(:Excursion))
+Declaration(Class(:FreeTimeBreak))
+Declaration(Class(:GovernmentOrganization))
+Declaration(Class(:IndustryOrganization))
+Declaration(Class(:MealBreak))
+Declaration(Class(:MealEvent))
+Declaration(Class(:MealMenu))
+Declaration(Class(:MedicineTopic))
+Declaration(Class(:MeetingRoomPlace))
+Declaration(Class(:MicroelectronicsTopic))
+Declaration(Class(:MobileComputingTopic))
+Declaration(Class(:MultimediaTopic))
+Declaration(Class(:NGO))
+Declaration(Class(:NonAcademicEvent))
+Declaration(Class(:NumericalReviewQuestion))
+Declaration(Class(:OperatingTopicsystems))
+Declaration(Class(:Organization))
+Declaration(Class(:OrganizationalMeeting))
+Declaration(Class(:Paper))
+Declaration(Class(:PaperPresentation))
+Declaration(Class(:ParallelAndDistributedComputingTopic))
+Declaration(Class(:PendingPaper))
+Declaration(Class(:PerformanceTopic))
+Declaration(Class(:Person))
+Declaration(Class(:PersonalHistory))
+Declaration(Class(:PersonalPublicationHistory))
+Declaration(Class(:PersonalReviewHistory))
+Declaration(Class(:Place))
+Declaration(Class(:PowerlineTransmissionTopic))
+Declaration(Class(:Presenter))
+Declaration(Class(:Programme))
+Declaration(Class(:PublishedPaper))
+Declaration(Class(:RadioCommunicationsTopic))
+Declaration(Class(:RatedPapers))
+Declaration(Class(:Reception))
+Declaration(Class(:RejectRating))
+Declaration(Class(:RejectedPaper))
+Declaration(Class(:Review))
+Declaration(Class(:ReviewForm))
+Declaration(Class(:ReviewQuestion))
+Declaration(Class(:ReviewRating))
+Declaration(Class(:Reviewer))
+Declaration(Class(:SatelliteAndSpaceCommunicationsTopic))
+Declaration(Class(:SecurityTopic))
+Declaration(Class(:SessionChair))
+Declaration(Class(:SignalProcessingTopic))
+Declaration(Class(:SingleLevelConference))
+Declaration(Class(:SlideSet))
+Declaration(Class(:SocialEvent))
+Declaration(Class(:Sponsorship))
+Declaration(Class(:TPCMember))
+Declaration(Class(:TalkEvent))
+Declaration(Class(:TestOnlyTopic))
+Declaration(Class(:TextualReviewQuestion))
+Declaration(Class(:Topic))
+Declaration(Class(:TravelGrant))
+Declaration(Class(:TwoLevelConference))
+Declaration(Class(:WeekRejectRating))
+Declaration(Class(:WelcomeTalk))
+Declaration(Class(:WirelessCommunicationsTopic))
+Declaration(Class(:WithdrawnPaper))
+Declaration(Class(:Workshop))
+Declaration(Class(owl:Thing))
+Declaration(ObjectProperty(:attendeeAt))
+Declaration(ObjectProperty(:belongsToEvent))
+Declaration(ObjectProperty(:forEvent))
+Declaration(ObjectProperty(:hasAttendee))
+Declaration(ObjectProperty(:hasCall))
+Declaration(ObjectProperty(:hasCountry))
+Declaration(ObjectProperty(:hasLocation))
+Declaration(ObjectProperty(:hasMember))
+Declaration(ObjectProperty(:hasMenu))
+Declaration(ObjectProperty(:hasProgramme))
+Declaration(ObjectProperty(:hasRating))
+Declaration(ObjectProperty(:hasRelatedDocument))
+Declaration(ObjectProperty(:hasRelatedPaper))
+Declaration(ObjectProperty(:hasReviewHistory))
+Declaration(ObjectProperty(:hasTopic))
+Declaration(ObjectProperty(:initiates))
+Declaration(ObjectProperty(:isInitiatedBy))
+Declaration(ObjectProperty(:isLocationOf))
+Declaration(ObjectProperty(:isMemberOf))
+Declaration(ObjectProperty(:isMenuOf))
+Declaration(ObjectProperty(:isProviderOf))
+Declaration(ObjectProperty(:isReviewHistoryOf))
+Declaration(ObjectProperty(:isReviewedBy))
+Declaration(ObjectProperty(:isReviewing))
+Declaration(ObjectProperty(:isTopicOf))
+Declaration(ObjectProperty(:isWrittenBy))
+Declaration(ObjectProperty(:providedBy))
+Declaration(ObjectProperty(:relatedToEvent))
+Declaration(ObjectProperty(:relatedToPaper))
+Declaration(ObjectProperty(:relatesTo))
+Declaration(DataProperty(:endDate))
+Declaration(DataProperty(:hasBiography))
+Declaration(DataProperty(:hasCity))
+Declaration(DataProperty(:hasCostAmount))
+Declaration(DataProperty(:hasCostCurrency))
+Declaration(DataProperty(:hasEmail))
+Declaration(DataProperty(:hasEndDateTime))
+Declaration(DataProperty(:hasFirstName))
+Declaration(DataProperty(:hasLastName))
+Declaration(DataProperty(:hasName))
+Declaration(DataProperty(:hasPhone))
+Declaration(DataProperty(:hasPostalCode))
+Declaration(DataProperty(:hasStartDateTime))
+Declaration(DataProperty(:hasStreet))
+Declaration(DataProperty(:hasSubmissionDeadline))
+Declaration(DataProperty(:hasSubmissionInstructions))
+Declaration(DataProperty(:manuscriptDueOn))
+Declaration(DataProperty(:paperDueOn))
+Declaration(DataProperty(:registrationDueOn))
+Declaration(DataProperty(:startDate))
+Declaration(NamedIndividual(:Argentina))
+Declaration(NamedIndividual(:Armenia))
+Declaration(NamedIndividual(:Australia))
+Declaration(NamedIndividual(:Austria))
+Declaration(NamedIndividual(:Azerbaijan))
+Declaration(NamedIndividual(:Bahamas))
+Declaration(NamedIndividual(:Bahrain))
+Declaration(NamedIndividual(:Bangladesh))
+Declaration(NamedIndividual(:Belarus))
+Declaration(NamedIndividual(:Belgium))
+Declaration(NamedIndividual(:BosniaAndHerzegovina))
+Declaration(NamedIndividual(:Botswana))
+Declaration(NamedIndividual(:Brazil))
+Declaration(NamedIndividual(:Bulgaria))
+Declaration(NamedIndividual(:Cambodia))
+Declaration(NamedIndividual(:Canada))
+Declaration(NamedIndividual(:Chile))
+Declaration(NamedIndividual(:China))
+Declaration(NamedIndividual(:CocosIslands))
+Declaration(NamedIndividual(:Colombia))
+Declaration(NamedIndividual(:Croatia))
+Declaration(NamedIndividual(:Cuba))
+Declaration(NamedIndividual(:Cyprus))
+Declaration(NamedIndividual(:CzechRepublic))
+Declaration(NamedIndividual(:DemocraticRepublicOfCongo))
+Declaration(NamedIndividual(:Denmark))
+Declaration(NamedIndividual(:Ecuador))
+Declaration(NamedIndividual(:Egypt))
+Declaration(NamedIndividual(:Estonia))
+Declaration(NamedIndividual(:Ethiopia))
+Declaration(NamedIndividual(:EuropeanUnion))
+Declaration(NamedIndividual(:Finland))
+Declaration(NamedIndividual(:France))
+Declaration(NamedIndividual(:Georgia))
+Declaration(NamedIndividual(:Germany))
+Declaration(NamedIndividual(:Ghana))
+Declaration(NamedIndividual(:Greece))
+Declaration(NamedIndividual(:HongKong))
+Declaration(NamedIndividual(:Hungary))
+Declaration(NamedIndividual(:Iceland))
+Declaration(NamedIndividual(:India))
+Declaration(NamedIndividual(:Indonesia))
+Declaration(NamedIndividual(:Iran))
+Declaration(NamedIndividual(:Iraq))
+Declaration(NamedIndividual(:Ireland))
+Declaration(NamedIndividual(:Israel))
+Declaration(NamedIndividual(:Italy))
+Declaration(NamedIndividual(:Japan))
+Declaration(NamedIndividual(:Jordan))
+Declaration(NamedIndividual(:Kenya))
+Declaration(NamedIndividual(:Korea))
+Declaration(NamedIndividual(:Kuwait))
+Declaration(NamedIndividual(:Latvia))
+Declaration(NamedIndividual(:Lebanon))
+Declaration(NamedIndividual(:Libya))
+Declaration(NamedIndividual(:Lithuania))
+Declaration(NamedIndividual(:Luxemburg))
+Declaration(NamedIndividual(:Macao))
+Declaration(NamedIndividual(:Macedonia))
+Declaration(NamedIndividual(:Madagascar))
+Declaration(NamedIndividual(:Malaysia))
+Declaration(NamedIndividual(:Malta))
+Declaration(NamedIndividual(:Mauritius))
+Declaration(NamedIndividual(:Mexico))
+Declaration(NamedIndividual(:Mongolia))
+Declaration(NamedIndividual(:Morocco))
+Declaration(NamedIndividual(:Nepal))
+Declaration(NamedIndividual(:Netherlands))
+Declaration(NamedIndividual(:NewZealand))
+Declaration(NamedIndividual(:Nicaragua))
+Declaration(NamedIndividual(:Nigeria))
+Declaration(NamedIndividual(:NorthKorea))
+Declaration(NamedIndividual(:Norway))
+Declaration(NamedIndividual(:Oman))
+Declaration(NamedIndividual(:Pakistan))
+Declaration(NamedIndividual(:Paraguay))
+Declaration(NamedIndividual(:Peru))
+Declaration(NamedIndividual(:Philippines))
+Declaration(NamedIndividual(:Poland))
+Declaration(NamedIndividual(:Portugal))
+Declaration(NamedIndividual(:PuertoRico))
+Declaration(NamedIndividual(:Qatar))
+Declaration(NamedIndividual(:Romania))
+Declaration(NamedIndividual(:Russia))
+Declaration(NamedIndividual(:SanMarino))
+Declaration(NamedIndividual(:SaudiArabia))
+Declaration(NamedIndividual(:Senegal))
+Declaration(NamedIndividual(:SerbiaAndMontenegro))
+Declaration(NamedIndividual(:Singapore))
+Declaration(NamedIndividual(:Slovakia))
+Declaration(NamedIndividual(:Slovenia))
+Declaration(NamedIndividual(:SouthAfrica))
+Declaration(NamedIndividual(:Spain))
+Declaration(NamedIndividual(:SriLanka))
+Declaration(NamedIndividual(:Sweden))
+Declaration(NamedIndividual(:Switzerland))
+Declaration(NamedIndividual(:Syria))
+Declaration(NamedIndividual(:Taiwan))
+Declaration(NamedIndividual(:Tajikistan))
+Declaration(NamedIndividual(:Tanzania))
+Declaration(NamedIndividual(:Thailand))
+Declaration(NamedIndividual(:Tunisia))
+Declaration(NamedIndividual(:Turkey))
+Declaration(NamedIndividual(:Turkmenistan))
+Declaration(NamedIndividual(:UAE))
+Declaration(NamedIndividual(:USA))
+Declaration(NamedIndividual(:Uganda))
+Declaration(NamedIndividual(:Ukraine))
+Declaration(NamedIndividual(:UnitedKingdom))
+Declaration(NamedIndividual(:Uruguay))
+Declaration(NamedIndividual(:Venezuela))
+Declaration(NamedIndividual(:Vietnam))
+Declaration(NamedIndividual(:Yemen))
+Declaration(NamedIndividual(:Zimbabwe))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://edas#attendeeAt> (<http://edas#attendeeAt>)
+
+InverseObjectProperties(:attendeeAt :hasAttendee)
+ObjectPropertyDomain(:attendeeAt :Person)
+ObjectPropertyRange(:attendeeAt :ConferenceEvent)
+
+# Object Property: <http://edas#belongsToEvent> (<http://edas#belongsToEvent>)
+
+InverseObjectProperties(:belongsToEvent :hasProgramme)
+ObjectPropertyDomain(:belongsToEvent :Programme)
+ObjectPropertyRange(:belongsToEvent :ConferenceEvent)
+
+# Object Property: <http://edas#forEvent> (<http://edas#forEvent>)
+
+InverseObjectProperties(:forEvent :hasCall)
+ObjectPropertyDomain(:forEvent :Call)
+ObjectPropertyRange(:forEvent :AcademicEvent)
+
+# Object Property: <http://edas#hasAttendee> (<http://edas#hasAttendee>)
+
+ObjectPropertyDomain(:hasAttendee :ConferenceEvent)
+ObjectPropertyRange(:hasAttendee :Person)
+
+# Object Property: <http://edas#hasCall> (<http://edas#hasCall>)
+
+ObjectPropertyDomain(:hasCall :AcademicEvent)
+ObjectPropertyRange(:hasCall :Call)
+
+# Object Property: <http://edas#hasCountry> (<http://edas#hasCountry>)
+
+FunctionalObjectProperty(:hasCountry)
+ObjectPropertyDomain(:hasCountry :Conference)
+ObjectPropertyRange(:hasCountry :Country)
+
+# Object Property: <http://edas#hasLocation> (<http://edas#hasLocation>)
+
+InverseObjectProperties(:hasLocation :isLocationOf)
+ObjectPropertyDomain(:hasLocation :ConferenceEvent)
+ObjectPropertyRange(:hasLocation :Place)
+
+# Object Property: <http://edas#hasMember> (<http://edas#hasMember>)
+
+InverseObjectProperties(:hasMember :isMemberOf)
+ObjectPropertyDomain(:hasMember :Conference)
+ObjectPropertyRange(:hasMember :Person)
+
+# Object Property: <http://edas#hasMenu> (<http://edas#hasMenu>)
+
+InverseObjectProperties(:hasMenu :isMenuOf)
+ObjectPropertyDomain(:hasMenu :MealEvent)
+ObjectPropertyRange(:hasMenu :MealMenu)
+
+# Object Property: <http://edas#hasProgramme> (<http://edas#hasProgramme>)
+
+ObjectPropertyDomain(:hasProgramme :ConferenceEvent)
+ObjectPropertyRange(:hasProgramme :Programme)
+
+# Object Property: <http://edas#hasRating> (<http://edas#hasRating>)
+
+FunctionalObjectProperty(:hasRating)
+ObjectPropertyDomain(:hasRating :ActivePaper)
+ObjectPropertyRange(:hasRating :ReviewRating)
+
+# Object Property: <http://edas#hasRelatedDocument> (<http://edas#hasRelatedDocument>)
+
+InverseObjectProperties(:hasRelatedDocument :relatesTo)
+ObjectPropertyDomain(:hasRelatedDocument ObjectUnionOf(:AcademicEvent :Conference :ConferenceSession :Person))
+ObjectPropertyRange(:hasRelatedDocument :Document)
+
+# Object Property: <http://edas#hasRelatedPaper> (<http://edas#hasRelatedPaper>)
+
+InverseObjectProperties(:hasRelatedPaper :isWrittenBy)
+ObjectPropertyDomain(:hasRelatedPaper :Author)
+ObjectPropertyRange(:hasRelatedPaper :Paper)
+
+# Object Property: <http://edas#hasReviewHistory> (<http://edas#hasReviewHistory>)
+
+InverseObjectProperties(:hasReviewHistory :isReviewHistoryOf)
+ObjectPropertyDomain(:hasReviewHistory :Reviewer)
+ObjectPropertyRange(:hasReviewHistory :PersonalReviewHistory)
+
+# Object Property: <http://edas#hasTopic> (<http://edas#hasTopic>)
+
+InverseObjectProperties(:hasTopic :isTopicOf)
+ObjectPropertyDomain(:hasTopic ObjectUnionOf(:Conference :Paper))
+ObjectPropertyRange(:hasTopic :Topic)
+
+# Object Property: <http://edas#initiates> (<http://edas#initiates>)
+
+InverseObjectProperties(:initiates :isInitiatedBy)
+ObjectPropertyDomain(:initiates ObjectUnionOf(:ConferenceChair :SessionChair :TPCMember))
+ObjectPropertyRange(:initiates :Call)
+
+# Object Property: <http://edas#isInitiatedBy> (<http://edas#isInitiatedBy>)
+
+ObjectPropertyDomain(:isInitiatedBy :Call)
+ObjectPropertyRange(:isInitiatedBy ObjectUnionOf(:ConferenceChair :SessionChair :TPCMember))
+
+# Object Property: <http://edas#isLocationOf> (<http://edas#isLocationOf>)
+
+ObjectPropertyDomain(:isLocationOf :Place)
+ObjectPropertyRange(:isLocationOf :ConferenceEvent)
+
+# Object Property: <http://edas#isMemberOf> (<http://edas#isMemberOf>)
+
+ObjectPropertyDomain(:isMemberOf :Person)
+ObjectPropertyRange(:isMemberOf :Conference)
+
+# Object Property: <http://edas#isMenuOf> (<http://edas#isMenuOf>)
+
+ObjectPropertyDomain(:isMenuOf :MealMenu)
+ObjectPropertyRange(:isMenuOf :MealEvent)
+
+# Object Property: <http://edas#isProviderOf> (<http://edas#isProviderOf>)
+
+InverseObjectProperties(:isProviderOf :providedBy)
+ObjectPropertyDomain(:isProviderOf :Organization)
+ObjectPropertyRange(:isProviderOf :Sponsorship)
+
+# Object Property: <http://edas#isReviewHistoryOf> (<http://edas#isReviewHistoryOf>)
+
+ObjectPropertyDomain(:isReviewHistoryOf :PersonalReviewHistory)
+ObjectPropertyRange(:isReviewHistoryOf :Reviewer)
+
+# Object Property: <http://edas#isReviewedBy> (<http://edas#isReviewedBy>)
+
+InverseObjectProperties(:isReviewedBy :isReviewing)
+ObjectPropertyDomain(:isReviewedBy :Paper)
+ObjectPropertyRange(:isReviewedBy ObjectUnionOf(:ConferenceChair :Reviewer :SessionChair :TPCMember))
+
+# Object Property: <http://edas#isReviewing> (<http://edas#isReviewing>)
+
+ObjectPropertyDomain(:isReviewing ObjectUnionOf(:ConferenceChair :Reviewer :SessionChair :TPCMember))
+ObjectPropertyRange(:isReviewing :Paper)
+
+# Object Property: <http://edas#isTopicOf> (<http://edas#isTopicOf>)
+
+ObjectPropertyDomain(:isTopicOf :Topic)
+ObjectPropertyRange(:isTopicOf ObjectUnionOf(:Conference :Paper))
+
+# Object Property: <http://edas#isWrittenBy> (<http://edas#isWrittenBy>)
+
+ObjectPropertyDomain(:isWrittenBy :Paper)
+ObjectPropertyRange(:isWrittenBy :Author)
+
+# Object Property: <http://edas#providedBy> (<http://edas#providedBy>)
+
+ObjectPropertyDomain(:providedBy :Sponsorship)
+ObjectPropertyRange(:providedBy :Organization)
+
+# Object Property: <http://edas#relatedToEvent> (<http://edas#relatedToEvent>)
+
+InverseObjectProperties(:relatedToEvent :relatedToPaper)
+ObjectPropertyDomain(:relatedToEvent :AcceptedPaper)
+ObjectPropertyRange(:relatedToEvent :PaperPresentation)
+
+# Object Property: <http://edas#relatedToPaper> (<http://edas#relatedToPaper>)
+
+ObjectPropertyDomain(:relatedToPaper :PaperPresentation)
+ObjectPropertyRange(:relatedToPaper :AcceptedPaper)
+
+# Object Property: <http://edas#relatesTo> (<http://edas#relatesTo>)
+
+ObjectPropertyDomain(:relatesTo :Document)
+ObjectPropertyRange(:relatesTo ObjectUnionOf(:AcademicEvent :Conference :ConferenceSession :Person))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://edas#endDate> (<http://edas#endDate>)
+
+DataPropertyDomain(:endDate :Conference)
+DataPropertyRange(:endDate xsd:dateTime)
+
+# Data Property: <http://edas#hasBiography> (<http://edas#hasBiography>)
+
+DataPropertyDomain(:hasBiography :Person)
+DataPropertyRange(:hasBiography xsd:string)
+
+# Data Property: <http://edas#hasCity> (<http://edas#hasCity>)
+
+DataPropertyDomain(:hasCity :ContactInformation)
+DataPropertyRange(:hasCity xsd:string)
+
+# Data Property: <http://edas#hasCostAmount> (<http://edas#hasCostAmount>)
+
+DataPropertyDomain(:hasCostAmount :Sponsorship)
+DataPropertyRange(:hasCostAmount xsd:int)
+
+# Data Property: <http://edas#hasCostCurrency> (<http://edas#hasCostCurrency>)
+
+DataPropertyDomain(:hasCostCurrency :Sponsorship)
+DataPropertyRange(:hasCostCurrency xsd:string)
+
+# Data Property: <http://edas#hasEmail> (<http://edas#hasEmail>)
+
+DataPropertyDomain(:hasEmail ObjectUnionOf(:ContactInformation :Person))
+DataPropertyRange(:hasEmail xsd:string)
+
+# Data Property: <http://edas#hasEndDateTime> (<http://edas#hasEndDateTime>)
+
+DataPropertyDomain(:hasEndDateTime :ConferenceEvent)
+DataPropertyRange(:hasEndDateTime xsd:dateTime)
+
+# Data Property: <http://edas#hasFirstName> (<http://edas#hasFirstName>)
+
+DataPropertyDomain(:hasFirstName :Person)
+DataPropertyRange(:hasFirstName xsd:string)
+
+# Data Property: <http://edas#hasLastName> (<http://edas#hasLastName>)
+
+DataPropertyDomain(:hasLastName :Person)
+DataPropertyRange(:hasLastName xsd:string)
+
+# Data Property: <http://edas#hasName> (<http://edas#hasName>)
+
+DataPropertyDomain(:hasName :Conference)
+DataPropertyRange(:hasName xsd:string)
+
+# Data Property: <http://edas#hasPhone> (<http://edas#hasPhone>)
+
+DataPropertyDomain(:hasPhone :ContactInformation)
+DataPropertyRange(:hasPhone xsd:string)
+
+# Data Property: <http://edas#hasPostalCode> (<http://edas#hasPostalCode>)
+
+DataPropertyDomain(:hasPostalCode :ContactInformation)
+DataPropertyRange(:hasPostalCode xsd:string)
+
+# Data Property: <http://edas#hasStartDateTime> (<http://edas#hasStartDateTime>)
+
+DataPropertyDomain(:hasStartDateTime :ConferenceEvent)
+DataPropertyRange(:hasStartDateTime xsd:dateTime)
+
+# Data Property: <http://edas#hasStreet> (<http://edas#hasStreet>)
+
+DataPropertyDomain(:hasStreet :ContactInformation)
+DataPropertyRange(:hasStreet xsd:string)
+
+# Data Property: <http://edas#hasSubmissionDeadline> (<http://edas#hasSubmissionDeadline>)
+
+FunctionalDataProperty(:hasSubmissionDeadline)
+DataPropertyDomain(:hasSubmissionDeadline :Call)
+DataPropertyRange(:hasSubmissionDeadline xsd:dateTime)
+
+# Data Property: <http://edas#hasSubmissionInstructions> (<http://edas#hasSubmissionInstructions>)
+
+FunctionalDataProperty(:hasSubmissionInstructions)
+DataPropertyDomain(:hasSubmissionInstructions :Call)
+DataPropertyRange(:hasSubmissionInstructions xsd:string)
+
+# Data Property: <http://edas#manuscriptDueOn> (<http://edas#manuscriptDueOn>)
+
+DataPropertyDomain(:manuscriptDueOn :Conference)
+DataPropertyRange(:manuscriptDueOn xsd:dateTime)
+
+# Data Property: <http://edas#paperDueOn> (<http://edas#paperDueOn>)
+
+DataPropertyDomain(:paperDueOn :Conference)
+DataPropertyRange(:paperDueOn xsd:dateTime)
+
+# Data Property: <http://edas#registrationDueOn> (<http://edas#registrationDueOn>)
+
+DataPropertyDomain(:registrationDueOn :Conference)
+DataPropertyRange(:registrationDueOn xsd:dateTime)
+
+# Data Property: <http://edas#startDate> (<http://edas#startDate>)
+
+DataPropertyDomain(:startDate :Conference)
+DataPropertyRange(:startDate xsd:dateTime)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://edas#AcademiaOrganization> (<http://edas#AcademiaOrganization>)
+
+SubClassOf(:AcademiaOrganization :Organization)
+DisjointClasses(:AcademiaOrganization :GovernmentOrganization)
+DisjointClasses(:AcademiaOrganization :IndustryOrganization)
+DisjointClasses(:AcademiaOrganization :NGO)
+
+# Class: <http://edas#AcademicEvent> (<http://edas#AcademicEvent>)
+
+SubClassOf(:AcademicEvent :ConferenceEvent)
+DisjointClasses(:AcademicEvent :NonAcademicEvent)
+
+# Class: <http://edas#AcceptRating> (<http://edas#AcceptRating>)
+
+SubClassOf(:AcceptRating :ReviewRating)
+DisjointClasses(:AcceptRating :AccpetIfRoomRating)
+DisjointClasses(:AcceptRating :RejectRating)
+DisjointClasses(:AcceptRating :WeekRejectRating)
+
+# Class: <http://edas#AcceptedPaper> (<http://edas#AcceptedPaper>)
+
+SubClassOf(:AcceptedPaper :Paper)
+DisjointClasses(:AcceptedPaper :ActivePaper)
+DisjointClasses(:AcceptedPaper :PendingPaper)
+DisjointClasses(:AcceptedPaper :PublishedPaper)
+DisjointClasses(:AcceptedPaper :RejectedPaper)
+DisjointClasses(:AcceptedPaper :WithdrawnPaper)
+
+# Class: <http://edas#AccommodationPlace> (<http://edas#AccommodationPlace>)
+
+SubClassOf(:AccommodationPlace :Place)
+
+# Class: <http://edas#AccpetIfRoomRating> (<http://edas#AccpetIfRoomRating>)
+
+SubClassOf(:AccpetIfRoomRating :ReviewRating)
+DisjointClasses(:AccpetIfRoomRating :RejectRating)
+DisjointClasses(:AccpetIfRoomRating :WeekRejectRating)
+
+# Class: <http://edas#ActivePaper> (<http://edas#ActivePaper>)
+
+SubClassOf(:ActivePaper :Paper)
+DisjointClasses(:ActivePaper :PendingPaper)
+DisjointClasses(:ActivePaper :PublishedPaper)
+DisjointClasses(:ActivePaper :RejectedPaper)
+DisjointClasses(:ActivePaper :WithdrawnPaper)
+
+# Class: <http://edas#AntennasTopic> (<http://edas#AntennasTopic>)
+
+SubClassOf(:AntennasTopic :Topic)
+DisjointClasses(:AntennasTopic :CADTopic)
+DisjointClasses(:AntennasTopic :CommunicationTheoryTopic)
+DisjointClasses(:AntennasTopic :CommunicationsTopic)
+DisjointClasses(:AntennasTopic :ComputerArchitectureTopic)
+DisjointClasses(:AntennasTopic :ComputerNetworksTopic)
+DisjointClasses(:AntennasTopic :CryptographyTopic)
+DisjointClasses(:AntennasTopic :MedicineTopic)
+DisjointClasses(:AntennasTopic :MicroelectronicsTopic)
+DisjointClasses(:AntennasTopic :MobileComputingTopic)
+DisjointClasses(:AntennasTopic :MultimediaTopic)
+DisjointClasses(:AntennasTopic :OperatingTopicsystems)
+DisjointClasses(:AntennasTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:AntennasTopic :PerformanceTopic)
+DisjointClasses(:AntennasTopic :PowerlineTransmissionTopic)
+DisjointClasses(:AntennasTopic :RadioCommunicationsTopic)
+DisjointClasses(:AntennasTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:AntennasTopic :SecurityTopic)
+DisjointClasses(:AntennasTopic :SignalProcessingTopic)
+DisjointClasses(:AntennasTopic :TestOnlyTopic)
+DisjointClasses(:AntennasTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Attendee> (<http://edas#Attendee>)
+
+SubClassOf(:Attendee :Person)
+
+# Class: <http://edas#Author> (<http://edas#Author>)
+
+EquivalentClasses(:Author ObjectIntersectionOf(:Person ObjectSomeValuesFrom(:hasRelatedDocument :Paper)))
+DisjointClasses(:Author :ConferenceChair)
+DisjointClasses(:Author :SessionChair)
+DisjointClasses(:Author :TPCMember)
+
+# Class: <http://edas#BreakEvent> (<http://edas#BreakEvent>)
+
+EquivalentClasses(:BreakEvent ObjectUnionOf(:CoffeeBreak :FreeTimeBreak :MealBreak))
+SubClassOf(:BreakEvent :NonAcademicEvent)
+DisjointClasses(:BreakEvent :MealEvent)
+
+# Class: <http://edas#CADTopic> (<http://edas#CADTopic>)
+
+SubClassOf(:CADTopic :Topic)
+DisjointClasses(:CADTopic :CommunicationTheoryTopic)
+DisjointClasses(:CADTopic :CommunicationsTopic)
+DisjointClasses(:CADTopic :ComputerArchitectureTopic)
+DisjointClasses(:CADTopic :ComputerNetworksTopic)
+DisjointClasses(:CADTopic :CryptographyTopic)
+DisjointClasses(:CADTopic :MedicineTopic)
+DisjointClasses(:CADTopic :MicroelectronicsTopic)
+DisjointClasses(:CADTopic :MobileComputingTopic)
+DisjointClasses(:CADTopic :MultimediaTopic)
+DisjointClasses(:CADTopic :OperatingTopicsystems)
+DisjointClasses(:CADTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:CADTopic :PerformanceTopic)
+DisjointClasses(:CADTopic :PowerlineTransmissionTopic)
+DisjointClasses(:CADTopic :RadioCommunicationsTopic)
+DisjointClasses(:CADTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:CADTopic :SecurityTopic)
+DisjointClasses(:CADTopic :SignalProcessingTopic)
+DisjointClasses(:CADTopic :TestOnlyTopic)
+DisjointClasses(:CADTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Call> (<http://edas#Call>)
+
+DisjointClasses(:Call :Conference)
+DisjointClasses(:Call :ConferenceEvent)
+DisjointClasses(:Call :ConferenceSession)
+DisjointClasses(:Call :ContactInformation)
+DisjointClasses(:Call :Country)
+DisjointClasses(:Call :Document)
+DisjointClasses(:Call :Organization)
+DisjointClasses(:Call :Person)
+DisjointClasses(:Call :PersonalHistory)
+DisjointClasses(:Call :Place)
+DisjointClasses(:Call :ReviewForm)
+DisjointClasses(:Call :ReviewQuestion)
+DisjointClasses(:Call :ReviewRating)
+DisjointClasses(:Call :Sponsorship)
+DisjointClasses(:Call :Topic)
+
+# Class: <http://edas#CallForManuscripts> (<http://edas#CallForManuscripts>)
+
+SubClassOf(:CallForManuscripts :Call)
+
+# Class: <http://edas#CallForPapers> (<http://edas#CallForPapers>)
+
+SubClassOf(:CallForPapers :Call)
+
+# Class: <http://edas#CallForReviews> (<http://edas#CallForReviews>)
+
+SubClassOf(:CallForReviews :Call)
+
+# Class: <http://edas#ClosingTalk> (<http://edas#ClosingTalk>)
+
+SubClassOf(:ClosingTalk :TalkEvent)
+DisjointClasses(:ClosingTalk :WelcomeTalk)
+
+# Class: <http://edas#CoffeeBreak> (<http://edas#CoffeeBreak>)
+
+SubClassOf(:CoffeeBreak :BreakEvent)
+
+# Class: <http://edas#CommunicationTheoryTopic> (<http://edas#CommunicationTheoryTopic>)
+
+SubClassOf(:CommunicationTheoryTopic :Topic)
+DisjointClasses(:CommunicationTheoryTopic :CommunicationsTopic)
+DisjointClasses(:CommunicationTheoryTopic :ComputerArchitectureTopic)
+DisjointClasses(:CommunicationTheoryTopic :ComputerNetworksTopic)
+DisjointClasses(:CommunicationTheoryTopic :CryptographyTopic)
+DisjointClasses(:CommunicationTheoryTopic :MedicineTopic)
+DisjointClasses(:CommunicationTheoryTopic :MicroelectronicsTopic)
+DisjointClasses(:CommunicationTheoryTopic :MobileComputingTopic)
+DisjointClasses(:CommunicationTheoryTopic :MultimediaTopic)
+DisjointClasses(:CommunicationTheoryTopic :OperatingTopicsystems)
+DisjointClasses(:CommunicationTheoryTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:CommunicationTheoryTopic :PerformanceTopic)
+DisjointClasses(:CommunicationTheoryTopic :PowerlineTransmissionTopic)
+DisjointClasses(:CommunicationTheoryTopic :RadioCommunicationsTopic)
+DisjointClasses(:CommunicationTheoryTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:CommunicationTheoryTopic :SecurityTopic)
+DisjointClasses(:CommunicationTheoryTopic :SignalProcessingTopic)
+DisjointClasses(:CommunicationTheoryTopic :TestOnlyTopic)
+DisjointClasses(:CommunicationTheoryTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#CommunicationsTopic> (<http://edas#CommunicationsTopic>)
+
+SubClassOf(:CommunicationsTopic :Topic)
+DisjointClasses(:CommunicationsTopic :ComputerArchitectureTopic)
+DisjointClasses(:CommunicationsTopic :ComputerNetworksTopic)
+DisjointClasses(:CommunicationsTopic :CryptographyTopic)
+DisjointClasses(:CommunicationsTopic :MedicineTopic)
+DisjointClasses(:CommunicationsTopic :MicroelectronicsTopic)
+DisjointClasses(:CommunicationsTopic :MobileComputingTopic)
+DisjointClasses(:CommunicationsTopic :MultimediaTopic)
+DisjointClasses(:CommunicationsTopic :OperatingTopicsystems)
+DisjointClasses(:CommunicationsTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:CommunicationsTopic :PerformanceTopic)
+DisjointClasses(:CommunicationsTopic :PowerlineTransmissionTopic)
+DisjointClasses(:CommunicationsTopic :RadioCommunicationsTopic)
+DisjointClasses(:CommunicationsTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:CommunicationsTopic :SecurityTopic)
+DisjointClasses(:CommunicationsTopic :SignalProcessingTopic)
+DisjointClasses(:CommunicationsTopic :TestOnlyTopic)
+DisjointClasses(:CommunicationsTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#ComputerArchitectureTopic> (<http://edas#ComputerArchitectureTopic>)
+
+SubClassOf(:ComputerArchitectureTopic :Topic)
+DisjointClasses(:ComputerArchitectureTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerArchitectureTopic :CryptographyTopic)
+DisjointClasses(:ComputerArchitectureTopic :MedicineTopic)
+DisjointClasses(:ComputerArchitectureTopic :MicroelectronicsTopic)
+DisjointClasses(:ComputerArchitectureTopic :MobileComputingTopic)
+DisjointClasses(:ComputerArchitectureTopic :MultimediaTopic)
+DisjointClasses(:ComputerArchitectureTopic :OperatingTopicsystems)
+DisjointClasses(:ComputerArchitectureTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:ComputerArchitectureTopic :PerformanceTopic)
+DisjointClasses(:ComputerArchitectureTopic :PowerlineTransmissionTopic)
+DisjointClasses(:ComputerArchitectureTopic :RadioCommunicationsTopic)
+DisjointClasses(:ComputerArchitectureTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:ComputerArchitectureTopic :SecurityTopic)
+DisjointClasses(:ComputerArchitectureTopic :SignalProcessingTopic)
+DisjointClasses(:ComputerArchitectureTopic :TestOnlyTopic)
+DisjointClasses(:ComputerArchitectureTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#ComputerNetworksAapplicationsTopic> (<http://edas#ComputerNetworksAapplicationsTopic>)
+
+SubClassOf(:ComputerNetworksAapplicationsTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksEnterpriseTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksManagementTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksMeasurementsTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksOpticalTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksSecurityTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksAapplicationsTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksEnterpriseTopic> (<http://edas#ComputerNetworksEnterpriseTopic>)
+
+SubClassOf(:ComputerNetworksEnterpriseTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksManagementTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksMeasurementsTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksOpticalTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksSecurityTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksEnterpriseTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksManagementTopic> (<http://edas#ComputerNetworksManagementTopic>)
+
+SubClassOf(:ComputerNetworksManagementTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksManagementTopic :ComputerNetworksMeasurementsTopic)
+DisjointClasses(:ComputerNetworksManagementTopic :ComputerNetworksOpticalTopic)
+DisjointClasses(:ComputerNetworksManagementTopic :ComputerNetworksSecurityTopic)
+DisjointClasses(:ComputerNetworksManagementTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksManagementTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksMeasurementsTopic> (<http://edas#ComputerNetworksMeasurementsTopic>)
+
+SubClassOf(:ComputerNetworksMeasurementsTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksMeasurementsTopic :ComputerNetworksOpticalTopic)
+DisjointClasses(:ComputerNetworksMeasurementsTopic :ComputerNetworksSecurityTopic)
+DisjointClasses(:ComputerNetworksMeasurementsTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksMeasurementsTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksOpticalTopic> (<http://edas#ComputerNetworksOpticalTopic>)
+
+SubClassOf(:ComputerNetworksOpticalTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksOpticalTopic :ComputerNetworksSecurityTopic)
+DisjointClasses(:ComputerNetworksOpticalTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksOpticalTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksSecurityTopic> (<http://edas#ComputerNetworksSecurityTopic>)
+
+SubClassOf(:ComputerNetworksSecurityTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksSecurityTopic :ComputerNetworksSensorTopic)
+DisjointClasses(:ComputerNetworksSecurityTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksSensorTopic> (<http://edas#ComputerNetworksSensorTopic>)
+
+SubClassOf(:ComputerNetworksSensorTopic :ComputerNetworksTopic)
+DisjointClasses(:ComputerNetworksSensorTopic :ComputerNetworksSwitchingTopic)
+
+# Class: <http://edas#ComputerNetworksSwitchingTopic> (<http://edas#ComputerNetworksSwitchingTopic>)
+
+SubClassOf(:ComputerNetworksSwitchingTopic :ComputerNetworksTopic)
+
+# Class: <http://edas#ComputerNetworksTopic> (<http://edas#ComputerNetworksTopic>)
+
+SubClassOf(:ComputerNetworksTopic :Topic)
+DisjointClasses(:ComputerNetworksTopic :CryptographyTopic)
+DisjointClasses(:ComputerNetworksTopic :MedicineTopic)
+DisjointClasses(:ComputerNetworksTopic :MicroelectronicsTopic)
+DisjointClasses(:ComputerNetworksTopic :MobileComputingTopic)
+DisjointClasses(:ComputerNetworksTopic :MultimediaTopic)
+DisjointClasses(:ComputerNetworksTopic :OperatingTopicsystems)
+DisjointClasses(:ComputerNetworksTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:ComputerNetworksTopic :PerformanceTopic)
+DisjointClasses(:ComputerNetworksTopic :PowerlineTransmissionTopic)
+DisjointClasses(:ComputerNetworksTopic :RadioCommunicationsTopic)
+DisjointClasses(:ComputerNetworksTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:ComputerNetworksTopic :SecurityTopic)
+DisjointClasses(:ComputerNetworksTopic :SignalProcessingTopic)
+DisjointClasses(:ComputerNetworksTopic :TestOnlyTopic)
+DisjointClasses(:ComputerNetworksTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Conference> (<http://edas#Conference>)
+
+SubClassOf(:Conference owl:Thing)
+SubClassOf(:Conference ObjectExactCardinality(1 :hasCountry))
+SubClassOf(:Conference ObjectExactCardinality(1 :hasTopic))
+SubClassOf(:Conference DataExactCardinality(1 :hasName))
+SubClassOf(:Conference DataMaxCardinality(1 :endDate))
+SubClassOf(:Conference DataMaxCardinality(1 :manuscriptDueOn))
+SubClassOf(:Conference DataMaxCardinality(1 :paperDueOn))
+SubClassOf(:Conference DataMaxCardinality(1 :registrationDueOn))
+SubClassOf(:Conference DataMaxCardinality(1 :startDate))
+DisjointClasses(:Conference :ConferenceEvent)
+DisjointClasses(:Conference :ConferenceSession)
+DisjointClasses(:Conference :ContactInformation)
+DisjointClasses(:Conference :Country)
+DisjointClasses(:Conference :Document)
+DisjointClasses(:Conference :Organization)
+DisjointClasses(:Conference :Paper)
+DisjointClasses(:Conference :Person)
+DisjointClasses(:Conference :PersonalHistory)
+DisjointClasses(:Conference :Place)
+DisjointClasses(:Conference :ReviewForm)
+DisjointClasses(:Conference :ReviewQuestion)
+DisjointClasses(:Conference :ReviewRating)
+DisjointClasses(:Conference :Sponsorship)
+DisjointClasses(:Conference :Topic)
+
+# Class: <http://edas#ConferenceChair> (<http://edas#ConferenceChair>)
+
+SubClassOf(:ConferenceChair :Person)
+
+# Class: <http://edas#ConferenceDinner> (<http://edas#ConferenceDinner>)
+
+SubClassOf(:ConferenceDinner :MealEvent)
+
+# Class: <http://edas#ConferenceEvent> (<http://edas#ConferenceEvent>)
+
+DisjointClasses(:ConferenceEvent :ConferenceSession)
+DisjointClasses(:ConferenceEvent :ContactInformation)
+DisjointClasses(:ConferenceEvent :Country)
+DisjointClasses(:ConferenceEvent :Document)
+DisjointClasses(:ConferenceEvent :Organization)
+DisjointClasses(:ConferenceEvent :Person)
+DisjointClasses(:ConferenceEvent :PersonalHistory)
+DisjointClasses(:ConferenceEvent :Place)
+DisjointClasses(:ConferenceEvent :ReviewForm)
+DisjointClasses(:ConferenceEvent :ReviewQuestion)
+DisjointClasses(:ConferenceEvent :ReviewRating)
+DisjointClasses(:ConferenceEvent :Sponsorship)
+DisjointClasses(:ConferenceEvent :Topic)
+
+# Class: <http://edas#ConferenceSession> (<http://edas#ConferenceSession>)
+
+DisjointClasses(:ConferenceSession :ContactInformation)
+DisjointClasses(:ConferenceSession :Country)
+DisjointClasses(:ConferenceSession :Document)
+DisjointClasses(:ConferenceSession :Organization)
+DisjointClasses(:ConferenceSession :Person)
+DisjointClasses(:ConferenceSession :PersonalHistory)
+DisjointClasses(:ConferenceSession :Place)
+DisjointClasses(:ConferenceSession :ReviewForm)
+DisjointClasses(:ConferenceSession :ReviewQuestion)
+DisjointClasses(:ConferenceSession :ReviewRating)
+DisjointClasses(:ConferenceSession :Sponsorship)
+DisjointClasses(:ConferenceSession :Topic)
+
+# Class: <http://edas#ConferenceVenuePlace> (<http://edas#ConferenceVenuePlace>)
+
+SubClassOf(:ConferenceVenuePlace :Place)
+
+# Class: <http://edas#ContactInformation> (<http://edas#ContactInformation>)
+
+DisjointClasses(:ContactInformation :Country)
+DisjointClasses(:ContactInformation :Document)
+DisjointClasses(:ContactInformation :Organization)
+DisjointClasses(:ContactInformation :PersonalHistory)
+DisjointClasses(:ContactInformation :Place)
+DisjointClasses(:ContactInformation :ReviewForm)
+DisjointClasses(:ContactInformation :ReviewQuestion)
+DisjointClasses(:ContactInformation :ReviewRating)
+DisjointClasses(:ContactInformation :Sponsorship)
+DisjointClasses(:ContactInformation :Topic)
+
+# Class: <http://edas#Country> (<http://edas#Country>)
+
+DisjointClasses(:Country :Document)
+DisjointClasses(:Country :Organization)
+DisjointClasses(:Country :Person)
+DisjointClasses(:Country :PersonalHistory)
+DisjointClasses(:Country :Place)
+DisjointClasses(:Country :ReviewForm)
+DisjointClasses(:Country :ReviewQuestion)
+DisjointClasses(:Country :ReviewRating)
+DisjointClasses(:Country :Sponsorship)
+DisjointClasses(:Country :Topic)
+
+# Class: <http://edas#CryptographyTopic> (<http://edas#CryptographyTopic>)
+
+SubClassOf(:CryptographyTopic :Topic)
+DisjointClasses(:CryptographyTopic :MedicineTopic)
+DisjointClasses(:CryptographyTopic :MicroelectronicsTopic)
+DisjointClasses(:CryptographyTopic :MobileComputingTopic)
+DisjointClasses(:CryptographyTopic :MultimediaTopic)
+DisjointClasses(:CryptographyTopic :OperatingTopicsystems)
+DisjointClasses(:CryptographyTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:CryptographyTopic :PerformanceTopic)
+DisjointClasses(:CryptographyTopic :PowerlineTransmissionTopic)
+DisjointClasses(:CryptographyTopic :RadioCommunicationsTopic)
+DisjointClasses(:CryptographyTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:CryptographyTopic :SecurityTopic)
+DisjointClasses(:CryptographyTopic :SignalProcessingTopic)
+DisjointClasses(:CryptographyTopic :TestOnlyTopic)
+DisjointClasses(:CryptographyTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#DiningPlace> (<http://edas#DiningPlace>)
+
+SubClassOf(:DiningPlace :Place)
+
+# Class: <http://edas#Document> (<http://edas#Document>)
+
+DisjointClasses(:Document :Organization)
+DisjointClasses(:Document :Person)
+DisjointClasses(:Document :PersonalHistory)
+DisjointClasses(:Document :Place)
+DisjointClasses(:Document :ReviewForm)
+DisjointClasses(:Document :ReviewQuestion)
+DisjointClasses(:Document :ReviewRating)
+DisjointClasses(:Document :Sponsorship)
+DisjointClasses(:Document :Topic)
+
+# Class: <http://edas#Excursion> (<http://edas#Excursion>)
+
+SubClassOf(:Excursion :SocialEvent)
+
+# Class: <http://edas#FreeTimeBreak> (<http://edas#FreeTimeBreak>)
+
+SubClassOf(:FreeTimeBreak :BreakEvent)
+
+# Class: <http://edas#GovernmentOrganization> (<http://edas#GovernmentOrganization>)
+
+SubClassOf(:GovernmentOrganization :Organization)
+DisjointClasses(:GovernmentOrganization :IndustryOrganization)
+DisjointClasses(:GovernmentOrganization :NGO)
+
+# Class: <http://edas#IndustryOrganization> (<http://edas#IndustryOrganization>)
+
+SubClassOf(:IndustryOrganization :Organization)
+DisjointClasses(:IndustryOrganization :NGO)
+
+# Class: <http://edas#MealBreak> (<http://edas#MealBreak>)
+
+SubClassOf(:MealBreak :BreakEvent)
+
+# Class: <http://edas#MealEvent> (<http://edas#MealEvent>)
+
+SubClassOf(:MealEvent :NonAcademicEvent)
+
+# Class: <http://edas#MealMenu> (<http://edas#MealMenu>)
+
+SubClassOf(:MealMenu :Document)
+DisjointClasses(:MealMenu :Paper)
+DisjointClasses(:MealMenu :Programme)
+DisjointClasses(:MealMenu :Review)
+DisjointClasses(:MealMenu :SlideSet)
+
+# Class: <http://edas#MedicineTopic> (<http://edas#MedicineTopic>)
+
+SubClassOf(:MedicineTopic :Topic)
+DisjointClasses(:MedicineTopic :MicroelectronicsTopic)
+DisjointClasses(:MedicineTopic :MobileComputingTopic)
+DisjointClasses(:MedicineTopic :MultimediaTopic)
+DisjointClasses(:MedicineTopic :OperatingTopicsystems)
+DisjointClasses(:MedicineTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:MedicineTopic :PerformanceTopic)
+DisjointClasses(:MedicineTopic :PowerlineTransmissionTopic)
+DisjointClasses(:MedicineTopic :RadioCommunicationsTopic)
+DisjointClasses(:MedicineTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:MedicineTopic :SecurityTopic)
+DisjointClasses(:MedicineTopic :SignalProcessingTopic)
+DisjointClasses(:MedicineTopic :TestOnlyTopic)
+DisjointClasses(:MedicineTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#MeetingRoomPlace> (<http://edas#MeetingRoomPlace>)
+
+SubClassOf(:MeetingRoomPlace :Place)
+
+# Class: <http://edas#MicroelectronicsTopic> (<http://edas#MicroelectronicsTopic>)
+
+SubClassOf(:MicroelectronicsTopic :Topic)
+DisjointClasses(:MicroelectronicsTopic :MobileComputingTopic)
+DisjointClasses(:MicroelectronicsTopic :MultimediaTopic)
+DisjointClasses(:MicroelectronicsTopic :OperatingTopicsystems)
+DisjointClasses(:MicroelectronicsTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:MicroelectronicsTopic :PerformanceTopic)
+DisjointClasses(:MicroelectronicsTopic :PowerlineTransmissionTopic)
+DisjointClasses(:MicroelectronicsTopic :RadioCommunicationsTopic)
+DisjointClasses(:MicroelectronicsTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:MicroelectronicsTopic :SecurityTopic)
+DisjointClasses(:MicroelectronicsTopic :SignalProcessingTopic)
+DisjointClasses(:MicroelectronicsTopic :TestOnlyTopic)
+DisjointClasses(:MicroelectronicsTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#MobileComputingTopic> (<http://edas#MobileComputingTopic>)
+
+SubClassOf(:MobileComputingTopic :Topic)
+DisjointClasses(:MobileComputingTopic :MultimediaTopic)
+DisjointClasses(:MobileComputingTopic :OperatingTopicsystems)
+DisjointClasses(:MobileComputingTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:MobileComputingTopic :PerformanceTopic)
+DisjointClasses(:MobileComputingTopic :PowerlineTransmissionTopic)
+DisjointClasses(:MobileComputingTopic :RadioCommunicationsTopic)
+DisjointClasses(:MobileComputingTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:MobileComputingTopic :SecurityTopic)
+DisjointClasses(:MobileComputingTopic :SignalProcessingTopic)
+DisjointClasses(:MobileComputingTopic :TestOnlyTopic)
+DisjointClasses(:MobileComputingTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#MultimediaTopic> (<http://edas#MultimediaTopic>)
+
+SubClassOf(:MultimediaTopic :Topic)
+DisjointClasses(:MultimediaTopic :OperatingTopicsystems)
+DisjointClasses(:MultimediaTopic :ParallelAndDistributedComputingTopic)
+DisjointClasses(:MultimediaTopic :PerformanceTopic)
+DisjointClasses(:MultimediaTopic :PowerlineTransmissionTopic)
+DisjointClasses(:MultimediaTopic :RadioCommunicationsTopic)
+DisjointClasses(:MultimediaTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:MultimediaTopic :SecurityTopic)
+DisjointClasses(:MultimediaTopic :SignalProcessingTopic)
+DisjointClasses(:MultimediaTopic :TestOnlyTopic)
+DisjointClasses(:MultimediaTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#NGO> (<http://edas#NGO>)
+
+SubClassOf(:NGO :Organization)
+
+# Class: <http://edas#NonAcademicEvent> (<http://edas#NonAcademicEvent>)
+
+SubClassOf(:NonAcademicEvent :ConferenceEvent)
+
+# Class: <http://edas#NumericalReviewQuestion> (<http://edas#NumericalReviewQuestion>)
+
+SubClassOf(:NumericalReviewQuestion :ReviewQuestion)
+
+# Class: <http://edas#OperatingTopicsystems> (<http://edas#OperatingTopicsystems>)
+
+SubClassOf(:OperatingTopicsystems :Topic)
+DisjointClasses(:OperatingTopicsystems :ParallelAndDistributedComputingTopic)
+DisjointClasses(:OperatingTopicsystems :PerformanceTopic)
+DisjointClasses(:OperatingTopicsystems :PowerlineTransmissionTopic)
+DisjointClasses(:OperatingTopicsystems :RadioCommunicationsTopic)
+DisjointClasses(:OperatingTopicsystems :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:OperatingTopicsystems :SecurityTopic)
+DisjointClasses(:OperatingTopicsystems :SignalProcessingTopic)
+DisjointClasses(:OperatingTopicsystems :TestOnlyTopic)
+DisjointClasses(:OperatingTopicsystems :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Organization> (<http://edas#Organization>)
+
+DisjointClasses(:Organization :Person)
+DisjointClasses(:Organization :PersonalHistory)
+DisjointClasses(:Organization :Place)
+DisjointClasses(:Organization :ReviewForm)
+DisjointClasses(:Organization :ReviewQuestion)
+DisjointClasses(:Organization :ReviewRating)
+DisjointClasses(:Organization :Sponsorship)
+DisjointClasses(:Organization :Topic)
+
+# Class: <http://edas#OrganizationalMeeting> (<http://edas#OrganizationalMeeting>)
+
+SubClassOf(:OrganizationalMeeting :AcademicEvent)
+DisjointClasses(:OrganizationalMeeting :PaperPresentation)
+DisjointClasses(:OrganizationalMeeting :TalkEvent)
+DisjointClasses(:OrganizationalMeeting :Workshop)
+
+# Class: <http://edas#Paper> (<http://edas#Paper>)
+
+SubClassOf(:Paper :Document)
+DisjointClasses(:Paper :Programme)
+DisjointClasses(:Paper :Review)
+DisjointClasses(:Paper :SlideSet)
+
+# Class: <http://edas#PaperPresentation> (<http://edas#PaperPresentation>)
+
+SubClassOf(:PaperPresentation :AcademicEvent)
+DisjointClasses(:PaperPresentation :TalkEvent)
+DisjointClasses(:PaperPresentation :Workshop)
+
+# Class: <http://edas#ParallelAndDistributedComputingTopic> (<http://edas#ParallelAndDistributedComputingTopic>)
+
+SubClassOf(:ParallelAndDistributedComputingTopic :Topic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :PerformanceTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :PowerlineTransmissionTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :RadioCommunicationsTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :SecurityTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :SignalProcessingTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :TestOnlyTopic)
+DisjointClasses(:ParallelAndDistributedComputingTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#PendingPaper> (<http://edas#PendingPaper>)
+
+SubClassOf(:PendingPaper :Paper)
+DisjointClasses(:PendingPaper :PublishedPaper)
+DisjointClasses(:PendingPaper :RejectedPaper)
+DisjointClasses(:PendingPaper :WithdrawnPaper)
+
+# Class: <http://edas#PerformanceTopic> (<http://edas#PerformanceTopic>)
+
+SubClassOf(:PerformanceTopic :Topic)
+DisjointClasses(:PerformanceTopic :PowerlineTransmissionTopic)
+DisjointClasses(:PerformanceTopic :RadioCommunicationsTopic)
+DisjointClasses(:PerformanceTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:PerformanceTopic :SecurityTopic)
+DisjointClasses(:PerformanceTopic :SignalProcessingTopic)
+DisjointClasses(:PerformanceTopic :TestOnlyTopic)
+DisjointClasses(:PerformanceTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Person> (<http://edas#Person>)
+
+DisjointClasses(:Person :PersonalHistory)
+DisjointClasses(:Person :Place)
+DisjointClasses(:Person :ReviewForm)
+DisjointClasses(:Person :ReviewQuestion)
+DisjointClasses(:Person :ReviewRating)
+DisjointClasses(:Person :Sponsorship)
+DisjointClasses(:Person :Topic)
+
+# Class: <http://edas#PersonalHistory> (<http://edas#PersonalHistory>)
+
+DisjointClasses(:PersonalHistory :Place)
+DisjointClasses(:PersonalHistory :ReviewForm)
+DisjointClasses(:PersonalHistory :ReviewQuestion)
+DisjointClasses(:PersonalHistory :ReviewRating)
+DisjointClasses(:PersonalHistory :Sponsorship)
+DisjointClasses(:PersonalHistory :Topic)
+
+# Class: <http://edas#PersonalPublicationHistory> (<http://edas#PersonalPublicationHistory>)
+
+SubClassOf(:PersonalPublicationHistory :PersonalHistory)
+
+# Class: <http://edas#PersonalReviewHistory> (<http://edas#PersonalReviewHistory>)
+
+SubClassOf(:PersonalReviewHistory :PersonalHistory)
+
+# Class: <http://edas#Place> (<http://edas#Place>)
+
+DisjointClasses(:Place :ReviewForm)
+DisjointClasses(:Place :ReviewQuestion)
+DisjointClasses(:Place :ReviewRating)
+DisjointClasses(:Place :Sponsorship)
+DisjointClasses(:Place :Topic)
+
+# Class: <http://edas#PowerlineTransmissionTopic> (<http://edas#PowerlineTransmissionTopic>)
+
+SubClassOf(:PowerlineTransmissionTopic :Topic)
+DisjointClasses(:PowerlineTransmissionTopic :RadioCommunicationsTopic)
+DisjointClasses(:PowerlineTransmissionTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:PowerlineTransmissionTopic :SecurityTopic)
+DisjointClasses(:PowerlineTransmissionTopic :SignalProcessingTopic)
+DisjointClasses(:PowerlineTransmissionTopic :TestOnlyTopic)
+DisjointClasses(:PowerlineTransmissionTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#Presenter> (<http://edas#Presenter>)
+
+SubClassOf(:Presenter :Author)
+
+# Class: <http://edas#Programme> (<http://edas#Programme>)
+
+SubClassOf(:Programme :Document)
+DisjointClasses(:Programme :Review)
+DisjointClasses(:Programme :SlideSet)
+
+# Class: <http://edas#PublishedPaper> (<http://edas#PublishedPaper>)
+
+SubClassOf(:PublishedPaper :Paper)
+DisjointClasses(:PublishedPaper :RejectedPaper)
+DisjointClasses(:PublishedPaper :WithdrawnPaper)
+
+# Class: <http://edas#RadioCommunicationsTopic> (<http://edas#RadioCommunicationsTopic>)
+
+SubClassOf(:RadioCommunicationsTopic :Topic)
+DisjointClasses(:RadioCommunicationsTopic :SatelliteAndSpaceCommunicationsTopic)
+DisjointClasses(:RadioCommunicationsTopic :SecurityTopic)
+DisjointClasses(:RadioCommunicationsTopic :SignalProcessingTopic)
+DisjointClasses(:RadioCommunicationsTopic :TestOnlyTopic)
+DisjointClasses(:RadioCommunicationsTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#RatedPapers> (<http://edas#RatedPapers>)
+
+EquivalentClasses(:RatedPapers ObjectSomeValuesFrom(:hasRating :ReviewRating))
+SubClassOf(:RatedPapers :ActivePaper)
+
+# Class: <http://edas#Reception> (<http://edas#Reception>)
+
+SubClassOf(:Reception :SocialEvent)
+
+# Class: <http://edas#RejectRating> (<http://edas#RejectRating>)
+
+SubClassOf(:RejectRating :ReviewRating)
+DisjointClasses(:RejectRating :WeekRejectRating)
+
+# Class: <http://edas#RejectedPaper> (<http://edas#RejectedPaper>)
+
+SubClassOf(:RejectedPaper :Paper)
+DisjointClasses(:RejectedPaper :WithdrawnPaper)
+
+# Class: <http://edas#Review> (<http://edas#Review>)
+
+SubClassOf(:Review :Document)
+DisjointClasses(:Review :SlideSet)
+
+# Class: <http://edas#ReviewForm> (<http://edas#ReviewForm>)
+
+DisjointClasses(:ReviewForm :ReviewQuestion)
+DisjointClasses(:ReviewForm :ReviewRating)
+DisjointClasses(:ReviewForm :Sponsorship)
+DisjointClasses(:ReviewForm :Topic)
+
+# Class: <http://edas#ReviewQuestion> (<http://edas#ReviewQuestion>)
+
+DisjointClasses(:ReviewQuestion :ReviewRating)
+DisjointClasses(:ReviewQuestion :Sponsorship)
+DisjointClasses(:ReviewQuestion :Topic)
+
+# Class: <http://edas#ReviewRating> (<http://edas#ReviewRating>)
+
+EquivalentClasses(:ReviewRating ObjectUnionOf(:AcceptRating :AccpetIfRoomRating :RejectRating :WeekRejectRating))
+DisjointClasses(:ReviewRating :Sponsorship)
+DisjointClasses(:ReviewRating :Topic)
+
+# Class: <http://edas#Reviewer> (<http://edas#Reviewer>)
+
+EquivalentClasses(:Reviewer ObjectIntersectionOf(:Person ObjectSomeValuesFrom(:isReviewing :Paper)))
+
+# Class: <http://edas#SatelliteAndSpaceCommunicationsTopic> (<http://edas#SatelliteAndSpaceCommunicationsTopic>)
+
+SubClassOf(:SatelliteAndSpaceCommunicationsTopic :Topic)
+DisjointClasses(:SatelliteAndSpaceCommunicationsTopic :SecurityTopic)
+DisjointClasses(:SatelliteAndSpaceCommunicationsTopic :SignalProcessingTopic)
+DisjointClasses(:SatelliteAndSpaceCommunicationsTopic :TestOnlyTopic)
+DisjointClasses(:SatelliteAndSpaceCommunicationsTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#SecurityTopic> (<http://edas#SecurityTopic>)
+
+SubClassOf(:SecurityTopic :Topic)
+DisjointClasses(:SecurityTopic :SignalProcessingTopic)
+DisjointClasses(:SecurityTopic :TestOnlyTopic)
+DisjointClasses(:SecurityTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#SessionChair> (<http://edas#SessionChair>)
+
+SubClassOf(:SessionChair :Person)
+
+# Class: <http://edas#SignalProcessingTopic> (<http://edas#SignalProcessingTopic>)
+
+SubClassOf(:SignalProcessingTopic :Topic)
+DisjointClasses(:SignalProcessingTopic :TestOnlyTopic)
+DisjointClasses(:SignalProcessingTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#SingleLevelConference> (<http://edas#SingleLevelConference>)
+
+EquivalentClasses(:SingleLevelConference ObjectIntersectionOf(:Conference ObjectComplementOf(:TwoLevelConference) ObjectAllValuesFrom(:hasMember :Person)))
+
+# Class: <http://edas#SlideSet> (<http://edas#SlideSet>)
+
+SubClassOf(:SlideSet :Document)
+
+# Class: <http://edas#SocialEvent> (<http://edas#SocialEvent>)
+
+SubClassOf(:SocialEvent :NonAcademicEvent)
+
+# Class: <http://edas#Sponsorship> (<http://edas#Sponsorship>)
+
+DisjointClasses(:Sponsorship :Topic)
+
+# Class: <http://edas#TPCMember> (<http://edas#TPCMember>)
+
+SubClassOf(:TPCMember :Person)
+
+# Class: <http://edas#TalkEvent> (<http://edas#TalkEvent>)
+
+SubClassOf(:TalkEvent :AcademicEvent)
+DisjointClasses(:TalkEvent :Workshop)
+
+# Class: <http://edas#TestOnlyTopic> (<http://edas#TestOnlyTopic>)
+
+SubClassOf(:TestOnlyTopic :Topic)
+DisjointClasses(:TestOnlyTopic :WirelessCommunicationsTopic)
+
+# Class: <http://edas#TextualReviewQuestion> (<http://edas#TextualReviewQuestion>)
+
+SubClassOf(:TextualReviewQuestion :ReviewQuestion)
+
+# Class: <http://edas#TravelGrant> (<http://edas#TravelGrant>)
+
+SubClassOf(:TravelGrant :Sponsorship)
+
+# Class: <http://edas#TwoLevelConference> (<http://edas#TwoLevelConference>)
+
+EquivalentClasses(:TwoLevelConference ObjectIntersectionOf(:Conference ObjectSomeValuesFrom(:hasMember :TPCMember) ObjectAllValuesFrom(:hasMember :Person)))
+
+# Class: <http://edas#WeekRejectRating> (<http://edas#WeekRejectRating>)
+
+SubClassOf(:WeekRejectRating :ReviewRating)
+
+# Class: <http://edas#WelcomeTalk> (<http://edas#WelcomeTalk>)
+
+SubClassOf(:WelcomeTalk :TalkEvent)
+
+# Class: <http://edas#WirelessCommunicationsTopic> (<http://edas#WirelessCommunicationsTopic>)
+
+SubClassOf(:WirelessCommunicationsTopic :Topic)
+
+# Class: <http://edas#WithdrawnPaper> (<http://edas#WithdrawnPaper>)
+
+SubClassOf(:WithdrawnPaper :Paper)
+
+# Class: <http://edas#Workshop> (<http://edas#Workshop>)
+
+SubClassOf(:Workshop :AcademicEvent)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://edas#Argentina> (<http://edas#Argentina>)
+
+ClassAssertion(:Country :Argentina)
+
+# Individual: <http://edas#Armenia> (<http://edas#Armenia>)
+
+ClassAssertion(:Country :Armenia)
+
+# Individual: <http://edas#Australia> (<http://edas#Australia>)
+
+ClassAssertion(:Country :Australia)
+
+# Individual: <http://edas#Austria> (<http://edas#Austria>)
+
+ClassAssertion(:Country :Austria)
+
+# Individual: <http://edas#Azerbaijan> (<http://edas#Azerbaijan>)
+
+ClassAssertion(:Country :Azerbaijan)
+
+# Individual: <http://edas#Bahamas> (<http://edas#Bahamas>)
+
+ClassAssertion(:Country :Bahamas)
+
+# Individual: <http://edas#Bahrain> (<http://edas#Bahrain>)
+
+ClassAssertion(:Country :Bahrain)
+
+# Individual: <http://edas#Bangladesh> (<http://edas#Bangladesh>)
+
+ClassAssertion(:Country :Bangladesh)
+
+# Individual: <http://edas#Belarus> (<http://edas#Belarus>)
+
+ClassAssertion(:Country :Belarus)
+
+# Individual: <http://edas#Belgium> (<http://edas#Belgium>)
+
+ClassAssertion(:Country :Belgium)
+
+# Individual: <http://edas#BosniaAndHerzegovina> (<http://edas#BosniaAndHerzegovina>)
+
+ClassAssertion(:Country :BosniaAndHerzegovina)
+
+# Individual: <http://edas#Botswana> (<http://edas#Botswana>)
+
+ClassAssertion(:Country :Botswana)
+
+# Individual: <http://edas#Brazil> (<http://edas#Brazil>)
+
+ClassAssertion(:Country :Brazil)
+
+# Individual: <http://edas#Bulgaria> (<http://edas#Bulgaria>)
+
+ClassAssertion(:Country :Bulgaria)
+
+# Individual: <http://edas#Cambodia> (<http://edas#Cambodia>)
+
+ClassAssertion(:Country :Cambodia)
+
+# Individual: <http://edas#Canada> (<http://edas#Canada>)
+
+ClassAssertion(:Country :Canada)
+
+# Individual: <http://edas#Chile> (<http://edas#Chile>)
+
+ClassAssertion(:Country :Chile)
+
+# Individual: <http://edas#China> (<http://edas#China>)
+
+ClassAssertion(:Country :China)
+
+# Individual: <http://edas#CocosIslands> (<http://edas#CocosIslands>)
+
+ClassAssertion(:Country :CocosIslands)
+
+# Individual: <http://edas#Colombia> (<http://edas#Colombia>)
+
+ClassAssertion(:Country :Colombia)
+
+# Individual: <http://edas#Croatia> (<http://edas#Croatia>)
+
+ClassAssertion(:Country :Croatia)
+
+# Individual: <http://edas#Cuba> (<http://edas#Cuba>)
+
+ClassAssertion(:Country :Cuba)
+
+# Individual: <http://edas#Cyprus> (<http://edas#Cyprus>)
+
+ClassAssertion(:Country :Cyprus)
+
+# Individual: <http://edas#CzechRepublic> (<http://edas#CzechRepublic>)
+
+ClassAssertion(:Country :CzechRepublic)
+
+# Individual: <http://edas#DemocraticRepublicOfCongo> (<http://edas#DemocraticRepublicOfCongo>)
+
+ClassAssertion(:Country :DemocraticRepublicOfCongo)
+
+# Individual: <http://edas#Denmark> (<http://edas#Denmark>)
+
+ClassAssertion(:Country :Denmark)
+
+# Individual: <http://edas#Ecuador> (<http://edas#Ecuador>)
+
+ClassAssertion(:Country :Ecuador)
+
+# Individual: <http://edas#Egypt> (<http://edas#Egypt>)
+
+ClassAssertion(:Country :Egypt)
+
+# Individual: <http://edas#Estonia> (<http://edas#Estonia>)
+
+ClassAssertion(:Country :Estonia)
+
+# Individual: <http://edas#Ethiopia> (<http://edas#Ethiopia>)
+
+ClassAssertion(:Country :Ethiopia)
+
+# Individual: <http://edas#EuropeanUnion> (<http://edas#EuropeanUnion>)
+
+ClassAssertion(:Country :EuropeanUnion)
+
+# Individual: <http://edas#Finland> (<http://edas#Finland>)
+
+ClassAssertion(:Country :Finland)
+
+# Individual: <http://edas#France> (<http://edas#France>)
+
+ClassAssertion(:Country :France)
+
+# Individual: <http://edas#Georgia> (<http://edas#Georgia>)
+
+ClassAssertion(:Country :Georgia)
+
+# Individual: <http://edas#Germany> (<http://edas#Germany>)
+
+ClassAssertion(:Country :Germany)
+
+# Individual: <http://edas#Ghana> (<http://edas#Ghana>)
+
+ClassAssertion(:Country :Ghana)
+
+# Individual: <http://edas#Greece> (<http://edas#Greece>)
+
+ClassAssertion(:Country :Greece)
+
+# Individual: <http://edas#HongKong> (<http://edas#HongKong>)
+
+ClassAssertion(:Country :HongKong)
+
+# Individual: <http://edas#Hungary> (<http://edas#Hungary>)
+
+ClassAssertion(:Country :Hungary)
+
+# Individual: <http://edas#Iceland> (<http://edas#Iceland>)
+
+ClassAssertion(:Country :Iceland)
+
+# Individual: <http://edas#India> (<http://edas#India>)
+
+ClassAssertion(:Country :India)
+
+# Individual: <http://edas#Indonesia> (<http://edas#Indonesia>)
+
+ClassAssertion(:Country :Indonesia)
+
+# Individual: <http://edas#Iran> (<http://edas#Iran>)
+
+ClassAssertion(:Country :Iran)
+
+# Individual: <http://edas#Iraq> (<http://edas#Iraq>)
+
+ClassAssertion(:Country :Iraq)
+
+# Individual: <http://edas#Ireland> (<http://edas#Ireland>)
+
+ClassAssertion(:Country :Ireland)
+
+# Individual: <http://edas#Israel> (<http://edas#Israel>)
+
+ClassAssertion(:Country :Israel)
+
+# Individual: <http://edas#Italy> (<http://edas#Italy>)
+
+ClassAssertion(:Country :Italy)
+
+# Individual: <http://edas#Japan> (<http://edas#Japan>)
+
+ClassAssertion(:Country :Japan)
+
+# Individual: <http://edas#Jordan> (<http://edas#Jordan>)
+
+ClassAssertion(:Country :Jordan)
+
+# Individual: <http://edas#Kenya> (<http://edas#Kenya>)
+
+ClassAssertion(:Country :Kenya)
+
+# Individual: <http://edas#Korea> (<http://edas#Korea>)
+
+ClassAssertion(:Country :Korea)
+
+# Individual: <http://edas#Kuwait> (<http://edas#Kuwait>)
+
+ClassAssertion(:Country :Kuwait)
+
+# Individual: <http://edas#Latvia> (<http://edas#Latvia>)
+
+ClassAssertion(:Country :Latvia)
+
+# Individual: <http://edas#Lebanon> (<http://edas#Lebanon>)
+
+ClassAssertion(:Country :Lebanon)
+
+# Individual: <http://edas#Libya> (<http://edas#Libya>)
+
+ClassAssertion(:Country :Libya)
+
+# Individual: <http://edas#Lithuania> (<http://edas#Lithuania>)
+
+ClassAssertion(:Country :Lithuania)
+
+# Individual: <http://edas#Luxemburg> (<http://edas#Luxemburg>)
+
+ClassAssertion(:Country :Luxemburg)
+
+# Individual: <http://edas#Macao> (<http://edas#Macao>)
+
+ClassAssertion(:Country :Macao)
+
+# Individual: <http://edas#Macedonia> (<http://edas#Macedonia>)
+
+ClassAssertion(:Country :Macedonia)
+
+# Individual: <http://edas#Madagascar> (<http://edas#Madagascar>)
+
+ClassAssertion(:Country :Madagascar)
+
+# Individual: <http://edas#Malaysia> (<http://edas#Malaysia>)
+
+ClassAssertion(:Country :Malaysia)
+
+# Individual: <http://edas#Malta> (<http://edas#Malta>)
+
+ClassAssertion(:Country :Malta)
+
+# Individual: <http://edas#Mauritius> (<http://edas#Mauritius>)
+
+ClassAssertion(:Country :Mauritius)
+
+# Individual: <http://edas#Mexico> (<http://edas#Mexico>)
+
+ClassAssertion(:Country :Mexico)
+
+# Individual: <http://edas#Mongolia> (<http://edas#Mongolia>)
+
+ClassAssertion(:Country :Mongolia)
+
+# Individual: <http://edas#Morocco> (<http://edas#Morocco>)
+
+ClassAssertion(:Country :Morocco)
+
+# Individual: <http://edas#Nepal> (<http://edas#Nepal>)
+
+ClassAssertion(:Country :Nepal)
+
+# Individual: <http://edas#Netherlands> (<http://edas#Netherlands>)
+
+ClassAssertion(:Country :Netherlands)
+
+# Individual: <http://edas#NewZealand> (<http://edas#NewZealand>)
+
+ClassAssertion(:Country :NewZealand)
+
+# Individual: <http://edas#Nicaragua> (<http://edas#Nicaragua>)
+
+ClassAssertion(:Country :Nicaragua)
+
+# Individual: <http://edas#Nigeria> (<http://edas#Nigeria>)
+
+ClassAssertion(:Country :Nigeria)
+
+# Individual: <http://edas#NorthKorea> (<http://edas#NorthKorea>)
+
+ClassAssertion(:Country :NorthKorea)
+
+# Individual: <http://edas#Norway> (<http://edas#Norway>)
+
+ClassAssertion(:Country :Norway)
+
+# Individual: <http://edas#Oman> (<http://edas#Oman>)
+
+ClassAssertion(:Country :Oman)
+
+# Individual: <http://edas#Pakistan> (<http://edas#Pakistan>)
+
+ClassAssertion(:Country :Pakistan)
+
+# Individual: <http://edas#Paraguay> (<http://edas#Paraguay>)
+
+ClassAssertion(:Country :Paraguay)
+
+# Individual: <http://edas#Peru> (<http://edas#Peru>)
+
+ClassAssertion(:Country :Peru)
+
+# Individual: <http://edas#Philippines> (<http://edas#Philippines>)
+
+ClassAssertion(:Country :Philippines)
+
+# Individual: <http://edas#Poland> (<http://edas#Poland>)
+
+ClassAssertion(:Country :Poland)
+
+# Individual: <http://edas#Portugal> (<http://edas#Portugal>)
+
+ClassAssertion(:Country :Portugal)
+
+# Individual: <http://edas#PuertoRico> (<http://edas#PuertoRico>)
+
+ClassAssertion(:Country :PuertoRico)
+
+# Individual: <http://edas#Qatar> (<http://edas#Qatar>)
+
+ClassAssertion(:Country :Qatar)
+
+# Individual: <http://edas#Romania> (<http://edas#Romania>)
+
+ClassAssertion(:Country :Romania)
+
+# Individual: <http://edas#Russia> (<http://edas#Russia>)
+
+ClassAssertion(:Country :Russia)
+
+# Individual: <http://edas#SanMarino> (<http://edas#SanMarino>)
+
+ClassAssertion(:Country :SanMarino)
+
+# Individual: <http://edas#SaudiArabia> (<http://edas#SaudiArabia>)
+
+ClassAssertion(:Country :SaudiArabia)
+
+# Individual: <http://edas#Senegal> (<http://edas#Senegal>)
+
+ClassAssertion(:Country :Senegal)
+
+# Individual: <http://edas#SerbiaAndMontenegro> (<http://edas#SerbiaAndMontenegro>)
+
+ClassAssertion(:Country :SerbiaAndMontenegro)
+
+# Individual: <http://edas#Singapore> (<http://edas#Singapore>)
+
+ClassAssertion(:Country :Singapore)
+
+# Individual: <http://edas#Slovakia> (<http://edas#Slovakia>)
+
+ClassAssertion(:Country :Slovakia)
+
+# Individual: <http://edas#Slovenia> (<http://edas#Slovenia>)
+
+ClassAssertion(:Country :Slovenia)
+
+# Individual: <http://edas#SouthAfrica> (<http://edas#SouthAfrica>)
+
+ClassAssertion(:Country :SouthAfrica)
+
+# Individual: <http://edas#Spain> (<http://edas#Spain>)
+
+ClassAssertion(:Country :Spain)
+
+# Individual: <http://edas#SriLanka> (<http://edas#SriLanka>)
+
+ClassAssertion(:Country :SriLanka)
+
+# Individual: <http://edas#Sweden> (<http://edas#Sweden>)
+
+ClassAssertion(:Country :Sweden)
+
+# Individual: <http://edas#Switzerland> (<http://edas#Switzerland>)
+
+ClassAssertion(:Country :Switzerland)
+
+# Individual: <http://edas#Syria> (<http://edas#Syria>)
+
+ClassAssertion(:Country :Syria)
+
+# Individual: <http://edas#Taiwan> (<http://edas#Taiwan>)
+
+ClassAssertion(:Country :Taiwan)
+
+# Individual: <http://edas#Tajikistan> (<http://edas#Tajikistan>)
+
+ClassAssertion(:Country :Tajikistan)
+
+# Individual: <http://edas#Tanzania> (<http://edas#Tanzania>)
+
+ClassAssertion(:Country :Tanzania)
+
+# Individual: <http://edas#Thailand> (<http://edas#Thailand>)
+
+ClassAssertion(:Country :Thailand)
+
+# Individual: <http://edas#Tunisia> (<http://edas#Tunisia>)
+
+ClassAssertion(:Country :Tunisia)
+
+# Individual: <http://edas#Turkey> (<http://edas#Turkey>)
+
+ClassAssertion(:Country :Turkey)
+
+# Individual: <http://edas#Turkmenistan> (<http://edas#Turkmenistan>)
+
+ClassAssertion(:Country :Turkmenistan)
+
+# Individual: <http://edas#UAE> (<http://edas#UAE>)
+
+ClassAssertion(:Country :UAE)
+
+# Individual: <http://edas#USA> (<http://edas#USA>)
+
+ClassAssertion(:Country :USA)
+
+# Individual: <http://edas#Uganda> (<http://edas#Uganda>)
+
+ClassAssertion(:Country :Uganda)
+
+# Individual: <http://edas#Ukraine> (<http://edas#Ukraine>)
+
+ClassAssertion(:Country :Ukraine)
+
+# Individual: <http://edas#UnitedKingdom> (<http://edas#UnitedKingdom>)
+
+ClassAssertion(:Country :UnitedKingdom)
+
+# Individual: <http://edas#Uruguay> (<http://edas#Uruguay>)
+
+ClassAssertion(:Country :Uruguay)
+
+# Individual: <http://edas#Venezuela> (<http://edas#Venezuela>)
+
+ClassAssertion(:Country :Venezuela)
+
+# Individual: <http://edas#Vietnam> (<http://edas#Vietnam>)
+
+ClassAssertion(:Country :Vietnam)
+
+# Individual: <http://edas#Yemen> (<http://edas#Yemen>)
+
+ClassAssertion(:Country :Yemen)
+
+# Individual: <http://edas#Zimbabwe> (<http://edas#Zimbabwe>)
+
+ClassAssertion(:Country :Zimbabwe)
+
+
+)

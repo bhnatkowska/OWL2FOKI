@@ -1,0 +1,192 @@
+Prefix(:=<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop>
+
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#AdultIndividualCustomer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#ChildIndividualCustomer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Company>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#GoldCustomer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Producer>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>))
+Declaration(Class(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Section>))
+Declaration(Class(owl:Thing))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasProducts>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producedBy>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#previousPrices>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName>))
+Declaration(DataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName>))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory>)
+
+InverseObjectProperties(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasProducts>)
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#belongsToCategory> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan>)
+
+TransitiveObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan>)
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#cheaperThan> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders>)
+
+InverseObjectProperties(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy>)
+InverseFunctionalObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy>)
+
+FunctionalObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy>)
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producedBy> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producedBy>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Producer>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy>)
+
+FunctionalObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy>)
+AsymmetricObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy>)
+IrreflexiveObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy>)
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#recommendedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+
+# Object Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts>)
+
+SymmetricObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts>)
+ReflexiveObjectProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts>)
+ObjectPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+ObjectPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#similarToProducts> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#categoryName> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Company>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#companyName> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#customerId> xsd:positiveInteger)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#firstName> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#lastName> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#previousPrices> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#previousPrices>)
+
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#previousPrices> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#previousPrices> xsd:decimal)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#price> xsd:decimal)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Producer>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#producerName> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName>)
+DataPropertyDomain(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>)
+DataPropertyRange(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#productName> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#AdultIndividualCustomer> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#AdultIndividualCustomer>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#AdultIndividualCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category>)
+
+EquivalentClasses(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Category> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Section>)
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#ChildIndividualCustomer> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#ChildIndividualCustomer>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#ChildIndividualCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Company>)
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+DisjointClasses(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#CompanyCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer>)
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#GoldCustomer> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#GoldCustomer>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#GoldCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#GoldCustomer> ObjectMinCardinality(2 <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#hasOrders>))
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>)
+DisjointUnion(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#IndividualCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#AdultIndividualCustomer> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#ChildIndividualCustomer>)
+
+# Class: <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order> (<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order>)
+
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order> ObjectMinCardinality(1 <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedProducts> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Product>))
+SubClassOf(<http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Order> ObjectExactCardinality(1 <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#orderedBy> <http://www.semanticweb.org/woroniecki/ontologies/2017/0/shop#Customer>))
+
+
+)

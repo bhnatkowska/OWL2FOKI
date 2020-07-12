@@ -1,0 +1,434 @@
+Prefix(:=<http://sigkdd#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://sigkdd>
+
+Declaration(Class(:ACM_SIGKDD))
+Declaration(Class(:Abstract))
+Declaration(Class(:Author))
+Declaration(Class(:Author_of_paper))
+Declaration(Class(:Author_of_paper_student))
+Declaration(Class(:Award))
+Declaration(Class(:Best_Applications_Paper_Award))
+Declaration(Class(:Best_Paper_Awards_Committee))
+Declaration(Class(:Best_Research_Paper_Award))
+Declaration(Class(:Best_Student_Paper_Award))
+Declaration(Class(:Best_Student_Paper_Supporter))
+Declaration(Class(:Bronze_Supporter))
+Declaration(Class(:Committee))
+Declaration(Class(:Conference))
+Declaration(Class(:Conference_hall))
+Declaration(Class(:Deadline))
+Declaration(Class(:Deadline_Abstract_Submission))
+Declaration(Class(:Deadline_Author_notification))
+Declaration(Class(:Deadline_Paper_Submission))
+Declaration(Class(:Document))
+Declaration(Class(:Exhibitor))
+Declaration(Class(:Fee))
+Declaration(Class(:General_Chair))
+Declaration(Class(:Gold_Supporter))
+Declaration(Class(:Hotel))
+Declaration(Class(:Invited_Speaker))
+Declaration(Class(:Listener))
+Declaration(Class(:Main_office))
+Declaration(Class(:Organizator))
+Declaration(Class(:Organizing_Committee))
+Declaration(Class(:Organizing_Committee_member))
+Declaration(Class(:Paper))
+Declaration(Class(:Person))
+Declaration(Class(:Place))
+Declaration(Class(:Platinum_Supporter))
+Declaration(Class(:Program_Chair))
+Declaration(Class(:Program_Committee))
+Declaration(Class(:Program_Committee_member))
+Declaration(Class(:Registration_Non-Member))
+Declaration(Class(:Registration_SIGKDD_Member))
+Declaration(Class(:Registration_SIGMOD_Member))
+Declaration(Class(:Registration_Student))
+Declaration(Class(:Registration_fee))
+Declaration(Class(:Review))
+Declaration(Class(:Silver_Supporter))
+Declaration(Class(:Speaker))
+Declaration(Class(:Sponzor))
+Declaration(Class(:Sponzor_fee))
+Declaration(Class(:Webmaster))
+Declaration(ObjectProperty(:award))
+Declaration(ObjectProperty(:awarded_by))
+Declaration(ObjectProperty(:can_stay_in))
+Declaration(ObjectProperty(:design))
+Declaration(ObjectProperty(:designed_by))
+Declaration(ObjectProperty(:hold))
+Declaration(ObjectProperty(:holded_by))
+Declaration(ObjectProperty(:notification_until))
+Declaration(ObjectProperty(:obtain))
+Declaration(ObjectProperty(:pay))
+Declaration(ObjectProperty(:payed_by))
+Declaration(ObjectProperty(:presentation))
+Declaration(ObjectProperty(:presentationed_by))
+Declaration(ObjectProperty(:search))
+Declaration(ObjectProperty(:searched_by))
+Declaration(ObjectProperty(:submit))
+Declaration(ObjectProperty(:submit_until))
+Declaration(DataProperty(:City_of_conference))
+Declaration(DataProperty(:Currency))
+Declaration(DataProperty(:Date))
+Declaration(DataProperty(:E-mail))
+Declaration(DataProperty(:End_of_conference))
+Declaration(DataProperty(:Name))
+Declaration(DataProperty(:Name_of_conference))
+Declaration(DataProperty(:Name_of_sponsor))
+Declaration(DataProperty(:Nation))
+Declaration(DataProperty(:Price))
+Declaration(DataProperty(:Start_of_conference))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://sigkdd#award> (<http://sigkdd#award>)
+
+InverseObjectProperties(:award :awarded_by)
+ObjectPropertyRange(:award :Award)
+
+# Object Property: <http://sigkdd#awarded_by> (<http://sigkdd#awarded_by>)
+
+ObjectPropertyDomain(:awarded_by :Award)
+ObjectPropertyRange(:awarded_by :Author)
+
+# Object Property: <http://sigkdd#can_stay_in> (<http://sigkdd#can_stay_in>)
+
+ObjectPropertyDomain(:can_stay_in :Person)
+ObjectPropertyRange(:can_stay_in :Place)
+
+# Object Property: <http://sigkdd#design> (<http://sigkdd#design>)
+
+InverseObjectProperties(:designed_by :design)
+ObjectPropertyDomain(:design :ACM_SIGKDD)
+ObjectPropertyRange(:design :Deadline)
+
+# Object Property: <http://sigkdd#designed_by> (<http://sigkdd#designed_by>)
+
+ObjectPropertyDomain(:designed_by :Deadline)
+ObjectPropertyRange(:designed_by :ACM_SIGKDD)
+
+# Object Property: <http://sigkdd#hold> (<http://sigkdd#hold>)
+
+InverseObjectProperties(:holded_by :hold)
+ObjectPropertyDomain(:hold :ACM_SIGKDD)
+ObjectPropertyRange(:hold :Conference)
+
+# Object Property: <http://sigkdd#holded_by> (<http://sigkdd#holded_by>)
+
+ObjectPropertyDomain(:holded_by :Conference)
+ObjectPropertyRange(:holded_by :ACM_SIGKDD)
+
+# Object Property: <http://sigkdd#notification_until> (<http://sigkdd#notification_until>)
+
+ObjectPropertyDomain(:notification_until :Author)
+ObjectPropertyRange(:notification_until :Deadline_Author_notification)
+
+# Object Property: <http://sigkdd#obtain> (<http://sigkdd#obtain>)
+
+ObjectPropertyDomain(:obtain :Author)
+ObjectPropertyRange(:obtain :Award)
+
+# Object Property: <http://sigkdd#pay> (<http://sigkdd#pay>)
+
+InverseObjectProperties(:payed_by :pay)
+ObjectPropertyDomain(:pay :Person)
+ObjectPropertyRange(:pay :Registration_fee)
+
+# Object Property: <http://sigkdd#payed_by> (<http://sigkdd#payed_by>)
+
+ObjectPropertyDomain(:payed_by :Registration_fee)
+ObjectPropertyRange(:payed_by :Person)
+
+# Object Property: <http://sigkdd#presentation> (<http://sigkdd#presentation>)
+
+InverseObjectProperties(:presentationed_by :presentation)
+ObjectPropertyDomain(:presentation :Speaker)
+ObjectPropertyRange(:presentation :Document)
+
+# Object Property: <http://sigkdd#presentationed_by> (<http://sigkdd#presentationed_by>)
+
+ObjectPropertyDomain(:presentationed_by :Document)
+ObjectPropertyRange(:presentationed_by :Speaker)
+
+# Object Property: <http://sigkdd#search> (<http://sigkdd#search>)
+
+InverseObjectProperties(:searched_by :search)
+ObjectPropertyDomain(:search :ACM_SIGKDD)
+ObjectPropertyRange(:search :Sponzor)
+
+# Object Property: <http://sigkdd#searched_by> (<http://sigkdd#searched_by>)
+
+ObjectPropertyDomain(:searched_by :Sponzor)
+ObjectPropertyRange(:searched_by :ACM_SIGKDD)
+
+# Object Property: <http://sigkdd#submit> (<http://sigkdd#submit>)
+
+ObjectPropertyDomain(:submit :Author)
+ObjectPropertyRange(:submit :Paper)
+
+# Object Property: <http://sigkdd#submit_until> (<http://sigkdd#submit_until>)
+
+ObjectPropertyDomain(:submit_until :Document)
+ObjectPropertyRange(:submit_until :Deadline)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://sigkdd#City_of_conference> (<http://sigkdd#City_of_conference>)
+
+DataPropertyDomain(:City_of_conference :Conference)
+DataPropertyRange(:City_of_conference xsd:string)
+
+# Data Property: <http://sigkdd#Currency> (<http://sigkdd#Currency>)
+
+DataPropertyDomain(:Currency :Registration_fee)
+DataPropertyRange(:Currency xsd:string)
+
+# Data Property: <http://sigkdd#Date> (<http://sigkdd#Date>)
+
+DataPropertyDomain(:Date :Deadline)
+DataPropertyRange(:Date xsd:dateTime)
+
+# Data Property: <http://sigkdd#E-mail> (<http://sigkdd#E-mail>)
+
+DataPropertyDomain(:E-mail :Person)
+DataPropertyRange(:E-mail xsd:string)
+
+# Data Property: <http://sigkdd#End_of_conference> (<http://sigkdd#End_of_conference>)
+
+DataPropertyDomain(:End_of_conference :Conference)
+DataPropertyRange(:End_of_conference xsd:dateTime)
+
+# Data Property: <http://sigkdd#Name> (<http://sigkdd#Name>)
+
+DataPropertyDomain(:Name :Person)
+DataPropertyRange(:Name xsd:string)
+
+# Data Property: <http://sigkdd#Name_of_conference> (<http://sigkdd#Name_of_conference>)
+
+DataPropertyDomain(:Name_of_conference :Conference)
+DataPropertyRange(:Name_of_conference xsd:string)
+
+# Data Property: <http://sigkdd#Name_of_sponsor> (<http://sigkdd#Name_of_sponsor>)
+
+DataPropertyDomain(:Name_of_sponsor :Sponzor)
+DataPropertyRange(:Name_of_sponsor xsd:string)
+
+# Data Property: <http://sigkdd#Nation> (<http://sigkdd#Nation>)
+
+DataPropertyDomain(:Nation :Person)
+DataPropertyRange(:Nation xsd:string)
+
+# Data Property: <http://sigkdd#Price> (<http://sigkdd#Price>)
+
+DataPropertyDomain(:Price :Registration_fee)
+DataPropertyRange(:Price xsd:int)
+
+# Data Property: <http://sigkdd#Start_of_conference> (<http://sigkdd#Start_of_conference>)
+
+DataPropertyDomain(:Start_of_conference :Conference)
+DataPropertyRange(:Start_of_conference xsd:dateTime)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://sigkdd#ACM_SIGKDD> (<http://sigkdd#ACM_SIGKDD>)
+
+SubClassOf(:ACM_SIGKDD owl:Thing)
+SubClassOf(:ACM_SIGKDD ObjectSomeValuesFrom(:design :Deadline))
+SubClassOf(:ACM_SIGKDD ObjectSomeValuesFrom(:hold :Conference))
+SubClassOf(:ACM_SIGKDD ObjectSomeValuesFrom(:search :Sponzor))
+
+# Class: <http://sigkdd#Abstract> (<http://sigkdd#Abstract>)
+
+EquivalentClasses(:Abstract ObjectSomeValuesFrom(:submit_until :Deadline_Abstract_Submission))
+SubClassOf(:Abstract :Document)
+
+# Class: <http://sigkdd#Author> (<http://sigkdd#Author>)
+
+EquivalentClasses(:Author ObjectSomeValuesFrom(:submit :Paper))
+SubClassOf(:Author :Speaker)
+SubClassOf(:Author ObjectSomeValuesFrom(:notification_until :Deadline_Author_notification))
+
+# Class: <http://sigkdd#Author_of_paper> (<http://sigkdd#Author_of_paper>)
+
+SubClassOf(:Author_of_paper :Author)
+SubClassOf(:Author_of_paper ObjectSomeValuesFrom(:award :Best_Applications_Paper_Award))
+SubClassOf(:Author_of_paper ObjectSomeValuesFrom(:award :Best_Research_Paper_Award))
+
+# Class: <http://sigkdd#Author_of_paper_student> (<http://sigkdd#Author_of_paper_student>)
+
+SubClassOf(:Author_of_paper_student :Author)
+SubClassOf(:Author_of_paper_student ObjectSomeValuesFrom(:award :Best_Student_Paper_Award))
+
+# Class: <http://sigkdd#Award> (<http://sigkdd#Award>)
+
+EquivalentClasses(:Award ObjectSomeValuesFrom(:awarded_by :Organizator))
+
+# Class: <http://sigkdd#Best_Applications_Paper_Award> (<http://sigkdd#Best_Applications_Paper_Award>)
+
+SubClassOf(:Best_Applications_Paper_Award :Award)
+
+# Class: <http://sigkdd#Best_Paper_Awards_Committee> (<http://sigkdd#Best_Paper_Awards_Committee>)
+
+SubClassOf(:Best_Paper_Awards_Committee :Committee)
+
+# Class: <http://sigkdd#Best_Research_Paper_Award> (<http://sigkdd#Best_Research_Paper_Award>)
+
+SubClassOf(:Best_Research_Paper_Award :Award)
+
+# Class: <http://sigkdd#Best_Student_Paper_Award> (<http://sigkdd#Best_Student_Paper_Award>)
+
+SubClassOf(:Best_Student_Paper_Award :Award)
+
+# Class: <http://sigkdd#Best_Student_Paper_Supporter> (<http://sigkdd#Best_Student_Paper_Supporter>)
+
+SubClassOf(:Best_Student_Paper_Supporter :Sponzor)
+
+# Class: <http://sigkdd#Bronze_Supporter> (<http://sigkdd#Bronze_Supporter>)
+
+SubClassOf(:Bronze_Supporter :Sponzor)
+
+# Class: <http://sigkdd#Conference_hall> (<http://sigkdd#Conference_hall>)
+
+SubClassOf(:Conference_hall :Place)
+
+# Class: <http://sigkdd#Deadline_Abstract_Submission> (<http://sigkdd#Deadline_Abstract_Submission>)
+
+SubClassOf(:Deadline_Abstract_Submission :Deadline)
+
+# Class: <http://sigkdd#Deadline_Author_notification> (<http://sigkdd#Deadline_Author_notification>)
+
+SubClassOf(:Deadline_Author_notification :Deadline)
+
+# Class: <http://sigkdd#Deadline_Paper_Submission> (<http://sigkdd#Deadline_Paper_Submission>)
+
+SubClassOf(:Deadline_Paper_Submission :Deadline)
+
+# Class: <http://sigkdd#Exhibitor> (<http://sigkdd#Exhibitor>)
+
+SubClassOf(:Exhibitor :Sponzor)
+
+# Class: <http://sigkdd#General_Chair> (<http://sigkdd#General_Chair>)
+
+SubClassOf(:General_Chair :Organizator)
+
+# Class: <http://sigkdd#Gold_Supporter> (<http://sigkdd#Gold_Supporter>)
+
+SubClassOf(:Gold_Supporter :Sponzor)
+
+# Class: <http://sigkdd#Hotel> (<http://sigkdd#Hotel>)
+
+SubClassOf(:Hotel :Place)
+
+# Class: <http://sigkdd#Invited_Speaker> (<http://sigkdd#Invited_Speaker>)
+
+SubClassOf(:Invited_Speaker :Speaker)
+
+# Class: <http://sigkdd#Listener> (<http://sigkdd#Listener>)
+
+SubClassOf(:Listener :Person)
+
+# Class: <http://sigkdd#Main_office> (<http://sigkdd#Main_office>)
+
+SubClassOf(:Main_office :Place)
+
+# Class: <http://sigkdd#Organizator> (<http://sigkdd#Organizator>)
+
+SubClassOf(:Organizator :Person)
+
+# Class: <http://sigkdd#Organizing_Committee> (<http://sigkdd#Organizing_Committee>)
+
+SubClassOf(:Organizing_Committee :Committee)
+
+# Class: <http://sigkdd#Organizing_Committee_member> (<http://sigkdd#Organizing_Committee_member>)
+
+SubClassOf(:Organizing_Committee_member :Organizator)
+
+# Class: <http://sigkdd#Paper> (<http://sigkdd#Paper>)
+
+EquivalentClasses(:Paper ObjectSomeValuesFrom(:submit_until :Deadline_Paper_Submission))
+SubClassOf(:Paper :Document)
+
+# Class: <http://sigkdd#Person> (<http://sigkdd#Person>)
+
+EquivalentClasses(:Person ObjectSomeValuesFrom(:pay :Registration_fee))
+SubClassOf(:Person owl:Thing)
+SubClassOf(:Person ObjectSomeValuesFrom(:can_stay_in :Hotel))
+
+# Class: <http://sigkdd#Platinum_Supporter> (<http://sigkdd#Platinum_Supporter>)
+
+SubClassOf(:Platinum_Supporter :Sponzor)
+
+# Class: <http://sigkdd#Program_Chair> (<http://sigkdd#Program_Chair>)
+
+SubClassOf(:Program_Chair :Organizator)
+
+# Class: <http://sigkdd#Program_Committee> (<http://sigkdd#Program_Committee>)
+
+SubClassOf(:Program_Committee :Committee)
+
+# Class: <http://sigkdd#Program_Committee_member> (<http://sigkdd#Program_Committee_member>)
+
+SubClassOf(:Program_Committee_member :Organizator)
+
+# Class: <http://sigkdd#Registration_Non-Member> (<http://sigkdd#Registration_Non-Member>)
+
+SubClassOf(:Registration_Non-Member :Registration_fee)
+
+# Class: <http://sigkdd#Registration_SIGKDD_Member> (<http://sigkdd#Registration_SIGKDD_Member>)
+
+SubClassOf(:Registration_SIGKDD_Member :Registration_fee)
+
+# Class: <http://sigkdd#Registration_SIGMOD_Member> (<http://sigkdd#Registration_SIGMOD_Member>)
+
+SubClassOf(:Registration_SIGMOD_Member :Registration_fee)
+
+# Class: <http://sigkdd#Registration_Student> (<http://sigkdd#Registration_Student>)
+
+SubClassOf(:Registration_Student :Registration_fee)
+
+# Class: <http://sigkdd#Registration_fee> (<http://sigkdd#Registration_fee>)
+
+SubClassOf(:Registration_fee :Fee)
+
+# Class: <http://sigkdd#Review> (<http://sigkdd#Review>)
+
+SubClassOf(:Review :Document)
+
+# Class: <http://sigkdd#Silver_Supporter> (<http://sigkdd#Silver_Supporter>)
+
+SubClassOf(:Silver_Supporter :Sponzor)
+
+# Class: <http://sigkdd#Speaker> (<http://sigkdd#Speaker>)
+
+EquivalentClasses(:Speaker ObjectSomeValuesFrom(:presentation :Document))
+SubClassOf(:Speaker :Person)
+
+# Class: <http://sigkdd#Sponzor> (<http://sigkdd#Sponzor>)
+
+EquivalentClasses(:Sponzor ObjectSomeValuesFrom(:pay :Sponzor_fee))
+
+# Class: <http://sigkdd#Sponzor_fee> (<http://sigkdd#Sponzor_fee>)
+
+SubClassOf(:Sponzor_fee :Fee)
+
+# Class: <http://sigkdd#Webmaster> (<http://sigkdd#Webmaster>)
+
+SubClassOf(:Webmaster :Organizator)
+
+
+)

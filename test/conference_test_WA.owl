@@ -1,0 +1,775 @@
+Prefix(:=<http://conference#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://conference>
+
+Declaration(Class(:Abstract))
+Declaration(Class(:Accepted_contribution))
+Declaration(Class(:Active_conference_participant))
+Declaration(Class(:Call_for_paper))
+Declaration(Class(:Call_for_participation))
+Declaration(Class(:Camera_ready_contribution))
+Declaration(Class(:Chair))
+Declaration(Class(:Co-chair))
+Declaration(Class(:Committee))
+Declaration(Class(:Committee_member))
+Declaration(Class(:Conference))
+Declaration(Class(:Conference_announcement))
+Declaration(Class(:Conference_applicant))
+Declaration(Class(:Conference_contribution))
+Declaration(Class(:Conference_contributor))
+Declaration(Class(:Conference_document))
+Declaration(Class(:Conference_fees))
+Declaration(Class(:Conference_part))
+Declaration(Class(:Conference_participant))
+Declaration(Class(:Conference_proceedings))
+Declaration(Class(:Conference_volume))
+Declaration(Class(:Conference_www))
+Declaration(Class(:Contribution_1th-author))
+Declaration(Class(:Contribution_co-author))
+Declaration(Class(:Early_paid_applicant))
+Declaration(Class(:Extended_abstract))
+Declaration(Class(:Important_dates))
+Declaration(Class(:Information_for_participants))
+Declaration(Class(:Invited_speaker))
+Declaration(Class(:Invited_talk))
+Declaration(Class(:Late_paid_applicant))
+Declaration(Class(:Organization))
+Declaration(Class(:Organizer))
+Declaration(Class(:Organizing_committee))
+Declaration(Class(:Paid_applicant))
+Declaration(Class(:Paper))
+Declaration(Class(:Passive_conference_participant))
+Declaration(Class(:Person))
+Declaration(Class(:Poster))
+Declaration(Class(:Presentation))
+Declaration(Class(:Program_committee))
+Declaration(Class(:Publisher))
+Declaration(Class(:Registeered_applicant))
+Declaration(Class(:Regular_author))
+Declaration(Class(:Regular_contribution))
+Declaration(Class(:Rejected_contribution))
+Declaration(Class(:Review))
+Declaration(Class(:Review_expertise))
+Declaration(Class(:Review_preference))
+Declaration(Class(:Reviewed_contribution))
+Declaration(Class(:Reviewer))
+Declaration(Class(:Steering_committee))
+Declaration(Class(:Submitted_contribution))
+Declaration(Class(:Topic))
+Declaration(Class(:Track))
+Declaration(Class(:Track-workshop_chair))
+Declaration(Class(:Tutorial))
+Declaration(Class(:Workshop))
+Declaration(Class(:Written_contribution))
+Declaration(ObjectProperty(:belong_to_a_conference_volume))
+Declaration(ObjectProperty(:belongs_to_a_review_reference))
+Declaration(ObjectProperty(:belongs_to_reviewers))
+Declaration(ObjectProperty(:contributes))
+Declaration(ObjectProperty(:gives_presentations))
+Declaration(ObjectProperty(:has_a_committee_chair))
+Declaration(ObjectProperty(:has_a_committee_co-chair))
+Declaration(ObjectProperty(:has_a_commtitee))
+Declaration(ObjectProperty(:has_a_program_committee))
+Declaration(ObjectProperty(:has_a_publisher))
+Declaration(ObjectProperty(:has_a_review))
+Declaration(ObjectProperty(:has_a_review_expertise))
+Declaration(ObjectProperty(:has_a_review_reference_or_expertise))
+Declaration(ObjectProperty(:has_a_steering_committee))
+Declaration(ObjectProperty(:has_a_submitted_contribution))
+Declaration(ObjectProperty(:has_a_topic_or_a_submission_contribution))
+Declaration(ObjectProperty(:has_a_track-workshop-tutorial_chair))
+Declaration(ObjectProperty(:has_a_track-workshop-tutorial_topic))
+Declaration(ObjectProperty(:has_an_abstract))
+Declaration(ObjectProperty(:has_an_organizing_committee))
+Declaration(ObjectProperty(:has_authors))
+Declaration(ObjectProperty(:has_been_assigned_a_review_reference))
+Declaration(ObjectProperty(:has_contributions))
+Declaration(ObjectProperty(:has_important_dates))
+Declaration(ObjectProperty(:has_members))
+Declaration(ObjectProperty(:has_parts))
+Declaration(ObjectProperty(:has_tracks))
+Declaration(ObjectProperty(:has_tutorials))
+Declaration(ObjectProperty(:has_workshops))
+Declaration(ObjectProperty(:invited_by))
+Declaration(ObjectProperty(:invites_co-reviewers))
+Declaration(ObjectProperty(:is_a_topis_of_conference_parts))
+Declaration(ObjectProperty(:is_given_by))
+Declaration(ObjectProperty(:is_part_of_conference_volumes))
+Declaration(ObjectProperty(:is_submitted_at))
+Declaration(ObjectProperty(:is_the_1th_part_of))
+Declaration(ObjectProperty(:issues))
+Declaration(ObjectProperty(:reviews))
+Declaration(ObjectProperty(:was_a_committe_co-chair_of))
+Declaration(ObjectProperty(:was_a_committee_chair_of))
+Declaration(ObjectProperty(:was_a_committee_of))
+Declaration(ObjectProperty(:was_a_member_of))
+Declaration(ObjectProperty(:was_a_program_committee_of))
+Declaration(ObjectProperty(:was_a_steering_committee_of))
+Declaration(ObjectProperty(:was_a_track-workshop_chair_of))
+Declaration(ObjectProperty(:was_an_organizing_committee_of))
+Declaration(DataProperty(:has_a_URL))
+Declaration(DataProperty(:has_a_date_of_issue))
+Declaration(DataProperty(:has_a_degree))
+Declaration(DataProperty(:has_a_location))
+Declaration(DataProperty(:has_a_name))
+Declaration(DataProperty(:has_a_volume))
+Declaration(DataProperty(:has_an_ISBN))
+Declaration(DataProperty(:has_an_email))
+Declaration(DataProperty(:has_an_expertise))
+Declaration(DataProperty(:has_gender))
+Declaration(DataProperty(:has_the_first_name))
+Declaration(DataProperty(:has_the_last_name))
+Declaration(DataProperty(:is_a_date_of_acceptance_announcement))
+Declaration(DataProperty(:is_a_date_of_camera_ready_paper_submission))
+Declaration(DataProperty(:is_a_full_paper_submission_date))
+Declaration(DataProperty(:is_a_starting_date))
+Declaration(DataProperty(:is_an_abstract_submission_date))
+Declaration(DataProperty(:is_an_ending_date))
+Declaration(Datatype(xsd:date))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://conference#belong_to_a_conference_volume> (<http://conference#belong_to_a_conference_volume>)
+
+InverseObjectProperties(:has_important_dates :belong_to_a_conference_volume)
+InverseFunctionalObjectProperty(:belong_to_a_conference_volume)
+ObjectPropertyDomain(:belong_to_a_conference_volume :Important_dates)
+ObjectPropertyRange(:belong_to_a_conference_volume :Conference_volume)
+
+# Object Property: <http://conference#belongs_to_a_review_reference> (<http://conference#belongs_to_a_review_reference>)
+
+InverseFunctionalObjectProperty(:belongs_to_a_review_reference)
+ObjectPropertyDomain(:belongs_to_a_review_reference :Topic)
+ObjectPropertyRange(:belongs_to_a_review_reference :Review_preference)
+
+# Object Property: <http://conference#belongs_to_reviewers> (<http://conference#belongs_to_reviewers>)
+
+InverseObjectProperties(:has_a_review_reference_or_expertise :belongs_to_reviewers)
+ObjectPropertyDomain(:belongs_to_reviewers ObjectUnionOf(:Review_expertise :Review_preference))
+ObjectPropertyRange(:belongs_to_reviewers :Reviewer)
+
+# Object Property: <http://conference#contributes> (<http://conference#contributes>)
+
+InverseObjectProperties(:contributes :has_authors)
+ObjectPropertyDomain(:contributes :Person)
+ObjectPropertyRange(:contributes :Conference_document)
+
+# Object Property: <http://conference#gives_presentations> (<http://conference#gives_presentations>)
+
+InverseObjectProperties(:is_given_by :gives_presentations)
+ObjectPropertyDomain(:gives_presentations :Active_conference_participant)
+ObjectPropertyRange(:gives_presentations :Presentation)
+
+# Object Property: <http://conference#has_a_committee_chair> (<http://conference#has_a_committee_chair>)
+
+SubObjectPropertyOf(:has_a_committee_chair :has_members)
+InverseObjectProperties(:has_a_committee_chair :was_a_committee_chair_of)
+FunctionalObjectProperty(:has_a_committee_chair)
+ObjectPropertyDomain(:has_a_committee_chair :Committee)
+ObjectPropertyRange(:has_a_committee_chair :Chair)
+
+# Object Property: <http://conference#has_a_committee_co-chair> (<http://conference#has_a_committee_co-chair>)
+
+SubObjectPropertyOf(:has_a_committee_co-chair :has_members)
+InverseObjectProperties(:has_a_committee_co-chair :was_a_committe_co-chair_of)
+ObjectPropertyDomain(:has_a_committee_co-chair :Committee)
+ObjectPropertyRange(:has_a_committee_co-chair :Co-chair)
+
+# Object Property: <http://conference#has_a_commtitee> (<http://conference#has_a_commtitee>)
+
+InverseObjectProperties(:was_a_committee_of :has_a_commtitee)
+ObjectPropertyDomain(:has_a_commtitee :Conference_volume)
+ObjectPropertyRange(:has_a_commtitee :Committee)
+
+# Object Property: <http://conference#has_a_program_committee> (<http://conference#has_a_program_committee>)
+
+SubObjectPropertyOf(:has_a_program_committee :has_a_commtitee)
+InverseObjectProperties(:has_a_program_committee :was_a_program_committee_of)
+FunctionalObjectProperty(:has_a_program_committee)
+ObjectPropertyDomain(:has_a_program_committee :Conference_volume)
+ObjectPropertyRange(:has_a_program_committee :Program_committee)
+
+# Object Property: <http://conference#has_a_publisher> (<http://conference#has_a_publisher>)
+
+InverseObjectProperties(:has_a_publisher :issues)
+FunctionalObjectProperty(:has_a_publisher)
+ObjectPropertyDomain(:has_a_publisher :Conference_proceedings)
+ObjectPropertyRange(:has_a_publisher :Publisher)
+
+# Object Property: <http://conference#has_a_review> (<http://conference#has_a_review>)
+
+InverseObjectProperties(:reviews :has_a_review)
+InverseFunctionalObjectProperty(:has_a_review)
+ObjectPropertyDomain(:has_a_review :Reviewed_contribution)
+ObjectPropertyRange(:has_a_review :Review)
+
+# Object Property: <http://conference#has_a_review_expertise> (<http://conference#has_a_review_expertise>)
+
+InverseObjectProperties(:has_a_submitted_contribution :has_a_review_expertise)
+InverseFunctionalObjectProperty(:has_a_review_expertise)
+ObjectPropertyDomain(:has_a_review_expertise :Submitted_contribution)
+ObjectPropertyRange(:has_a_review_expertise :Review_expertise)
+
+# Object Property: <http://conference#has_a_review_reference_or_expertise> (<http://conference#has_a_review_reference_or_expertise>)
+
+ObjectPropertyDomain(:has_a_review_reference_or_expertise :Reviewer)
+ObjectPropertyRange(:has_a_review_reference_or_expertise ObjectUnionOf(:Review_expertise :Review_preference))
+
+# Object Property: <http://conference#has_a_steering_committee> (<http://conference#has_a_steering_committee>)
+
+SubObjectPropertyOf(:has_a_steering_committee :has_a_commtitee)
+InverseObjectProperties(:has_a_steering_committee :was_a_steering_committee_of)
+FunctionalObjectProperty(:has_a_steering_committee)
+ObjectPropertyDomain(:has_a_steering_committee :Conference_volume)
+ObjectPropertyRange(:has_a_steering_committee :Steering_committee)
+
+# Object Property: <http://conference#has_a_submitted_contribution> (<http://conference#has_a_submitted_contribution>)
+
+FunctionalObjectProperty(:has_a_submitted_contribution)
+ObjectPropertyDomain(:has_a_submitted_contribution :Review_expertise)
+ObjectPropertyRange(:has_a_submitted_contribution :Submitted_contribution)
+
+# Object Property: <http://conference#has_a_topic_or_a_submission_contribution> (<http://conference#has_a_topic_or_a_submission_contribution>)
+
+InverseObjectProperties(:has_been_assigned_a_review_reference :has_a_topic_or_a_submission_contribution)
+FunctionalObjectProperty(:has_a_topic_or_a_submission_contribution)
+ObjectPropertyDomain(:has_a_topic_or_a_submission_contribution :Review_preference)
+ObjectPropertyRange(:has_a_topic_or_a_submission_contribution ObjectUnionOf(:Submitted_contribution :Topic))
+
+# Object Property: <http://conference#has_a_track-workshop-tutorial_chair> (<http://conference#has_a_track-workshop-tutorial_chair>)
+
+InverseObjectProperties(:was_a_track-workshop_chair_of :has_a_track-workshop-tutorial_chair)
+FunctionalObjectProperty(:has_a_track-workshop-tutorial_chair)
+ObjectPropertyDomain(:has_a_track-workshop-tutorial_chair :Conference_part)
+ObjectPropertyRange(:has_a_track-workshop-tutorial_chair :Track-workshop_chair)
+
+# Object Property: <http://conference#has_a_track-workshop-tutorial_topic> (<http://conference#has_a_track-workshop-tutorial_topic>)
+
+InverseObjectProperties(:is_a_topis_of_conference_parts :has_a_track-workshop-tutorial_topic)
+ObjectPropertyDomain(:has_a_track-workshop-tutorial_topic :Conference_part)
+ObjectPropertyRange(:has_a_track-workshop-tutorial_topic :Topic)
+
+# Object Property: <http://conference#has_an_abstract> (<http://conference#has_an_abstract>)
+
+InverseObjectProperties(:is_the_1th_part_of :has_an_abstract)
+FunctionalObjectProperty(:has_an_abstract)
+ObjectPropertyDomain(:has_an_abstract ObjectUnionOf(:Paper :Poster :Presentation))
+ObjectPropertyRange(:has_an_abstract :Abstract)
+
+# Object Property: <http://conference#has_an_organizing_committee> (<http://conference#has_an_organizing_committee>)
+
+SubObjectPropertyOf(:has_an_organizing_committee :has_a_commtitee)
+InverseObjectProperties(:has_an_organizing_committee :was_an_organizing_committee_of)
+FunctionalObjectProperty(:has_an_organizing_committee)
+ObjectPropertyDomain(:has_an_organizing_committee :Conference_volume)
+ObjectPropertyRange(:has_an_organizing_committee :Organizing_committee)
+
+# Object Property: <http://conference#has_authors> (<http://conference#has_authors>)
+
+ObjectPropertyDomain(:has_authors :Conference_document)
+ObjectPropertyRange(:has_authors :Person)
+
+# Object Property: <http://conference#has_been_assigned_a_review_reference> (<http://conference#has_been_assigned_a_review_reference>)
+
+InverseFunctionalObjectProperty(:has_been_assigned_a_review_reference)
+ObjectPropertyDomain(:has_been_assigned_a_review_reference ObjectUnionOf(:Submitted_contribution :Topic))
+ObjectPropertyRange(:has_been_assigned_a_review_reference :Review_preference)
+
+# Object Property: <http://conference#has_contributions> (<http://conference#has_contributions>)
+
+InverseObjectProperties(:is_submitted_at :has_contributions)
+ObjectPropertyDomain(:has_contributions :Conference_volume)
+ObjectPropertyRange(:has_contributions :Conference_contribution)
+
+# Object Property: <http://conference#has_important_dates> (<http://conference#has_important_dates>)
+
+FunctionalObjectProperty(:has_important_dates)
+ObjectPropertyDomain(:has_important_dates :Conference_volume)
+ObjectPropertyRange(:has_important_dates :Important_dates)
+
+# Object Property: <http://conference#has_members> (<http://conference#has_members>)
+
+InverseObjectProperties(:was_a_member_of :has_members)
+ObjectPropertyDomain(:has_members :Committee)
+ObjectPropertyRange(:has_members :Committee_member)
+
+# Object Property: <http://conference#has_parts> (<http://conference#has_parts>)
+
+InverseObjectProperties(:is_part_of_conference_volumes :has_parts)
+ObjectPropertyDomain(:has_parts :Conference_volume)
+ObjectPropertyRange(:has_parts :Conference_part)
+
+# Object Property: <http://conference#has_tracks> (<http://conference#has_tracks>)
+
+SubObjectPropertyOf(:has_tracks :has_parts)
+ObjectPropertyDomain(:has_tracks :Conference_volume)
+ObjectPropertyRange(:has_tracks :Track)
+
+# Object Property: <http://conference#has_tutorials> (<http://conference#has_tutorials>)
+
+SubObjectPropertyOf(:has_tutorials :has_parts)
+ObjectPropertyDomain(:has_tutorials :Conference_volume)
+ObjectPropertyRange(:has_tutorials :Tutorial)
+
+# Object Property: <http://conference#has_workshops> (<http://conference#has_workshops>)
+
+SubObjectPropertyOf(:has_workshops :has_parts)
+ObjectPropertyDomain(:has_workshops :Conference_volume)
+ObjectPropertyRange(:has_workshops :Workshop)
+
+# Object Property: <http://conference#invited_by> (<http://conference#invited_by>)
+
+InverseObjectProperties(:invited_by :invites_co-reviewers)
+ObjectPropertyDomain(:invited_by :Reviewer)
+ObjectPropertyRange(:invited_by :Reviewer)
+
+# Object Property: <http://conference#invites_co-reviewers> (<http://conference#invites_co-reviewers>)
+
+ObjectPropertyDomain(:invites_co-reviewers :Reviewer)
+ObjectPropertyRange(:invites_co-reviewers :Reviewer)
+
+# Object Property: <http://conference#is_a_topis_of_conference_parts> (<http://conference#is_a_topis_of_conference_parts>)
+
+ObjectPropertyDomain(:is_a_topis_of_conference_parts :Topic)
+ObjectPropertyRange(:is_a_topis_of_conference_parts :Conference_part)
+
+# Object Property: <http://conference#is_given_by> (<http://conference#is_given_by>)
+
+ObjectPropertyDomain(:is_given_by :Presentation)
+ObjectPropertyRange(:is_given_by :Active_conference_participant)
+
+# Object Property: <http://conference#is_part_of_conference_volumes> (<http://conference#is_part_of_conference_volumes>)
+
+ObjectPropertyDomain(:is_part_of_conference_volumes :Conference_part)
+ObjectPropertyRange(:is_part_of_conference_volumes :Conference_volume)
+
+# Object Property: <http://conference#is_submitted_at> (<http://conference#is_submitted_at>)
+
+ObjectPropertyDomain(:is_submitted_at :Conference_contribution)
+ObjectPropertyRange(:is_submitted_at :Conference_volume)
+
+# Object Property: <http://conference#is_the_1th_part_of> (<http://conference#is_the_1th_part_of>)
+
+InverseFunctionalObjectProperty(:is_the_1th_part_of)
+ObjectPropertyDomain(:is_the_1th_part_of :Abstract)
+ObjectPropertyRange(:is_the_1th_part_of ObjectUnionOf(:Paper :Poster :Presentation))
+
+# Object Property: <http://conference#issues> (<http://conference#issues>)
+
+InverseFunctionalObjectProperty(:issues)
+ObjectPropertyDomain(:issues :Publisher)
+ObjectPropertyRange(:issues :Conference_proceedings)
+
+# Object Property: <http://conference#reviews> (<http://conference#reviews>)
+
+FunctionalObjectProperty(:reviews)
+ObjectPropertyDomain(:reviews :Review)
+ObjectPropertyRange(:reviews :Reviewed_contribution)
+
+# Object Property: <http://conference#was_a_committe_co-chair_of> (<http://conference#was_a_committe_co-chair_of>)
+
+SubObjectPropertyOf(:was_a_committe_co-chair_of :was_a_member_of)
+ObjectPropertyDomain(:was_a_committe_co-chair_of :Co-chair)
+ObjectPropertyRange(:was_a_committe_co-chair_of :Committee)
+
+# Object Property: <http://conference#was_a_committee_chair_of> (<http://conference#was_a_committee_chair_of>)
+
+SubObjectPropertyOf(:was_a_committee_chair_of :was_a_member_of)
+InverseFunctionalObjectProperty(:was_a_committee_chair_of)
+ObjectPropertyDomain(:was_a_committee_chair_of :Chair)
+ObjectPropertyRange(:was_a_committee_chair_of :Committee)
+
+# Object Property: <http://conference#was_a_committee_of> (<http://conference#was_a_committee_of>)
+
+ObjectPropertyDomain(:was_a_committee_of :Committee)
+ObjectPropertyRange(:was_a_committee_of :Conference_volume)
+
+# Object Property: <http://conference#was_a_member_of> (<http://conference#was_a_member_of>)
+
+ObjectPropertyDomain(:was_a_member_of :Committee_member)
+ObjectPropertyRange(:was_a_member_of :Committee)
+
+# Object Property: <http://conference#was_a_program_committee_of> (<http://conference#was_a_program_committee_of>)
+
+SubObjectPropertyOf(:was_a_program_committee_of :was_a_committee_of)
+InverseFunctionalObjectProperty(:was_a_program_committee_of)
+ObjectPropertyDomain(:was_a_program_committee_of :Program_committee)
+ObjectPropertyRange(:was_a_program_committee_of :Conference_volume)
+
+# Object Property: <http://conference#was_a_steering_committee_of> (<http://conference#was_a_steering_committee_of>)
+
+SubObjectPropertyOf(:was_a_steering_committee_of :was_a_committee_of)
+InverseFunctionalObjectProperty(:was_a_steering_committee_of)
+ObjectPropertyDomain(:was_a_steering_committee_of :Steering_committee)
+ObjectPropertyRange(:was_a_steering_committee_of :Conference_volume)
+
+# Object Property: <http://conference#was_a_track-workshop_chair_of> (<http://conference#was_a_track-workshop_chair_of>)
+
+InverseFunctionalObjectProperty(:was_a_track-workshop_chair_of)
+ObjectPropertyDomain(:was_a_track-workshop_chair_of :Track-workshop_chair)
+ObjectPropertyRange(:was_a_track-workshop_chair_of :Conference_part)
+
+# Object Property: <http://conference#was_an_organizing_committee_of> (<http://conference#was_an_organizing_committee_of>)
+
+SubObjectPropertyOf(:was_an_organizing_committee_of :was_a_committee_of)
+InverseFunctionalObjectProperty(:was_an_organizing_committee_of)
+ObjectPropertyDomain(:was_an_organizing_committee_of :Organizing_committee)
+ObjectPropertyRange(:was_an_organizing_committee_of :Conference_volume)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://conference#has_a_URL> (<http://conference#has_a_URL>)
+
+FunctionalDataProperty(:has_a_URL)
+DataPropertyDomain(:has_a_URL :Conference_www)
+DataPropertyRange(:has_a_URL xsd:string)
+
+# Data Property: <http://conference#has_a_date_of_issue> (<http://conference#has_a_date_of_issue>)
+
+FunctionalDataProperty(:has_a_date_of_issue)
+DataPropertyDomain(:has_a_date_of_issue :Conference_document)
+DataPropertyRange(:has_a_date_of_issue xsd:date)
+
+# Data Property: <http://conference#has_a_degree> (<http://conference#has_a_degree>)
+
+FunctionalDataProperty(:has_a_degree)
+DataPropertyDomain(:has_a_degree :Review_preference)
+DataPropertyRange(:has_a_degree xsd:int)
+
+# Data Property: <http://conference#has_a_location> (<http://conference#has_a_location>)
+
+DataPropertyDomain(:has_a_location :Conference_volume)
+DataPropertyRange(:has_a_location xsd:string)
+
+# Data Property: <http://conference#has_a_name> (<http://conference#has_a_name>)
+
+FunctionalDataProperty(:has_a_name)
+DataPropertyDomain(:has_a_name ObjectUnionOf(:Conference :Conference_part :Conference_proceedings :Publisher :Topic))
+DataPropertyRange(:has_a_name xsd:string)
+
+# Data Property: <http://conference#has_a_volume> (<http://conference#has_a_volume>)
+
+FunctionalDataProperty(:has_a_volume)
+DataPropertyDomain(:has_a_volume :Conference_proceedings)
+DataPropertyRange(:has_a_volume xsd:int)
+
+# Data Property: <http://conference#has_an_ISBN> (<http://conference#has_an_ISBN>)
+
+FunctionalDataProperty(:has_an_ISBN)
+DataPropertyDomain(:has_an_ISBN :Conference_proceedings)
+DataPropertyRange(:has_an_ISBN xsd:string)
+
+# Data Property: <http://conference#has_an_email> (<http://conference#has_an_email>)
+
+DataPropertyDomain(:has_an_email :Person)
+DataPropertyRange(:has_an_email xsd:string)
+
+# Data Property: <http://conference#has_an_expertise> (<http://conference#has_an_expertise>)
+
+FunctionalDataProperty(:has_an_expertise)
+DataPropertyDomain(:has_an_expertise :Review_expertise)
+DataPropertyRange(:has_an_expertise xsd:string)
+
+# Data Property: <http://conference#has_gender> (<http://conference#has_gender>)
+
+FunctionalDataProperty(:has_gender)
+DataPropertyDomain(:has_gender :Person)
+DataPropertyRange(:has_gender xsd:string)
+
+# Data Property: <http://conference#has_the_first_name> (<http://conference#has_the_first_name>)
+
+DataPropertyDomain(:has_the_first_name :Person)
+DataPropertyRange(:has_the_first_name xsd:string)
+
+# Data Property: <http://conference#has_the_last_name> (<http://conference#has_the_last_name>)
+
+FunctionalDataProperty(:has_the_last_name)
+DataPropertyDomain(:has_the_last_name :Person)
+DataPropertyRange(:has_the_last_name xsd:string)
+
+# Data Property: <http://conference#is_a_date_of_acceptance_announcement> (<http://conference#is_a_date_of_acceptance_announcement>)
+
+FunctionalDataProperty(:is_a_date_of_acceptance_announcement)
+DataPropertyDomain(:is_a_date_of_acceptance_announcement :Important_dates)
+DataPropertyRange(:is_a_date_of_acceptance_announcement xsd:date)
+
+# Data Property: <http://conference#is_a_date_of_camera_ready_paper_submission> (<http://conference#is_a_date_of_camera_ready_paper_submission>)
+
+FunctionalDataProperty(:is_a_date_of_camera_ready_paper_submission)
+DataPropertyDomain(:is_a_date_of_camera_ready_paper_submission :Important_dates)
+DataPropertyRange(:is_a_date_of_camera_ready_paper_submission xsd:date)
+
+# Data Property: <http://conference#is_a_full_paper_submission_date> (<http://conference#is_a_full_paper_submission_date>)
+
+FunctionalDataProperty(:is_a_full_paper_submission_date)
+DataPropertyDomain(:is_a_full_paper_submission_date :Important_dates)
+DataPropertyRange(:is_a_full_paper_submission_date xsd:date)
+
+# Data Property: <http://conference#is_a_starting_date> (<http://conference#is_a_starting_date>)
+
+FunctionalDataProperty(:is_a_starting_date)
+DataPropertyDomain(:is_a_starting_date :Important_dates)
+DataPropertyRange(:is_a_starting_date xsd:date)
+
+# Data Property: <http://conference#is_an_abstract_submission_date> (<http://conference#is_an_abstract_submission_date>)
+
+FunctionalDataProperty(:is_an_abstract_submission_date)
+DataPropertyDomain(:is_an_abstract_submission_date :Important_dates)
+DataPropertyRange(:is_an_abstract_submission_date xsd:date)
+
+# Data Property: <http://conference#is_an_ending_date> (<http://conference#is_an_ending_date>)
+
+FunctionalDataProperty(:is_an_ending_date)
+DataPropertyDomain(:is_an_ending_date :Important_dates)
+DataPropertyRange(:is_an_ending_date xsd:date)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://conference#Abstract> (<http://conference#Abstract>)
+
+SubClassOf(:Abstract :Extended_abstract)
+
+# Class: <http://conference#Accepted_contribution> (<http://conference#Accepted_contribution>)
+
+SubClassOf(:Accepted_contribution :Reviewed_contribution)
+DisjointClasses(:Accepted_contribution :Rejected_contribution)
+
+# Class: <http://conference#Active_conference_participant> (<http://conference#Active_conference_participant>)
+
+SubClassOf(:Active_conference_participant :Conference_contributor)
+SubClassOf(:Active_conference_participant :Conference_participant)
+SubClassOf(:Active_conference_participant ObjectUnionOf(:Invited_speaker :Regular_author))
+DisjointClasses(:Active_conference_participant :Passive_conference_participant)
+
+# Class: <http://conference#Call_for_paper> (<http://conference#Call_for_paper>)
+
+SubClassOf(:Call_for_paper :Conference_document)
+
+# Class: <http://conference#Call_for_participation> (<http://conference#Call_for_participation>)
+
+SubClassOf(:Call_for_participation :Conference_document)
+
+# Class: <http://conference#Camera_ready_contribution> (<http://conference#Camera_ready_contribution>)
+
+SubClassOf(:Camera_ready_contribution :Accepted_contribution)
+
+# Class: <http://conference#Chair> (<http://conference#Chair>)
+
+EquivalentClasses(:Chair ObjectSomeValuesFrom(:was_a_committee_chair_of :Committee))
+SubClassOf(:Chair :Committee_member)
+
+# Class: <http://conference#Co-chair> (<http://conference#Co-chair>)
+
+EquivalentClasses(:Co-chair ObjectSomeValuesFrom(:was_a_committe_co-chair_of :Committee))
+SubClassOf(:Co-chair :Committee_member)
+
+# Class: <http://conference#Committee> (<http://conference#Committee>)
+
+EquivalentClasses(:Committee ObjectUnionOf(:Organizing_committee :Program_committee :Steering_committee))
+
+# Class: <http://conference#Committee_member> (<http://conference#Committee_member>)
+
+EquivalentClasses(:Committee_member ObjectSomeValuesFrom(:was_a_member_of :Committee))
+SubClassOf(:Committee_member :Person)
+
+# Class: <http://conference#Conference_announcement> (<http://conference#Conference_announcement>)
+
+SubClassOf(:Conference_announcement :Conference_document)
+
+# Class: <http://conference#Conference_applicant> (<http://conference#Conference_applicant>)
+
+SubClassOf(:Conference_applicant :Person)
+
+# Class: <http://conference#Conference_contribution> (<http://conference#Conference_contribution>)
+
+EquivalentClasses(:Conference_contribution ObjectUnionOf(:Invited_talk :Poster :Regular_contribution))
+EquivalentClasses(:Conference_contribution ObjectUnionOf(:Presentation :Written_contribution))
+SubClassOf(:Conference_contribution :Conference_document)
+
+# Class: <http://conference#Conference_contributor> (<http://conference#Conference_contributor>)
+
+SubClassOf(:Conference_contributor :Person)
+
+# Class: <http://conference#Conference_participant> (<http://conference#Conference_participant>)
+
+EquivalentClasses(:Conference_participant ObjectUnionOf(:Active_conference_participant :Passive_conference_participant))
+SubClassOf(:Conference_participant :Person)
+
+# Class: <http://conference#Conference_volume> (<http://conference#Conference_volume>)
+
+SubClassOf(:Conference_volume :Conference)
+
+# Class: <http://conference#Conference_www> (<http://conference#Conference_www>)
+
+SubClassOf(:Conference_www :Conference_document)
+
+# Class: <http://conference#Contribution_1th-author> (<http://conference#Contribution_1th-author>)
+
+SubClassOf(:Contribution_1th-author :Regular_author)
+DisjointClasses(:Contribution_1th-author :Contribution_co-author)
+
+# Class: <http://conference#Contribution_co-author> (<http://conference#Contribution_co-author>)
+
+SubClassOf(:Contribution_co-author :Regular_author)
+
+# Class: <http://conference#Early_paid_applicant> (<http://conference#Early_paid_applicant>)
+
+SubClassOf(:Early_paid_applicant :Paid_applicant)
+DisjointClasses(:Early_paid_applicant :Late_paid_applicant)
+
+# Class: <http://conference#Extended_abstract> (<http://conference#Extended_abstract>)
+
+SubClassOf(:Extended_abstract :Regular_contribution)
+DisjointClasses(:Extended_abstract :Paper)
+
+# Class: <http://conference#Information_for_participants> (<http://conference#Information_for_participants>)
+
+SubClassOf(:Information_for_participants :Conference_document)
+
+# Class: <http://conference#Invited_speaker> (<http://conference#Invited_speaker>)
+
+EquivalentClasses(:Invited_speaker ObjectSomeValuesFrom(:contributes :Invited_talk))
+SubClassOf(:Invited_speaker :Conference_contributor)
+
+# Class: <http://conference#Invited_talk> (<http://conference#Invited_talk>)
+
+SubClassOf(:Invited_talk :Presentation)
+DisjointClasses(:Invited_talk :Poster)
+DisjointClasses(:Invited_talk :Regular_contribution)
+
+# Class: <http://conference#Late_paid_applicant> (<http://conference#Late_paid_applicant>)
+
+SubClassOf(:Late_paid_applicant :Paid_applicant)
+
+# Class: <http://conference#Organizer> (<http://conference#Organizer>)
+
+SubClassOf(:Organizer owl:Thing)
+SubClassOf(:Organizer ObjectUnionOf(:Committee_member :Organization))
+
+# Class: <http://conference#Organizing_committee> (<http://conference#Organizing_committee>)
+
+SubClassOf(:Organizing_committee :Committee)
+DisjointClasses(:Organizing_committee :Program_committee)
+DisjointClasses(:Organizing_committee :Steering_committee)
+
+# Class: <http://conference#Paid_applicant> (<http://conference#Paid_applicant>)
+
+EquivalentClasses(:Paid_applicant ObjectUnionOf(:Early_paid_applicant :Late_paid_applicant))
+SubClassOf(:Paid_applicant :Registeered_applicant)
+
+# Class: <http://conference#Paper> (<http://conference#Paper>)
+
+SubClassOf(:Paper :Regular_contribution)
+
+# Class: <http://conference#Passive_conference_participant> (<http://conference#Passive_conference_participant>)
+
+SubClassOf(:Passive_conference_participant :Conference_participant)
+
+# Class: <http://conference#Poster> (<http://conference#Poster>)
+
+SubClassOf(:Poster :Conference_contribution)
+DisjointClasses(:Poster :Regular_contribution)
+
+# Class: <http://conference#Presentation> (<http://conference#Presentation>)
+
+SubClassOf(:Presentation :Conference_contribution)
+
+# Class: <http://conference#Program_committee> (<http://conference#Program_committee>)
+
+SubClassOf(:Program_committee :Committee)
+DisjointClasses(:Program_committee :Steering_committee)
+
+# Class: <http://conference#Registeered_applicant> (<http://conference#Registeered_applicant>)
+
+SubClassOf(:Registeered_applicant :Conference_applicant)
+
+# Class: <http://conference#Regular_author> (<http://conference#Regular_author>)
+
+EquivalentClasses(:Regular_author ObjectIntersectionOf(ObjectUnionOf(:Contribution_1th-author :Contribution_co-author) ObjectSomeValuesFrom(:contributes :Conference_contribution)))
+SubClassOf(:Regular_author :Conference_contributor)
+
+# Class: <http://conference#Regular_contribution> (<http://conference#Regular_contribution>)
+
+EquivalentClasses(:Regular_contribution ObjectUnionOf(:Extended_abstract :Paper))
+SubClassOf(:Regular_contribution :Written_contribution)
+
+# Class: <http://conference#Rejected_contribution> (<http://conference#Rejected_contribution>)
+
+SubClassOf(:Rejected_contribution :Reviewed_contribution)
+
+# Class: <http://conference#Review> (<http://conference#Review>)
+
+SubClassOf(:Review :Conference_document)
+SubClassOf(:Review ObjectAllValuesFrom(:has_authors :Reviewer))
+
+# Class: <http://conference#Review_expertise> (<http://conference#Review_expertise>)
+
+SubClassOf(:Review_expertise owl:Thing)
+SubClassOf(:Review_expertise ObjectSomeValuesFrom(:belongs_to_reviewers :Reviewer))
+SubClassOf(:Review_expertise ObjectSomeValuesFrom(:has_a_submitted_contribution :Submitted_contribution))
+
+# Class: <http://conference#Review_preference> (<http://conference#Review_preference>)
+
+SubClassOf(:Review_preference owl:Thing)
+SubClassOf(:Review_preference ObjectSomeValuesFrom(:belongs_to_reviewers :Reviewer))
+SubClassOf(:Review_preference ObjectSomeValuesFrom(:has_a_topic_or_a_submission_contribution ObjectUnionOf(:Submitted_contribution :Topic)))
+
+# Class: <http://conference#Reviewed_contribution> (<http://conference#Reviewed_contribution>)
+
+EquivalentClasses(:Reviewed_contribution ObjectUnionOf(:Accepted_contribution :Rejected_contribution))
+SubClassOf(:Reviewed_contribution :Submitted_contribution)
+
+# Class: <http://conference#Reviewer> (<http://conference#Reviewer>)
+
+SubClassOf(:Reviewer :Person)
+
+# Class: <http://conference#Steering_committee> (<http://conference#Steering_committee>)
+
+SubClassOf(:Steering_committee :Committee)
+
+# Class: <http://conference#Submitted_contribution> (<http://conference#Submitted_contribution>)
+
+SubClassOf(:Submitted_contribution :Written_contribution)
+SubClassOf(:Submitted_contribution ObjectUnionOf(:Poster :Regular_contribution))
+
+# Class: <http://conference#Track> (<http://conference#Track>)
+
+SubClassOf(:Track :Conference_part)
+DisjointClasses(:Track :Tutorial)
+DisjointClasses(:Track :Workshop)
+
+# Class: <http://conference#Track-workshop_chair> (<http://conference#Track-workshop_chair>)
+
+EquivalentClasses(:Track-workshop_chair ObjectSomeValuesFrom(:was_a_track-workshop_chair_of ObjectUnionOf(:Track :Workshop)))
+SubClassOf(:Track-workshop_chair :Person)
+
+# Class: <http://conference#Tutorial> (<http://conference#Tutorial>)
+
+SubClassOf(:Tutorial :Conference_part)
+DisjointClasses(:Tutorial :Workshop)
+
+# Class: <http://conference#Workshop> (<http://conference#Workshop>)
+
+SubClassOf(:Workshop :Conference_part)
+
+# Class: <http://conference#Written_contribution> (<http://conference#Written_contribution>)
+
+SubClassOf(:Written_contribution :Conference_contribution)
+SubClassOf(:Written_contribution ObjectUnionOf(:Poster :Regular_contribution))
+
+
+)

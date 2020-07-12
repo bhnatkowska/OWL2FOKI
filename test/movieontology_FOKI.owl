@@ -1,0 +1,2350 @@
+Prefix(:=<http://www.movieontology.org/2009/10/01/movieontology.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(www:=<http://www.movieontology.org/2009/11/09/>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(page:=<http://dbpedia.org/page/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl2xml:=<http://www.w3.org/2006/12/owl2-xml#>)
+Prefix(ontology:=<http://dbpedia.org/ontology/>)
+Prefix(movieontology:=<http://www.movieontology.org/2009/10/01/movieontology.owl#>)
+Prefix(movieontology2:=<http://www.movieontology.org/2009/11/09/movieontology.owl#>)
+
+
+Ontology(<http://www.movieontology.org/2009/11/09/movieontology.owl>
+Import(<http://dbpedia.org/ontology/>)
+Annotation(dc:contributor "Amancio Bouza")
+Annotation(dc:creator "Amancio Bouza")
+Annotation(dc:date "20.01.2010")
+Annotation(dc:description "MO - Movie ontology")
+Annotation(dc:publisher "Amancio Bouza")
+
+Declaration(Class(ontology:Actor))
+Declaration(Class(ontology:Country))
+Declaration(Class(ontology:Language))
+Declaration(Class(ontology:Musical_Artist))
+Declaration(Class(ontology:Person))
+Declaration(Class(ontology:Writer))
+Declaration(Class(page:Film_Director))
+Declaration(Class(page:Place))
+Declaration(Class(movieontology:Actionreach))
+Declaration(Class(movieontology:Africa))
+Declaration(Class(movieontology:America))
+Declaration(Class(movieontology:Asia))
+Declaration(Class(movieontology:Australia_and_New_Zealand))
+Declaration(Class(movieontology:Award))
+Declaration(Class(movieontology:Brute_Action))
+Declaration(Class(movieontology:Caribbean))
+Declaration(Class(movieontology:Central_America))
+Declaration(Class(movieontology:Central_Asia))
+Declaration(Class(movieontology:Certification))
+Declaration(Class(movieontology:Colorinfo))
+Declaration(Class(movieontology:Costume_Designer))
+Declaration(Class(movieontology:Documentarial_Information))
+Declaration(Class(movieontology:Eastern_Africa))
+Declaration(Class(movieontology:Eastern_Asia))
+Declaration(Class(movieontology:Eastern_Europe))
+Declaration(Class(movieontology:Editor))
+Declaration(Class(movieontology:Entertaining_Information))
+Declaration(Class(movieontology:Entertainment))
+Declaration(Class(movieontology:Europe))
+Declaration(Class(movieontology:Experience))
+Declaration(Class(movieontology:Fast-Info))
+Declaration(Class(movieontology:Fun))
+Declaration(Class(movieontology:Genre))
+Declaration(Class(movieontology:Heavy_Sensible))
+Declaration(Class(movieontology:Historical_Information))
+Declaration(Class(movieontology:Imaginational_Entertainment))
+Declaration(Class(movieontology:Info-TV))
+Declaration(Class(movieontology:Information))
+Declaration(Class(movieontology:Intelectual_Entertainment))
+Declaration(Class(movieontology:Kids))
+Declaration(Class(movieontology:LatinAmerica))
+Declaration(Class(movieontology:Logical_Thrilling))
+Declaration(Class(movieontology:Love))
+Declaration(Class(movieontology:Melanesia))
+Declaration(Class(movieontology:Micronesia))
+Declaration(Class(movieontology:Middle_Africa))
+Declaration(Class(movieontology:Musical_Entertainment))
+Declaration(Class(movieontology:Northern_Africa))
+Declaration(Class(movieontology:Northern_America))
+Declaration(Class(movieontology:Northern_Europe))
+Declaration(Class(movieontology:Oceania))
+Declaration(Class(movieontology:Old_Action))
+Declaration(Class(movieontology:Online_retailer))
+Declaration(Class(movieontology:Polynesia))
+Declaration(Class(movieontology:Porn))
+Declaration(Class(movieontology:Presentation))
+Declaration(Class(movieontology:Producer))
+Declaration(Class(movieontology:Production_Company))
+Declaration(Class(movieontology:SciFi_and_Fantasy))
+Declaration(Class(movieontology:Sensible))
+Declaration(Class(movieontology:Sensible_Thrilling))
+Declaration(Class(movieontology:SocialActive))
+Declaration(Class(movieontology:Sound_Mix))
+Declaration(Class(movieontology:South_America))
+Declaration(Class(movieontology:Southeastern_Asia))
+Declaration(Class(movieontology:Southern_Africa))
+Declaration(Class(movieontology:Southern_Asia))
+Declaration(Class(movieontology:Southern_Europe))
+Declaration(Class(movieontology:Special-Info))
+Declaration(Class(movieontology:TV-Entertainment))
+Declaration(Class(movieontology:Territory))
+Declaration(Class(movieontology:Thrilling))
+Declaration(Class(movieontology:Western_Africa))
+Declaration(Class(movieontology:Western_Asia))
+Declaration(Class(movieontology:Western_Europe))
+Declaration(Class(www:Movie))
+Declaration(Class(movieontology2:Consumable_Product))
+Declaration(Class(owl:Thing))
+Declaration(ObjectProperty(movieontology:belongsToGenre))
+Declaration(ObjectProperty(movieontology:containsCountry))
+Declaration(ObjectProperty(movieontology:enablesConsumptionOf))
+Declaration(ObjectProperty(movieontology:hasActor))
+Declaration(ObjectProperty(movieontology:hasActress))
+Declaration(ObjectProperty(movieontology:hasColor))
+Declaration(ObjectProperty(movieontology:hasComposer))
+Declaration(ObjectProperty(movieontology:hasCostumeDesigner))
+Declaration(ObjectProperty(movieontology:hasDirector))
+Declaration(ObjectProperty(movieontology:hasEditor))
+Declaration(ObjectProperty(movieontology:hasFilmLocation))
+Declaration(ObjectProperty(movieontology:hasMaleActor))
+Declaration(ObjectProperty(movieontology:hasProducer))
+Declaration(ObjectProperty(movieontology:hasReleasingCountry))
+Declaration(ObjectProperty(movieontology:hasSoundmix))
+Declaration(ObjectProperty(movieontology:hasTranslatedMovie))
+Declaration(ObjectProperty(movieontology:isActorIn))
+Declaration(ObjectProperty(movieontology:isActressIn))
+Declaration(ObjectProperty(movieontology:isAwardedWith))
+Declaration(ObjectProperty(movieontology:isCertificationOf))
+Declaration(ObjectProperty(movieontology:isCertifiedWith))
+Declaration(ObjectProperty(movieontology:isColorOf))
+Declaration(ObjectProperty(movieontology:isComposerIn))
+Declaration(ObjectProperty(movieontology:isConsumableAs))
+Declaration(ObjectProperty(movieontology:isCostumeDesignerIn))
+Declaration(ObjectProperty(movieontology:isDirectorOf))
+Declaration(ObjectProperty(movieontology:isEditorIn))
+Declaration(ObjectProperty(movieontology:isFilmLocationOf))
+Declaration(ObjectProperty(movieontology:isGenreOf))
+Declaration(ObjectProperty(movieontology:isProducedBy))
+Declaration(ObjectProperty(movieontology:isReleasingCountryOf))
+Declaration(ObjectProperty(movieontology:isSoundmixOf))
+Declaration(ObjectProperty(movieontology:isTranslatedTo))
+Declaration(ObjectProperty(movieontology:nominatedFor))
+Declaration(ObjectProperty(movieontology:partOfTerritory))
+Declaration(ObjectProperty(movieontology:produced))
+Declaration(ObjectProperty(movieontology2:isAwardOf))
+Declaration(ObjectProperty(movieontology2:isMaleActorIn))
+Declaration(DataProperty(movieontology:imdbrating))
+Declaration(DataProperty(movieontology:releasedate))
+Declaration(DataProperty(movieontology:runtime))
+Declaration(DataProperty(movieontology:title))
+Declaration(NamedIndividual(movieontology:Action))
+Declaration(NamedIndividual(movieontology:Adult))
+Declaration(NamedIndividual(movieontology:Adventure))
+Declaration(NamedIndividual(movieontology:Afghanistan))
+Declaration(NamedIndividual(movieontology:Aland_Islands))
+Declaration(NamedIndividual(movieontology:Albania))
+Declaration(NamedIndividual(movieontology:Algeria))
+Declaration(NamedIndividual(movieontology:Amazon.com_retailer))
+Declaration(NamedIndividual(movieontology:American_Samoa))
+Declaration(NamedIndividual(movieontology:Andorra))
+Declaration(NamedIndividual(movieontology:Angola))
+Declaration(NamedIndividual(movieontology:Anguilla))
+Declaration(NamedIndividual(movieontology:Animation))
+Declaration(NamedIndividual(movieontology:Antigua_and_Barbuda))
+Declaration(NamedIndividual(movieontology:Argentina))
+Declaration(NamedIndividual(movieontology:Armenia))
+Declaration(NamedIndividual(movieontology:Aruba))
+Declaration(NamedIndividual(movieontology:Australia))
+Declaration(NamedIndividual(movieontology:Austria))
+Declaration(NamedIndividual(movieontology:Azerbaijan))
+Declaration(NamedIndividual(movieontology:BAFTA_Film_Award))
+Declaration(NamedIndividual(movieontology:Bahamas))
+Declaration(NamedIndividual(movieontology:Bahrain))
+Declaration(NamedIndividual(movieontology:Bangladesh))
+Declaration(NamedIndividual(movieontology:Barbados))
+Declaration(NamedIndividual(movieontology:Belarus))
+Declaration(NamedIndividual(movieontology:Belgium))
+Declaration(NamedIndividual(movieontology:Belize))
+Declaration(NamedIndividual(movieontology:Benin))
+Declaration(NamedIndividual(movieontology:Bermuda))
+Declaration(NamedIndividual(movieontology:Bhutan))
+Declaration(NamedIndividual(movieontology:Biography))
+Declaration(NamedIndividual(movieontology:Black_and_White))
+Declaration(NamedIndividual(movieontology:Blockbuster.com_retailer))
+Declaration(NamedIndividual(movieontology:Bolivia))
+Declaration(NamedIndividual(movieontology:Bosnia-Herzegovina))
+Declaration(NamedIndividual(movieontology:Botswana))
+Declaration(NamedIndividual(movieontology:Brazil))
+Declaration(NamedIndividual(movieontology:British_Virgin_Islands))
+Declaration(NamedIndividual(movieontology:Brunei_Darussalam))
+Declaration(NamedIndividual(movieontology:Bulgaria))
+Declaration(NamedIndividual(movieontology:Burkina_Faso))
+Declaration(NamedIndividual(movieontology:Burma))
+Declaration(NamedIndividual(movieontology:Burundi))
+Declaration(NamedIndividual(movieontology:Cambodia))
+Declaration(NamedIndividual(movieontology:Cameroon))
+Declaration(NamedIndividual(movieontology:Canada))
+Declaration(NamedIndividual(movieontology:Cape_Verde))
+Declaration(NamedIndividual(movieontology:Cayman_Islands))
+Declaration(NamedIndividual(movieontology:Central_African_Republic))
+Declaration(NamedIndividual(movieontology:Chad))
+Declaration(NamedIndividual(movieontology:Channel_Islands))
+Declaration(NamedIndividual(movieontology:Chile))
+Declaration(NamedIndividual(movieontology:China))
+Declaration(NamedIndividual(movieontology:Colombia))
+Declaration(NamedIndividual(movieontology:Color))
+Declaration(NamedIndividual(movieontology:Comedy))
+Declaration(NamedIndividual(movieontology:Comoros))
+Declaration(NamedIndividual(movieontology:Congo))
+Declaration(NamedIndividual(movieontology:Cook_Islands))
+Declaration(NamedIndividual(movieontology:Costa_Rica))
+Declaration(NamedIndividual(movieontology:Crime))
+Declaration(NamedIndividual(movieontology:Croatia))
+Declaration(NamedIndividual(movieontology:Cuba))
+Declaration(NamedIndividual(movieontology:Cyprus))
+Declaration(NamedIndividual(movieontology:Czech_Republic))
+Declaration(NamedIndividual(movieontology:Denmark))
+Declaration(NamedIndividual(movieontology:Djibouti))
+Declaration(NamedIndividual(movieontology:Documentary))
+Declaration(NamedIndividual(movieontology:Dominica))
+Declaration(NamedIndividual(movieontology:Dominican_Republic))
+Declaration(NamedIndividual(movieontology:Drama))
+Declaration(NamedIndividual(movieontology:Ecuador))
+Declaration(NamedIndividual(movieontology:Egypt))
+Declaration(NamedIndividual(movieontology:El_Salvador))
+Declaration(NamedIndividual(movieontology:Equatorial_Guinea))
+Declaration(NamedIndividual(movieontology:Eritrea))
+Declaration(NamedIndividual(movieontology:Estonia))
+Declaration(NamedIndividual(movieontology:Ethiopia))
+Declaration(NamedIndividual(movieontology:Falkland_Islands))
+Declaration(NamedIndividual(movieontology:Family))
+Declaration(NamedIndividual(movieontology:Fantasy))
+Declaration(NamedIndividual(movieontology:Faroe_Islands))
+Declaration(NamedIndividual(movieontology:Federated_States_of_Micronesia))
+Declaration(NamedIndividual(movieontology:Fiji))
+Declaration(NamedIndividual(movieontology:Film-Noir))
+Declaration(NamedIndividual(movieontology:Finland))
+Declaration(NamedIndividual(movieontology:France))
+Declaration(NamedIndividual(movieontology:French_Guiana))
+Declaration(NamedIndividual(movieontology:French_Polynesia))
+Declaration(NamedIndividual(movieontology:Gabon))
+Declaration(NamedIndividual(movieontology:Gambia))
+Declaration(NamedIndividual(movieontology:Game-Show))
+Declaration(NamedIndividual(movieontology:Georgia))
+Declaration(NamedIndividual(movieontology:Germany))
+Declaration(NamedIndividual(movieontology:Ghana))
+Declaration(NamedIndividual(movieontology:Gibraltar))
+Declaration(NamedIndividual(movieontology:Golden_Globe_Award))
+Declaration(NamedIndividual(movieontology:Greece))
+Declaration(NamedIndividual(movieontology:Greenland))
+Declaration(NamedIndividual(movieontology:Grenada))
+Declaration(NamedIndividual(movieontology:Guadeloupe))
+Declaration(NamedIndividual(movieontology:Guam))
+Declaration(NamedIndividual(movieontology:Guatemala))
+Declaration(NamedIndividual(movieontology:Guernesey))
+Declaration(NamedIndividual(movieontology:Guinea))
+Declaration(NamedIndividual(movieontology:Guinea-Bassau))
+Declaration(NamedIndividual(movieontology:Guyana))
+Declaration(NamedIndividual(movieontology:Haiti))
+Declaration(NamedIndividual(movieontology:History))
+Declaration(NamedIndividual(movieontology:Holy_See))
+Declaration(NamedIndividual(movieontology:Honduras))
+Declaration(NamedIndividual(movieontology:Hong_Kong))
+Declaration(NamedIndividual(movieontology:Horror))
+Declaration(NamedIndividual(movieontology:Hungary))
+Declaration(NamedIndividual(movieontology:Iceland))
+Declaration(NamedIndividual(movieontology:India))
+Declaration(NamedIndividual(movieontology:Indonesia))
+Declaration(NamedIndividual(movieontology:Iran))
+Declaration(NamedIndividual(movieontology:Iraq))
+Declaration(NamedIndividual(movieontology:Ireland))
+Declaration(NamedIndividual(movieontology:Isle_of_Man))
+Declaration(NamedIndividual(movieontology:Israel))
+Declaration(NamedIndividual(movieontology:Italy))
+Declaration(NamedIndividual(movieontology:Ivory_Coast))
+Declaration(NamedIndividual(movieontology:Jamaica))
+Declaration(NamedIndividual(movieontology:Japan))
+Declaration(NamedIndividual(movieontology:Jersey))
+Declaration(NamedIndividual(movieontology:Jordan))
+Declaration(NamedIndividual(movieontology:Kazakhstan))
+Declaration(NamedIndividual(movieontology:Kenya))
+Declaration(NamedIndividual(movieontology:Kiribati))
+Declaration(NamedIndividual(movieontology:Kuwait))
+Declaration(NamedIndividual(movieontology:Kyrgyzstan))
+Declaration(NamedIndividual(movieontology:Laos))
+Declaration(NamedIndividual(movieontology:Latvia))
+Declaration(NamedIndividual(movieontology:Lebanon))
+Declaration(NamedIndividual(movieontology:Lesotho))
+Declaration(NamedIndividual(movieontology:Liberia))
+Declaration(NamedIndividual(movieontology:Libya))
+Declaration(NamedIndividual(movieontology:Liechtenstein))
+Declaration(NamedIndividual(movieontology:Lithuania))
+Declaration(NamedIndividual(movieontology:Luxembourg))
+Declaration(NamedIndividual(movieontology:Macao))
+Declaration(NamedIndividual(movieontology:Madagascar))
+Declaration(NamedIndividual(movieontology:Malawi))
+Declaration(NamedIndividual(movieontology:Malaysia))
+Declaration(NamedIndividual(movieontology:Maldives))
+Declaration(NamedIndividual(movieontology:Mali))
+Declaration(NamedIndividual(movieontology:Malta))
+Declaration(NamedIndividual(movieontology:Marshal_lIsland))
+Declaration(NamedIndividual(movieontology:Martinique))
+Declaration(NamedIndividual(movieontology:Mauritania))
+Declaration(NamedIndividual(movieontology:Mauritius))
+Declaration(NamedIndividual(movieontology:Mayotte))
+Declaration(NamedIndividual(movieontology:Mexico))
+Declaration(NamedIndividual(movieontology:Miscellaneous_Award))
+Declaration(NamedIndividual(movieontology:Moldova))
+Declaration(NamedIndividual(movieontology:Monaco))
+Declaration(NamedIndividual(movieontology:Mongolia))
+Declaration(NamedIndividual(movieontology:Montenegro))
+Declaration(NamedIndividual(movieontology:Montserrat))
+Declaration(NamedIndividual(movieontology:Morocco))
+Declaration(NamedIndividual(movieontology:Mozambique))
+Declaration(NamedIndividual(movieontology:Music))
+Declaration(NamedIndividual(movieontology:Musical))
+Declaration(NamedIndividual(movieontology:Myanmar))
+Declaration(NamedIndividual(movieontology:Mystery))
+Declaration(NamedIndividual(movieontology:Namibia))
+Declaration(NamedIndividual(movieontology:Nauru))
+Declaration(NamedIndividual(movieontology:Nepal))
+Declaration(NamedIndividual(movieontology:Netflix.com_retailer))
+Declaration(NamedIndividual(movieontology:Netherlands))
+Declaration(NamedIndividual(movieontology:Netherlands_Antilles))
+Declaration(NamedIndividual(movieontology:New_Caledonia))
+Declaration(NamedIndividual(movieontology:New_Zealand))
+Declaration(NamedIndividual(movieontology:News))
+Declaration(NamedIndividual(movieontology:Nicaragua))
+Declaration(NamedIndividual(movieontology:Niger))
+Declaration(NamedIndividual(movieontology:Nigeria))
+Declaration(NamedIndividual(movieontology:Niue))
+Declaration(NamedIndividual(movieontology:Norfolk_Island))
+Declaration(NamedIndividual(movieontology:North_Korea))
+Declaration(NamedIndividual(movieontology:Northern_Mariana_Islands))
+Declaration(NamedIndividual(movieontology:Norway))
+Declaration(NamedIndividual(movieontology:Oman))
+Declaration(NamedIndividual(movieontology:Oscar_Award))
+Declaration(NamedIndividual(movieontology:Pakistan))
+Declaration(NamedIndividual(movieontology:Palau))
+Declaration(NamedIndividual(movieontology:Palestine))
+Declaration(NamedIndividual(movieontology:Panama))
+Declaration(NamedIndividual(movieontology:Papua_New_Guinea))
+Declaration(NamedIndividual(movieontology:Paraguay))
+Declaration(NamedIndividual(movieontology:Peru))
+Declaration(NamedIndividual(movieontology:Philippines))
+Declaration(NamedIndividual(movieontology:Pitcairn))
+Declaration(NamedIndividual(movieontology:Poland))
+Declaration(NamedIndividual(movieontology:Portugal))
+Declaration(NamedIndividual(movieontology:Primetime_Emmy_Award))
+Declaration(NamedIndividual(movieontology:Puerto_Rico))
+Declaration(NamedIndividual(movieontology:Qatar))
+Declaration(NamedIndividual(movieontology:Reality-TV))
+Declaration(NamedIndividual(movieontology:Republic_of_Macedonia))
+Declaration(NamedIndividual(movieontology:Reunion))
+Declaration(NamedIndividual(movieontology:Romance))
+Declaration(NamedIndividual(movieontology:Romania))
+Declaration(NamedIndividual(movieontology:RottenTomatoes.com_retailer))
+Declaration(NamedIndividual(movieontology:Russia))
+Declaration(NamedIndividual(movieontology:RussiaAsia))
+Declaration(NamedIndividual(movieontology:Rwanda))
+Declaration(NamedIndividual(movieontology:Saint-Barthelemy))
+Declaration(NamedIndividual(movieontology:Saint_Helena))
+Declaration(NamedIndividual(movieontology:Saint_Kitts_and_NEvis))
+Declaration(NamedIndividual(movieontology:Saint_Lucia))
+Declaration(NamedIndividual(movieontology:Saint_Martin))
+Declaration(NamedIndividual(movieontology:Saint_Pierre_and_Miquelon))
+Declaration(NamedIndividual(movieontology:Saint_Vincent_and_the_Grenadines))
+Declaration(NamedIndividual(movieontology:Samoa))
+Declaration(NamedIndividual(movieontology:San_Marino))
+Declaration(NamedIndividual(movieontology:Sao_Tome_and_Principe))
+Declaration(NamedIndividual(movieontology:Saudi_Arabia))
+Declaration(NamedIndividual(movieontology:Sci-Fi))
+Declaration(NamedIndividual(movieontology:Senegal))
+Declaration(NamedIndividual(movieontology:Serbia))
+Declaration(NamedIndividual(movieontology:Serbia_and_Montenegro))
+Declaration(NamedIndividual(movieontology:Seychelles))
+Declaration(NamedIndividual(movieontology:Short))
+Declaration(NamedIndividual(movieontology:Sierra_Leone))
+Declaration(NamedIndividual(movieontology:Singapore))
+Declaration(NamedIndividual(movieontology:Slovakia))
+Declaration(NamedIndividual(movieontology:Slovenia))
+Declaration(NamedIndividual(movieontology:Solomon_Island))
+Declaration(NamedIndividual(movieontology:Somalia))
+Declaration(NamedIndividual(movieontology:South_Africa))
+Declaration(NamedIndividual(movieontology:South_Korea))
+Declaration(NamedIndividual(movieontology:Spain))
+Declaration(NamedIndividual(movieontology:Sport))
+Declaration(NamedIndividual(movieontology:Sri_Lanka))
+Declaration(NamedIndividual(movieontology:Sudan))
+Declaration(NamedIndividual(movieontology:Suriname))
+Declaration(NamedIndividual(movieontology:Svalbard_and_Jan_Mayen_Islands))
+Declaration(NamedIndividual(movieontology:Swaziland))
+Declaration(NamedIndividual(movieontology:Sweden))
+Declaration(NamedIndividual(movieontology:Switzerland))
+Declaration(NamedIndividual(movieontology:Syria))
+Declaration(NamedIndividual(movieontology:Taiwan))
+Declaration(NamedIndividual(movieontology:Tajikistan))
+Declaration(NamedIndividual(movieontology:Talk-Show))
+Declaration(NamedIndividual(movieontology:Tanzania))
+Declaration(NamedIndividual(movieontology:Thailand))
+Declaration(NamedIndividual(movieontology:Thriller))
+Declaration(NamedIndividual(movieontology:Timor-Leste))
+Declaration(NamedIndividual(movieontology:Togo))
+Declaration(NamedIndividual(movieontology:Tokelau))
+Declaration(NamedIndividual(movieontology:Tonga))
+Declaration(NamedIndividual(movieontology:Trinidad_and_Tobago))
+Declaration(NamedIndividual(movieontology:Tunisia))
+Declaration(NamedIndividual(movieontology:Turkey))
+Declaration(NamedIndividual(movieontology:Turkmenistan))
+Declaration(NamedIndividual(movieontology:Turks_and_Caicos_Islands))
+Declaration(NamedIndividual(movieontology:Tuvalu))
+Declaration(NamedIndividual(movieontology:USA))
+Declaration(NamedIndividual(movieontology:USA_Passed))
+Declaration(NamedIndividual(movieontology:Uganda))
+Declaration(NamedIndividual(movieontology:Ukraine))
+Declaration(NamedIndividual(movieontology:United_Arab_Emirates))
+Declaration(NamedIndividual(movieontology:United_Kingdom))
+Declaration(NamedIndividual(movieontology:United_States_Virgin_Islands))
+Declaration(NamedIndividual(movieontology:Uruguay))
+Declaration(NamedIndividual(movieontology:Uzbekistan))
+Declaration(NamedIndividual(movieontology:Vanuatu))
+Declaration(NamedIndividual(movieontology:Venezuela))
+Declaration(NamedIndividual(movieontology:Vietnam))
+Declaration(NamedIndividual(movieontology:Wallis_and_Futuna_Islands))
+Declaration(NamedIndividual(movieontology:War))
+Declaration(NamedIndividual(movieontology:Western))
+Declaration(NamedIndividual(movieontology:Western_Sahara))
+Declaration(NamedIndividual(movieontology:Yemen))
+Declaration(NamedIndividual(movieontology:Zaire))
+Declaration(NamedIndividual(movieontology:Zambia))
+Declaration(NamedIndividual(movieontology:Zimbabwe))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:creator))
+Declaration(AnnotationProperty(dc:date))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:publisher))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#belongsToGenre> (<http://www.movieontology.org/2009/10/01/movieontology.owl#belongsToGenre>)
+
+InverseObjectProperties(movieontology:belongsToGenre movieontology:isGenreOf)
+ObjectPropertyDomain(movieontology:belongsToGenre www:Movie)
+ObjectPropertyRange(movieontology:belongsToGenre movieontology:Genre)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#containsCountry> (<http://www.movieontology.org/2009/10/01/movieontology.owl#containsCountry>)
+
+ObjectPropertyDomain(movieontology:containsCountry movieontology:Territory)
+ObjectPropertyRange(movieontology:containsCountry ontology:Country)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#enablesConsumptionOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#enablesConsumptionOf>)
+
+InverseObjectProperties(movieontology:enablesConsumptionOf movieontology:isConsumableAs)
+ObjectPropertyDomain(movieontology:enablesConsumptionOf movieontology2:Consumable_Product)
+ObjectPropertyRange(movieontology:enablesConsumptionOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor>)
+
+InverseObjectProperties(movieontology:hasActor movieontology:isActorIn)
+ObjectPropertyDomain(movieontology:hasActor www:Movie)
+ObjectPropertyRange(movieontology:hasActor ontology:Actor)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress>)
+
+SubObjectPropertyOf(movieontology:hasActress movieontology:hasActor)
+InverseObjectProperties(movieontology:hasActress movieontology:isActressIn)
+DisjointObjectProperties(movieontology:hasActress movieontology:hasMaleActor)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasColor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasColor>)
+
+InverseObjectProperties(movieontology:hasColor movieontology:isColorOf)
+ObjectPropertyDomain(movieontology:hasColor www:Movie)
+ObjectPropertyRange(movieontology:hasColor movieontology:Colorinfo)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer>)
+
+InverseObjectProperties(movieontology:hasComposer movieontology:isComposerIn)
+ObjectPropertyDomain(movieontology:hasComposer www:Movie)
+ObjectPropertyRange(movieontology:hasComposer ontology:Musical_Artist)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner>)
+
+InverseObjectProperties(movieontology:hasCostumeDesigner movieontology:isCostumeDesignerIn)
+ObjectPropertyDomain(movieontology:hasCostumeDesigner www:Movie)
+ObjectPropertyRange(movieontology:hasCostumeDesigner movieontology:Costume_Designer)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector>)
+
+InverseObjectProperties(movieontology:hasDirector movieontology:isDirectorOf)
+ObjectPropertyDomain(movieontology:hasDirector www:Movie)
+ObjectPropertyRange(movieontology:hasDirector page:Film_Director)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor>)
+
+InverseObjectProperties(movieontology:hasEditor movieontology:isEditorIn)
+ObjectPropertyDomain(movieontology:hasEditor www:Movie)
+ObjectPropertyRange(movieontology:hasEditor movieontology:Editor)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation>)
+
+InverseObjectProperties(movieontology:hasFilmLocation movieontology:isFilmLocationOf)
+ObjectPropertyDomain(movieontology:hasFilmLocation www:Movie)
+ObjectPropertyRange(movieontology:hasFilmLocation page:Place)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor>)
+
+SubObjectPropertyOf(movieontology:hasMaleActor movieontology:hasActor)
+InverseObjectProperties(movieontology:hasMaleActor movieontology2:isMaleActorIn)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer>)
+
+ObjectPropertyDomain(movieontology:hasProducer www:Movie)
+ObjectPropertyRange(movieontology:hasProducer movieontology:Producer)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasReleasingCountry> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasReleasingCountry>)
+
+InverseObjectProperties(movieontology:hasReleasingCountry movieontology:isReleasingCountryOf)
+ObjectPropertyDomain(movieontology:hasReleasingCountry www:Movie)
+ObjectPropertyRange(movieontology:hasReleasingCountry ontology:Country)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasSoundmix> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasSoundmix>)
+
+InverseObjectProperties(movieontology:hasSoundmix movieontology:isSoundmixOf)
+ObjectPropertyDomain(movieontology:hasSoundmix www:Movie)
+ObjectPropertyRange(movieontology:hasSoundmix movieontology:Sound_Mix)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie> (<http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie>)
+
+InverseObjectProperties(movieontology:hasTranslatedMovie movieontology:isTranslatedTo)
+ObjectPropertyDomain(movieontology:hasTranslatedMovie ontology:Language)
+ObjectPropertyRange(movieontology:hasTranslatedMovie www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isActorIn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isActorIn>)
+
+SubObjectPropertyOf(movieontology:isActorIn movieontology:isActorIn)
+ObjectPropertyDomain(movieontology:isActorIn ontology:Actor)
+ObjectPropertyRange(movieontology:isActorIn www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn>)
+
+SubObjectPropertyOf(movieontology:isActressIn movieontology:isActorIn)
+DisjointObjectProperties(movieontology:isActressIn movieontology2:isMaleActorIn)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isAwardedWith> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isAwardedWith>)
+
+InverseObjectProperties(movieontology2:isAwardOf movieontology:isAwardedWith)
+ObjectPropertyDomain(movieontology:isAwardedWith www:Movie)
+ObjectPropertyRange(movieontology:isAwardedWith movieontology:Award)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isCertificationOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isCertificationOf>)
+
+InverseObjectProperties(movieontology:isCertificationOf movieontology:isCertifiedWith)
+ObjectPropertyDomain(movieontology:isCertificationOf movieontology:Certification)
+ObjectPropertyRange(movieontology:isCertificationOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isCertifiedWith> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isCertifiedWith>)
+
+ObjectPropertyDomain(movieontology:isCertifiedWith www:Movie)
+ObjectPropertyRange(movieontology:isCertifiedWith movieontology:Certification)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isColorOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isColorOf>)
+
+ObjectPropertyDomain(movieontology:isColorOf movieontology:Colorinfo)
+ObjectPropertyRange(movieontology:isColorOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isComposerIn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isComposerIn>)
+
+ObjectPropertyDomain(movieontology:isComposerIn ontology:Musical_Artist)
+ObjectPropertyRange(movieontology:isComposerIn www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isConsumableAs> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isConsumableAs>)
+
+ObjectPropertyDomain(movieontology:isConsumableAs www:Movie)
+ObjectPropertyRange(movieontology:isConsumableAs movieontology2:Consumable_Product)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isCostumeDesignerIn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isCostumeDesignerIn>)
+
+ObjectPropertyDomain(movieontology:isCostumeDesignerIn movieontology:Costume_Designer)
+ObjectPropertyRange(movieontology:isCostumeDesignerIn www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf>)
+
+ObjectPropertyDomain(movieontology:isDirectorOf page:Film_Director)
+ObjectPropertyRange(movieontology:isDirectorOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn>)
+
+ObjectPropertyDomain(movieontology:isEditorIn movieontology:Editor)
+ObjectPropertyRange(movieontology:isEditorIn www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf>)
+
+ObjectPropertyDomain(movieontology:isFilmLocationOf page:Place)
+ObjectPropertyRange(movieontology:isFilmLocationOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isProducedBy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isProducedBy>)
+
+InverseObjectProperties(movieontology:isProducedBy movieontology:produced)
+ObjectPropertyDomain(movieontology:isProducedBy www:Movie)
+ObjectPropertyRange(movieontology:isProducedBy movieontology:Production_Company)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isReleasingCountryOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isReleasingCountryOf>)
+
+ObjectPropertyDomain(movieontology:isReleasingCountryOf ontology:Country)
+ObjectPropertyRange(movieontology:isReleasingCountryOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf>)
+
+ObjectPropertyDomain(movieontology:isSoundmixOf movieontology:Sound_Mix)
+ObjectPropertyRange(movieontology:isSoundmixOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#isTranslatedTo> (<http://www.movieontology.org/2009/10/01/movieontology.owl#isTranslatedTo>)
+
+ObjectPropertyDomain(movieontology:isTranslatedTo www:Movie)
+ObjectPropertyRange(movieontology:isTranslatedTo ontology:Language)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#nominatedFor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#nominatedFor>)
+
+ObjectPropertyDomain(movieontology:nominatedFor www:Movie)
+ObjectPropertyRange(movieontology:nominatedFor movieontology:Award)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#partOfTerritory> (<http://www.movieontology.org/2009/10/01/movieontology.owl#partOfTerritory>)
+
+ObjectPropertyDomain(movieontology:partOfTerritory ontology:Country)
+ObjectPropertyRange(movieontology:partOfTerritory movieontology:Territory)
+
+# Object Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#produced> (<http://www.movieontology.org/2009/10/01/movieontology.owl#produced>)
+
+ObjectPropertyDomain(movieontology:produced movieontology:Production_Company)
+ObjectPropertyRange(movieontology:produced www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/11/09/movieontology.owl#isAwardOf> (<http://www.movieontology.org/2009/11/09/movieontology.owl#isAwardOf>)
+
+ObjectPropertyDomain(movieontology2:isAwardOf movieontology:Award)
+ObjectPropertyRange(movieontology2:isAwardOf www:Movie)
+
+# Object Property: <http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn> (<http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn>)
+
+SubObjectPropertyOf(movieontology2:isMaleActorIn movieontology:isActorIn)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#imdbrating> (<http://www.movieontology.org/2009/10/01/movieontology.owl#imdbrating>)
+
+FunctionalDataProperty(movieontology:imdbrating)
+DataPropertyDomain(movieontology:imdbrating www:Movie)
+DataPropertyRange(movieontology:imdbrating xsd:double)
+
+# Data Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#releasedate> (<http://www.movieontology.org/2009/10/01/movieontology.owl#releasedate>)
+
+FunctionalDataProperty(movieontology:releasedate)
+DataPropertyDomain(movieontology:releasedate www:Movie)
+DataPropertyRange(movieontology:releasedate xsd:anyURI)
+
+# Data Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#runtime> (<http://www.movieontology.org/2009/10/01/movieontology.owl#runtime>)
+
+FunctionalDataProperty(movieontology:runtime)
+DataPropertyDomain(movieontology:runtime www:Movie)
+DataPropertyRange(movieontology:runtime xsd:int)
+
+# Data Property: <http://www.movieontology.org/2009/10/01/movieontology.owl#title> (<http://www.movieontology.org/2009/10/01/movieontology.owl#title>)
+
+DataPropertyDomain(movieontology:title www:Movie)
+DataPropertyRange(movieontology:title xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://dbpedia.org/ontology/Actor> (<http://dbpedia.org/ontology/Actor>)
+
+SubClassOf(ontology:Actor ontology:Person)
+
+# Class: <http://dbpedia.org/ontology/Language> (<http://dbpedia.org/ontology/Language>)
+
+SubClassOf(ontology:Language movieontology:Presentation)
+
+# Class: <http://dbpedia.org/ontology/Musical_Artist> (<http://dbpedia.org/ontology/Musical_Artist>)
+
+SubClassOf(ontology:Musical_Artist ontology:Person)
+
+# Class: <http://dbpedia.org/ontology/Writer> (<http://dbpedia.org/ontology/Writer>)
+
+SubClassOf(ontology:Writer ontology:Person)
+
+# Class: <http://dbpedia.org/page/Film_Director> (<http://dbpedia.org/page/Film_Director>)
+
+SubClassOf(page:Film_Director ontology:Person)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Actionreach> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Actionreach>)
+
+SubClassOf(movieontology:Actionreach movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Africa>)
+
+SubClassOf(movieontology:Africa movieontology:Territory)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#America> (<http://www.movieontology.org/2009/10/01/movieontology.owl#America>)
+
+SubClassOf(movieontology:America movieontology:Territory)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Asia>)
+
+SubClassOf(movieontology:Asia movieontology:Territory)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Australia_and_New_Zealand> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Australia_and_New_Zealand>)
+
+SubClassOf(movieontology:Australia_and_New_Zealand movieontology:Oceania)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Brute_Action> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Brute_Action>)
+
+SubClassOf(movieontology:Brute_Action movieontology:Actionreach)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Caribbean> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Caribbean>)
+
+SubClassOf(movieontology:Caribbean movieontology:America)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Central_America> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Central_America>)
+
+SubClassOf(movieontology:Central_America movieontology:LatinAmerica)
+DisjointClasses(movieontology:Central_America movieontology:South_America)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Central_Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Central_Asia>)
+
+SubClassOf(movieontology:Central_Asia movieontology:Asia)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Colorinfo> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Colorinfo>)
+
+SubClassOf(movieontology:Colorinfo movieontology:Presentation)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Costume_Designer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Costume_Designer>)
+
+SubClassOf(movieontology:Costume_Designer ontology:Person)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentarial_Information> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Documentarial_Information>)
+
+SubClassOf(movieontology:Documentarial_Information movieontology:Special-Info)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Africa>)
+
+SubClassOf(movieontology:Eastern_Africa movieontology:Africa)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Asia>)
+
+SubClassOf(movieontology:Eastern_Asia movieontology:Asia)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Europe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Europe>)
+
+SubClassOf(movieontology:Eastern_Europe movieontology:Europe)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Editor> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Editor>)
+
+SubClassOf(movieontology:Editor ontology:Person)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Entertaining_Information> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Entertaining_Information>)
+
+SubClassOf(movieontology:Entertaining_Information movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Entertainment> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Entertainment>)
+
+SubClassOf(movieontology:Entertainment movieontology:Genre)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Europe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Europe>)
+
+SubClassOf(movieontology:Europe movieontology:Territory)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Experience> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Experience>)
+
+SubClassOf(movieontology:Experience movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Fast-Info> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Fast-Info>)
+
+SubClassOf(movieontology:Fast-Info movieontology:Information)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Fun> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Fun>)
+
+SubClassOf(movieontology:Fun movieontology:SocialActive)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Heavy_Sensible> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Heavy_Sensible>)
+
+SubClassOf(movieontology:Heavy_Sensible movieontology:Sensible)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Historical_Information> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Historical_Information>)
+
+SubClassOf(movieontology:Historical_Information movieontology:Documentarial_Information)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Imaginational_Entertainment> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Imaginational_Entertainment>)
+
+SubClassOf(movieontology:Imaginational_Entertainment movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Info-TV> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Info-TV>)
+
+SubClassOf(movieontology:Info-TV movieontology:Fast-Info)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Information> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Information>)
+
+SubClassOf(movieontology:Information movieontology:Genre)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Intelectual_Entertainment> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Intelectual_Entertainment>)
+
+SubClassOf(movieontology:Intelectual_Entertainment movieontology:Experience)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kids> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kids>)
+
+SubClassOf(movieontology:Kids movieontology:SocialActive)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#LatinAmerica> (<http://www.movieontology.org/2009/10/01/movieontology.owl#LatinAmerica>)
+
+SubClassOf(movieontology:LatinAmerica movieontology:America)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Logical_Thrilling> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Logical_Thrilling>)
+
+SubClassOf(movieontology:Logical_Thrilling movieontology:Thrilling)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Love> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Love>)
+
+SubClassOf(movieontology:Love movieontology:Sensible)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Melanesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Melanesia>)
+
+SubClassOf(movieontology:Melanesia movieontology:Oceania)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Micronesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Micronesia>)
+
+SubClassOf(movieontology:Micronesia movieontology:Oceania)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Middle_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Middle_Africa>)
+
+SubClassOf(movieontology:Middle_Africa movieontology:Africa)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical_Entertainment> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Musical_Entertainment>)
+
+SubClassOf(movieontology:Musical_Entertainment movieontology:Intelectual_Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Africa>)
+
+SubClassOf(movieontology:Northern_Africa movieontology:Africa)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_America> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_America>)
+
+SubClassOf(movieontology:Northern_America movieontology:America)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Europe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Europe>)
+
+SubClassOf(movieontology:Northern_Europe movieontology:Europe)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Oceania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Oceania>)
+
+SubClassOf(movieontology:Oceania movieontology:Territory)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Old_Action> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Old_Action>)
+
+SubClassOf(movieontology:Old_Action movieontology:Actionreach)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Polynesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Polynesia>)
+
+SubClassOf(movieontology:Polynesia movieontology:Oceania)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Porn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Porn>)
+
+SubClassOf(movieontology:Porn movieontology:Experience)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Producer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Producer>)
+
+SubClassOf(movieontology:Producer ontology:Person)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#SciFi_and_Fantasy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#SciFi_and_Fantasy>)
+
+SubClassOf(movieontology:SciFi_and_Fantasy movieontology:Imaginational_Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible>)
+
+SubClassOf(movieontology:Sensible movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible_Thrilling> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible_Thrilling>)
+
+SubClassOf(movieontology:Sensible_Thrilling movieontology:Thrilling)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#SocialActive> (<http://www.movieontology.org/2009/10/01/movieontology.owl#SocialActive>)
+
+SubClassOf(movieontology:SocialActive movieontology:Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sound_Mix> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sound_Mix>)
+
+SubClassOf(movieontology:Sound_Mix movieontology:Presentation)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#South_America> (<http://www.movieontology.org/2009/10/01/movieontology.owl#South_America>)
+
+SubClassOf(movieontology:South_America movieontology:LatinAmerica)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Southeastern_Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Southeastern_Asia>)
+
+SubClassOf(movieontology:Southeastern_Asia movieontology:Asia)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Africa>)
+
+SubClassOf(movieontology:Southern_Africa movieontology:Africa)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Asia>)
+
+SubClassOf(movieontology:Southern_Asia movieontology:Asia)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Europe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Europe>)
+
+SubClassOf(movieontology:Southern_Europe movieontology:Europe)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Special-Info> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Special-Info>)
+
+SubClassOf(movieontology:Special-Info movieontology:Information)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#TV-Entertainment> (<http://www.movieontology.org/2009/10/01/movieontology.owl#TV-Entertainment>)
+
+SubClassOf(movieontology:TV-Entertainment movieontology:Experience)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Thrilling> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Thrilling>)
+
+SubClassOf(movieontology:Thrilling movieontology:Imaginational_Entertainment)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Africa>)
+
+SubClassOf(movieontology:Western_Africa movieontology:Africa)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Asia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Asia>)
+
+SubClassOf(movieontology:Western_Asia movieontology:Asia)
+
+# Class: <http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Europe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Europe>)
+
+SubClassOf(movieontology:Western_Europe movieontology:Europe)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Action> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Action>)
+
+ClassAssertion(movieontology:Brute_Action movieontology:Action)
+ClassAssertion(owl:Thing movieontology:Action)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Adult> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Adult>)
+
+ClassAssertion(movieontology:Porn movieontology:Adult)
+ClassAssertion(owl:Thing movieontology:Adult)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Adventure> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Adventure>)
+
+ClassAssertion(movieontology:Actionreach movieontology:Adventure)
+ClassAssertion(movieontology:Imaginational_Entertainment movieontology:Adventure)
+ClassAssertion(owl:Thing movieontology:Adventure)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Afghanistan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Afghanistan>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Afghanistan)
+ClassAssertion(owl:Thing movieontology:Afghanistan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Aland_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Aland_Islands>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Aland_Islands)
+ClassAssertion(owl:Thing movieontology:Aland_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Albania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Albania>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Albania)
+ClassAssertion(owl:Thing movieontology:Albania)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Algeria> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Algeria>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Algeria)
+ClassAssertion(owl:Thing movieontology:Algeria)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer>)
+
+ClassAssertion(movieontology:Online_retailer movieontology:Amazon.com_retailer)
+ClassAssertion(owl:Thing movieontology:Amazon.com_retailer)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#American_Samoa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#American_Samoa>)
+
+ClassAssertion(movieontology:Polynesia movieontology:American_Samoa)
+ClassAssertion(owl:Thing movieontology:American_Samoa)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Andorra> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Andorra>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Andorra)
+ClassAssertion(owl:Thing movieontology:Andorra)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Angola> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Angola>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Angola)
+ClassAssertion(owl:Thing movieontology:Angola)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Anguilla> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Anguilla>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Anguilla)
+ClassAssertion(owl:Thing movieontology:Anguilla)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Animation> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Animation>)
+
+ClassAssertion(movieontology:Fun movieontology:Animation)
+ClassAssertion(owl:Thing movieontology:Animation)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Antigua_and_Barbuda> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Antigua_and_Barbuda>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Antigua_and_Barbuda)
+ClassAssertion(owl:Thing movieontology:Antigua_and_Barbuda)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Argentina> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Argentina>)
+
+ClassAssertion(movieontology:South_America movieontology:Argentina)
+ClassAssertion(owl:Thing movieontology:Argentina)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Armenia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Armenia>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Armenia)
+ClassAssertion(owl:Thing movieontology:Armenia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Aruba> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Aruba>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Aruba)
+ClassAssertion(owl:Thing movieontology:Aruba)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Australia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Australia>)
+
+ClassAssertion(movieontology:Australia_and_New_Zealand movieontology:Australia)
+ClassAssertion(owl:Thing movieontology:Australia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Austria> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Austria>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Austria)
+ClassAssertion(owl:Thing movieontology:Austria)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Azerbaijan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Azerbaijan>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Azerbaijan)
+ClassAssertion(owl:Thing movieontology:Azerbaijan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#BAFTA_Film_Award> (<http://www.movieontology.org/2009/10/01/movieontology.owl#BAFTA_Film_Award>)
+
+ClassAssertion(movieontology:Award movieontology:BAFTA_Film_Award)
+ClassAssertion(owl:Thing movieontology:BAFTA_Film_Award)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bahamas> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bahamas>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Bahamas)
+ClassAssertion(owl:Thing movieontology:Bahamas)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bahrain> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bahrain>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Bahrain)
+ClassAssertion(owl:Thing movieontology:Bahrain)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bangladesh> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bangladesh>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Bangladesh)
+ClassAssertion(owl:Thing movieontology:Bangladesh)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Barbados> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Barbados>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Barbados)
+ClassAssertion(owl:Thing movieontology:Barbados)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Belarus> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Belarus>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Belarus)
+ClassAssertion(owl:Thing movieontology:Belarus)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Belgium> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Belgium>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Belgium)
+ClassAssertion(owl:Thing movieontology:Belgium)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Belize> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Belize>)
+
+ClassAssertion(movieontology:Central_America movieontology:Belize)
+ClassAssertion(owl:Thing movieontology:Belize)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Benin> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Benin>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Benin)
+ClassAssertion(owl:Thing movieontology:Benin)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bermuda> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bermuda>)
+
+ClassAssertion(movieontology:Northern_America movieontology:Bermuda)
+ClassAssertion(owl:Thing movieontology:Bermuda)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bhutan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bhutan>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Bhutan)
+ClassAssertion(owl:Thing movieontology:Bhutan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Biography> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Biography>)
+
+ClassAssertion(movieontology:Documentarial_Information movieontology:Biography)
+ClassAssertion(owl:Thing movieontology:Biography)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Black_and_White> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Black_and_White>)
+
+ClassAssertion(movieontology:Colorinfo movieontology:Black_and_White)
+ClassAssertion(owl:Thing movieontology:Black_and_White)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Blockbuster.com_retailer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Blockbuster.com_retailer>)
+
+ClassAssertion(movieontology:Online_retailer movieontology:Blockbuster.com_retailer)
+ClassAssertion(owl:Thing movieontology:Blockbuster.com_retailer)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bolivia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bolivia>)
+
+ClassAssertion(movieontology:South_America movieontology:Bolivia)
+ClassAssertion(owl:Thing movieontology:Bolivia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bosnia-Herzegovina> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bosnia-Herzegovina>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Bosnia-Herzegovina)
+ClassAssertion(owl:Thing movieontology:Bosnia-Herzegovina)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Botswana> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Botswana>)
+
+ClassAssertion(movieontology:Southern_Africa movieontology:Botswana)
+ClassAssertion(owl:Thing movieontology:Botswana)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Brazil> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Brazil>)
+
+ClassAssertion(movieontology:South_America movieontology:Brazil)
+ClassAssertion(owl:Thing movieontology:Brazil)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#British_Virgin_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#British_Virgin_Islands>)
+
+ClassAssertion(movieontology:Caribbean movieontology:British_Virgin_Islands)
+ClassAssertion(owl:Thing movieontology:British_Virgin_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Brunei_Darussalam> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Brunei_Darussalam>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Brunei_Darussalam)
+ClassAssertion(owl:Thing movieontology:Brunei_Darussalam)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Bulgaria> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Bulgaria>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Bulgaria)
+ClassAssertion(owl:Thing movieontology:Bulgaria)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Burkina_Faso> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Burkina_Faso>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Burkina_Faso)
+ClassAssertion(owl:Thing movieontology:Burkina_Faso)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Burma> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Burma>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Burma)
+ClassAssertion(owl:Thing movieontology:Burma)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Burundi> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Burundi>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Burundi)
+ClassAssertion(owl:Thing movieontology:Burundi)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cambodia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cambodia>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Cambodia)
+ClassAssertion(owl:Thing movieontology:Cambodia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cameroon> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cameroon>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Cameroon)
+ClassAssertion(owl:Thing movieontology:Cameroon)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Canada> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Canada>)
+
+ClassAssertion(movieontology:Northern_America movieontology:Canada)
+ClassAssertion(owl:Thing movieontology:Canada)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cape_Verde> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cape_Verde>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Cape_Verde)
+ClassAssertion(owl:Thing movieontology:Cape_Verde)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cayman_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cayman_Islands>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Cayman_Islands)
+ClassAssertion(owl:Thing movieontology:Cayman_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Central_African_Republic> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Central_African_Republic>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Central_African_Republic)
+ClassAssertion(owl:Thing movieontology:Central_African_Republic)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Chad> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Chad>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Chad)
+ClassAssertion(owl:Thing movieontology:Chad)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Channel_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Channel_Islands>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Channel_Islands)
+ClassAssertion(owl:Thing movieontology:Channel_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Chile> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Chile>)
+
+ClassAssertion(movieontology:South_America movieontology:Chile)
+ClassAssertion(owl:Thing movieontology:Chile)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#China> (<http://www.movieontology.org/2009/10/01/movieontology.owl#China>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:China)
+ClassAssertion(owl:Thing movieontology:China)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Colombia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Colombia>)
+
+ClassAssertion(movieontology:South_America movieontology:Colombia)
+ClassAssertion(owl:Thing movieontology:Colombia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Color> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Color>)
+
+ClassAssertion(movieontology:Colorinfo movieontology:Color)
+ClassAssertion(owl:Thing movieontology:Color)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Comedy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Comedy>)
+
+ClassAssertion(movieontology:Fun movieontology:Comedy)
+ClassAssertion(owl:Thing movieontology:Comedy)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Comoros> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Comoros>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Comoros)
+ClassAssertion(owl:Thing movieontology:Comoros)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Congo> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Congo>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Congo)
+ClassAssertion(owl:Thing movieontology:Congo)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cook_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cook_Islands>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Cook_Islands)
+ClassAssertion(owl:Thing movieontology:Cook_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Costa_Rica> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Costa_Rica>)
+
+ClassAssertion(movieontology:Central_America movieontology:Costa_Rica)
+ClassAssertion(owl:Thing movieontology:Costa_Rica)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Crime> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Crime>)
+
+ClassAssertion(movieontology:Logical_Thrilling movieontology:Crime)
+ClassAssertion(owl:Thing movieontology:Crime)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Croatia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Croatia>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Croatia)
+ClassAssertion(owl:Thing movieontology:Croatia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cuba> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cuba>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Cuba)
+ClassAssertion(owl:Thing movieontology:Cuba)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Cyprus> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Cyprus>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Cyprus)
+ClassAssertion(owl:Thing movieontology:Cyprus)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Czech_Republic> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Czech_Republic>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Czech_Republic)
+ClassAssertion(owl:Thing movieontology:Czech_Republic)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Denmark> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Denmark>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Denmark)
+ClassAssertion(owl:Thing movieontology:Denmark)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Djibouti> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Djibouti>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Djibouti)
+ClassAssertion(owl:Thing movieontology:Djibouti)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary>)
+
+ClassAssertion(movieontology:Documentarial_Information movieontology:Documentary)
+ClassAssertion(owl:Thing movieontology:Documentary)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Dominica> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Dominica>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Dominica)
+ClassAssertion(owl:Thing movieontology:Dominica)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Dominican_Republic> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Dominican_Republic>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Dominican_Republic)
+ClassAssertion(owl:Thing movieontology:Dominican_Republic)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Drama> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Drama>)
+
+ClassAssertion(movieontology:Heavy_Sensible movieontology:Drama)
+ClassAssertion(owl:Thing movieontology:Drama)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ecuador> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ecuador>)
+
+ClassAssertion(movieontology:South_America movieontology:Ecuador)
+ClassAssertion(owl:Thing movieontology:Ecuador)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Egypt> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Egypt>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Egypt)
+ClassAssertion(owl:Thing movieontology:Egypt)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#El_Salvador> (<http://www.movieontology.org/2009/10/01/movieontology.owl#El_Salvador>)
+
+ClassAssertion(movieontology:Central_America movieontology:El_Salvador)
+ClassAssertion(owl:Thing movieontology:El_Salvador)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Equatorial_Guinea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Equatorial_Guinea>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Equatorial_Guinea)
+ClassAssertion(owl:Thing movieontology:Equatorial_Guinea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Eritrea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Eritrea>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Eritrea)
+ClassAssertion(owl:Thing movieontology:Eritrea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Estonia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Estonia>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Estonia)
+ClassAssertion(owl:Thing movieontology:Estonia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ethiopia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ethiopia>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Ethiopia)
+ClassAssertion(owl:Thing movieontology:Ethiopia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Falkland_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Falkland_Islands>)
+
+ClassAssertion(movieontology:South_America movieontology:Falkland_Islands)
+ClassAssertion(owl:Thing movieontology:Falkland_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Family> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Family>)
+
+ClassAssertion(movieontology:Kids movieontology:Family)
+ClassAssertion(owl:Thing movieontology:Family)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Fantasy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Fantasy>)
+
+ClassAssertion(movieontology:SciFi_and_Fantasy movieontology:Fantasy)
+ClassAssertion(owl:Thing movieontology:Fantasy)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Faroe_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Faroe_Islands>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Faroe_Islands)
+ClassAssertion(owl:Thing movieontology:Faroe_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Federated_States_of_Micronesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Federated_States_of_Micronesia>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Federated_States_of_Micronesia)
+ClassAssertion(owl:Thing movieontology:Federated_States_of_Micronesia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Fiji> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Fiji>)
+
+ClassAssertion(movieontology:Melanesia movieontology:Fiji)
+ClassAssertion(owl:Thing movieontology:Fiji)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Film-Noir> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Film-Noir>)
+
+ClassAssertion(movieontology:Heavy_Sensible movieontology:Film-Noir)
+ClassAssertion(owl:Thing movieontology:Film-Noir)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Finland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Finland>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Finland)
+ClassAssertion(owl:Thing movieontology:Finland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#France> (<http://www.movieontology.org/2009/10/01/movieontology.owl#France>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:France)
+ClassAssertion(owl:Thing movieontology:France)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#French_Guiana> (<http://www.movieontology.org/2009/10/01/movieontology.owl#French_Guiana>)
+
+ClassAssertion(movieontology:South_America movieontology:French_Guiana)
+ClassAssertion(owl:Thing movieontology:French_Guiana)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#French_Polynesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#French_Polynesia>)
+
+ClassAssertion(movieontology:Polynesia movieontology:French_Polynesia)
+ClassAssertion(owl:Thing movieontology:French_Polynesia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Gabon> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Gabon>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Gabon)
+ClassAssertion(owl:Thing movieontology:Gabon)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Gambia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Gambia>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Gambia)
+ClassAssertion(owl:Thing movieontology:Gambia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Game-Show> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Game-Show>)
+
+ClassAssertion(movieontology:TV-Entertainment movieontology:Game-Show)
+ClassAssertion(owl:Thing movieontology:Game-Show)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Georgia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Georgia>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Georgia)
+ClassAssertion(owl:Thing movieontology:Georgia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Germany> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Germany>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Germany)
+ClassAssertion(owl:Thing movieontology:Germany)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ghana> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ghana>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Ghana)
+ClassAssertion(owl:Thing movieontology:Ghana)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Gibraltar> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Gibraltar>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Gibraltar)
+ClassAssertion(owl:Thing movieontology:Gibraltar)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Golden_Globe_Award> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Golden_Globe_Award>)
+
+ClassAssertion(movieontology:Award movieontology:Golden_Globe_Award)
+ClassAssertion(owl:Thing movieontology:Golden_Globe_Award)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Greece> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Greece>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Greece)
+ClassAssertion(owl:Thing movieontology:Greece)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Greenland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Greenland>)
+
+ClassAssertion(movieontology:Northern_America movieontology:Greenland)
+ClassAssertion(owl:Thing movieontology:Greenland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Grenada> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Grenada>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Grenada)
+ClassAssertion(owl:Thing movieontology:Grenada)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guadeloupe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guadeloupe>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Guadeloupe)
+ClassAssertion(owl:Thing movieontology:Guadeloupe)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guam> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guam>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Guam)
+ClassAssertion(owl:Thing movieontology:Guam)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guatemala> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guatemala>)
+
+ClassAssertion(movieontology:Central_America movieontology:Guatemala)
+ClassAssertion(owl:Thing movieontology:Guatemala)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guernesey> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guernesey>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Guernesey)
+ClassAssertion(owl:Thing movieontology:Guernesey)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guinea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guinea>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Guinea)
+ClassAssertion(owl:Thing movieontology:Guinea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guinea-Bassau> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guinea-Bassau>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Guinea-Bassau)
+ClassAssertion(owl:Thing movieontology:Guinea-Bassau)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Guyana> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Guyana>)
+
+ClassAssertion(movieontology:South_America movieontology:Guyana)
+ClassAssertion(owl:Thing movieontology:Guyana)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Haiti> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Haiti>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Haiti)
+ClassAssertion(owl:Thing movieontology:Haiti)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#History> (<http://www.movieontology.org/2009/10/01/movieontology.owl#History>)
+
+ClassAssertion(movieontology:Historical_Information movieontology:History)
+ClassAssertion(owl:Thing movieontology:History)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Holy_See> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Holy_See>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Holy_See)
+ClassAssertion(owl:Thing movieontology:Holy_See)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Honduras> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Honduras>)
+
+ClassAssertion(movieontology:Central_America movieontology:Honduras)
+ClassAssertion(owl:Thing movieontology:Honduras)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Hong_Kong> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Hong_Kong>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:Hong_Kong)
+ClassAssertion(owl:Thing movieontology:Hong_Kong)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Horror> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Horror>)
+
+ClassAssertion(movieontology:Thrilling movieontology:Horror)
+ClassAssertion(owl:Thing movieontology:Horror)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Hungary> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Hungary>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Hungary)
+ClassAssertion(owl:Thing movieontology:Hungary)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Iceland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Iceland>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Iceland)
+ClassAssertion(owl:Thing movieontology:Iceland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#India> (<http://www.movieontology.org/2009/10/01/movieontology.owl#India>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:India)
+ClassAssertion(owl:Thing movieontology:India)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Indonesia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Indonesia>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Indonesia)
+ClassAssertion(owl:Thing movieontology:Indonesia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Iran> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Iran>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Iran)
+ClassAssertion(owl:Thing movieontology:Iran)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Iraq> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Iraq>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Iraq)
+ClassAssertion(owl:Thing movieontology:Iraq)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ireland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ireland>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Ireland)
+ClassAssertion(owl:Thing movieontology:Ireland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Isle_of_Man> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Isle_of_Man>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Isle_of_Man)
+ClassAssertion(owl:Thing movieontology:Isle_of_Man)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Israel> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Israel>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Israel)
+ClassAssertion(owl:Thing movieontology:Israel)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Italy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Italy>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Italy)
+ClassAssertion(owl:Thing movieontology:Italy)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ivory_Coast> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ivory_Coast>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Ivory_Coast)
+ClassAssertion(owl:Thing movieontology:Ivory_Coast)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Jamaica> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Jamaica>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Jamaica)
+ClassAssertion(owl:Thing movieontology:Jamaica)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Japan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Japan>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:Japan)
+ClassAssertion(owl:Thing movieontology:Japan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Jersey> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Jersey>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Jersey)
+ClassAssertion(owl:Thing movieontology:Jersey)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Jordan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Jordan>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Jordan)
+ClassAssertion(owl:Thing movieontology:Jordan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kazakhstan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kazakhstan>)
+
+ClassAssertion(movieontology:Central_Asia movieontology:Kazakhstan)
+ClassAssertion(owl:Thing movieontology:Kazakhstan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kenya> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kenya>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Kenya)
+ClassAssertion(owl:Thing movieontology:Kenya)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kiribati> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kiribati>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Kiribati)
+ClassAssertion(owl:Thing movieontology:Kiribati)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kuwait> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kuwait>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Kuwait)
+ClassAssertion(owl:Thing movieontology:Kuwait)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Kyrgyzstan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Kyrgyzstan>)
+
+ClassAssertion(movieontology:Central_Asia movieontology:Kyrgyzstan)
+ClassAssertion(owl:Thing movieontology:Kyrgyzstan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Laos> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Laos>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Laos)
+ClassAssertion(owl:Thing movieontology:Laos)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Latvia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Latvia>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Latvia)
+ClassAssertion(owl:Thing movieontology:Latvia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Lebanon> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Lebanon>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Lebanon)
+ClassAssertion(owl:Thing movieontology:Lebanon)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Lesotho> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Lesotho>)
+
+ClassAssertion(movieontology:Southern_Africa movieontology:Lesotho)
+ClassAssertion(owl:Thing movieontology:Lesotho)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Liberia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Liberia>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Liberia)
+ClassAssertion(owl:Thing movieontology:Liberia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Libya> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Libya>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Libya)
+ClassAssertion(owl:Thing movieontology:Libya)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Liechtenstein> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Liechtenstein>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Liechtenstein)
+ClassAssertion(owl:Thing movieontology:Liechtenstein)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Lithuania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Lithuania>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Lithuania)
+ClassAssertion(owl:Thing movieontology:Lithuania)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Luxembourg> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Luxembourg>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Luxembourg)
+ClassAssertion(owl:Thing movieontology:Luxembourg)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Macao> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Macao>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:Macao)
+ClassAssertion(owl:Thing movieontology:Macao)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Madagascar> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Madagascar>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Madagascar)
+ClassAssertion(owl:Thing movieontology:Madagascar)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Malawi> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Malawi>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Malawi)
+ClassAssertion(owl:Thing movieontology:Malawi)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Malaysia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Malaysia>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Malaysia)
+ClassAssertion(owl:Thing movieontology:Malaysia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Maldives> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Maldives>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Maldives)
+ClassAssertion(owl:Thing movieontology:Maldives)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mali> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mali>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Mali)
+ClassAssertion(owl:Thing movieontology:Mali)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Malta> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Malta>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Malta)
+ClassAssertion(owl:Thing movieontology:Malta)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Marshal_lIsland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Marshal_lIsland>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Marshal_lIsland)
+ClassAssertion(owl:Thing movieontology:Marshal_lIsland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Martinique> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Martinique>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Martinique)
+ClassAssertion(owl:Thing movieontology:Martinique)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mauritania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mauritania>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Mauritania)
+ClassAssertion(owl:Thing movieontology:Mauritania)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mauritius> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mauritius>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Mauritius)
+ClassAssertion(owl:Thing movieontology:Mauritius)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mayotte> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mayotte>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Mayotte)
+ClassAssertion(owl:Thing movieontology:Mayotte)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mexico> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mexico>)
+
+ClassAssertion(movieontology:Central_America movieontology:Mexico)
+ClassAssertion(owl:Thing movieontology:Mexico)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Miscellaneous_Award> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Miscellaneous_Award>)
+
+ClassAssertion(movieontology:Award movieontology:Miscellaneous_Award)
+ClassAssertion(owl:Thing movieontology:Miscellaneous_Award)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Moldova> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Moldova>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Moldova)
+ClassAssertion(owl:Thing movieontology:Moldova)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Monaco> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Monaco>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Monaco)
+ClassAssertion(owl:Thing movieontology:Monaco)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mongolia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mongolia>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:Mongolia)
+ClassAssertion(owl:Thing movieontology:Mongolia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Montenegro> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Montenegro>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Montenegro)
+ClassAssertion(owl:Thing movieontology:Montenegro)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Montserrat> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Montserrat>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Montserrat)
+ClassAssertion(owl:Thing movieontology:Montserrat)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Morocco> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Morocco>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Morocco)
+ClassAssertion(owl:Thing movieontology:Morocco)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mozambique> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mozambique>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Mozambique)
+ClassAssertion(owl:Thing movieontology:Mozambique)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Music> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Music>)
+
+ClassAssertion(movieontology:Musical_Entertainment movieontology:Music)
+ClassAssertion(owl:Thing movieontology:Music)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Musical>)
+
+ClassAssertion(movieontology:Musical_Entertainment movieontology:Musical)
+ClassAssertion(owl:Thing movieontology:Musical)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Myanmar> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Myanmar>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Myanmar)
+ClassAssertion(owl:Thing movieontology:Myanmar)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery>)
+
+ClassAssertion(movieontology:Sensible_Thrilling movieontology:Mystery)
+ClassAssertion(owl:Thing movieontology:Mystery)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Namibia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Namibia>)
+
+ClassAssertion(movieontology:Southern_Africa movieontology:Namibia)
+ClassAssertion(owl:Thing movieontology:Namibia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Nauru> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Nauru>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Nauru)
+ClassAssertion(owl:Thing movieontology:Nauru)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Nepal> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Nepal>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Nepal)
+ClassAssertion(owl:Thing movieontology:Nepal)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer>)
+
+ClassAssertion(movieontology:Online_retailer movieontology:Netflix.com_retailer)
+ClassAssertion(owl:Thing movieontology:Netflix.com_retailer)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Netherlands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Netherlands>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Netherlands)
+ClassAssertion(owl:Thing movieontology:Netherlands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Netherlands_Antilles> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Netherlands_Antilles>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Netherlands_Antilles)
+ClassAssertion(owl:Thing movieontology:Netherlands_Antilles)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#New_Caledonia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#New_Caledonia>)
+
+ClassAssertion(movieontology:Melanesia movieontology:New_Caledonia)
+ClassAssertion(owl:Thing movieontology:New_Caledonia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#New_Zealand> (<http://www.movieontology.org/2009/10/01/movieontology.owl#New_Zealand>)
+
+ClassAssertion(movieontology:Australia_and_New_Zealand movieontology:New_Zealand)
+ClassAssertion(owl:Thing movieontology:New_Zealand)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#News> (<http://www.movieontology.org/2009/10/01/movieontology.owl#News>)
+
+ClassAssertion(movieontology:Info-TV movieontology:News)
+ClassAssertion(owl:Thing movieontology:News)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Nicaragua> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Nicaragua>)
+
+ClassAssertion(movieontology:Central_America movieontology:Nicaragua)
+ClassAssertion(owl:Thing movieontology:Nicaragua)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Niger> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Niger>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Niger)
+ClassAssertion(owl:Thing movieontology:Niger)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Nigeria> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Nigeria>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Nigeria)
+ClassAssertion(owl:Thing movieontology:Nigeria)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Niue> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Niue>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Niue)
+ClassAssertion(owl:Thing movieontology:Niue)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Norfolk_Island> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Norfolk_Island>)
+
+ClassAssertion(movieontology:Australia_and_New_Zealand movieontology:Norfolk_Island)
+ClassAssertion(owl:Thing movieontology:Norfolk_Island)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#North_Korea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#North_Korea>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:North_Korea)
+ClassAssertion(owl:Thing movieontology:North_Korea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Mariana_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Mariana_Islands>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Northern_Mariana_Islands)
+ClassAssertion(owl:Thing movieontology:Northern_Mariana_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Norway> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Norway>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Norway)
+ClassAssertion(owl:Thing movieontology:Norway)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Oman> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Oman>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Oman)
+ClassAssertion(owl:Thing movieontology:Oman)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Oscar_Award> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Oscar_Award>)
+
+ClassAssertion(movieontology:Award movieontology:Oscar_Award)
+ClassAssertion(owl:Thing movieontology:Oscar_Award)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Pakistan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Pakistan>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Pakistan)
+ClassAssertion(owl:Thing movieontology:Pakistan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Palau> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Palau>)
+
+ClassAssertion(movieontology:Micronesia movieontology:Palau)
+ClassAssertion(owl:Thing movieontology:Palau)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Palestine> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Palestine>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Palestine)
+ClassAssertion(owl:Thing movieontology:Palestine)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Panama> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Panama>)
+
+ClassAssertion(movieontology:Central_America movieontology:Panama)
+ClassAssertion(owl:Thing movieontology:Panama)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Papua_New_Guinea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Papua_New_Guinea>)
+
+ClassAssertion(movieontology:Melanesia movieontology:Papua_New_Guinea)
+ClassAssertion(owl:Thing movieontology:Papua_New_Guinea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Paraguay> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Paraguay>)
+
+ClassAssertion(movieontology:South_America movieontology:Paraguay)
+ClassAssertion(owl:Thing movieontology:Paraguay)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Peru> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Peru>)
+
+ClassAssertion(movieontology:South_America movieontology:Peru)
+ClassAssertion(owl:Thing movieontology:Peru)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Philippines> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Philippines>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Philippines)
+ClassAssertion(owl:Thing movieontology:Philippines)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Pitcairn> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Pitcairn>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Pitcairn)
+ClassAssertion(owl:Thing movieontology:Pitcairn)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Poland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Poland>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Poland)
+ClassAssertion(owl:Thing movieontology:Poland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Portugal> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Portugal>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Portugal)
+ClassAssertion(owl:Thing movieontology:Portugal)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Primetime_Emmy_Award> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Primetime_Emmy_Award>)
+
+ClassAssertion(movieontology:Award movieontology:Primetime_Emmy_Award)
+ClassAssertion(owl:Thing movieontology:Primetime_Emmy_Award)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Puerto_Rico> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Puerto_Rico>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Puerto_Rico)
+ClassAssertion(owl:Thing movieontology:Puerto_Rico)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Qatar> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Qatar>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Qatar)
+ClassAssertion(owl:Thing movieontology:Qatar)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Reality-TV> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Reality-TV>)
+
+ClassAssertion(movieontology:TV-Entertainment movieontology:Reality-TV)
+ClassAssertion(owl:Thing movieontology:Reality-TV)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Republic_of_Macedonia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Republic_of_Macedonia>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Republic_of_Macedonia)
+ClassAssertion(owl:Thing movieontology:Republic_of_Macedonia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Reunion> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Reunion>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Reunion)
+ClassAssertion(owl:Thing movieontology:Reunion)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Romance> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Romance>)
+
+ClassAssertion(movieontology:Love movieontology:Romance)
+ClassAssertion(owl:Thing movieontology:Romance)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Romania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Romania>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Romania)
+ClassAssertion(owl:Thing movieontology:Romania)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer> (<http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer>)
+
+ClassAssertion(movieontology:Online_retailer movieontology:RottenTomatoes.com_retailer)
+ClassAssertion(owl:Thing movieontology:RottenTomatoes.com_retailer)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Russia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Russia>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Russia)
+ClassAssertion(owl:Thing movieontology:Russia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#RussiaAsia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#RussiaAsia>)
+
+ClassAssertion(movieontology:Asia movieontology:RussiaAsia)
+ClassAssertion(owl:Thing movieontology:RussiaAsia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Rwanda> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Rwanda>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Rwanda)
+ClassAssertion(owl:Thing movieontology:Rwanda)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint-Barthelemy> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint-Barthelemy>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Saint-Barthelemy)
+ClassAssertion(owl:Thing movieontology:Saint-Barthelemy)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Helena> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Helena>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Saint_Helena)
+ClassAssertion(owl:Thing movieontology:Saint_Helena)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Kitts_and_NEvis> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Kitts_and_NEvis>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Saint_Kitts_and_NEvis)
+ClassAssertion(owl:Thing movieontology:Saint_Kitts_and_NEvis)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Lucia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Lucia>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Saint_Lucia)
+ClassAssertion(owl:Thing movieontology:Saint_Lucia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Martin> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Martin>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Saint_Martin)
+ClassAssertion(owl:Thing movieontology:Saint_Martin)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Pierre_and_Miquelon> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Pierre_and_Miquelon>)
+
+ClassAssertion(movieontology:Northern_America movieontology:Saint_Pierre_and_Miquelon)
+ClassAssertion(owl:Thing movieontology:Saint_Pierre_and_Miquelon)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Vincent_and_the_Grenadines> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saint_Vincent_and_the_Grenadines>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Saint_Vincent_and_the_Grenadines)
+ClassAssertion(owl:Thing movieontology:Saint_Vincent_and_the_Grenadines)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Samoa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Samoa>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Samoa)
+ClassAssertion(owl:Thing movieontology:Samoa)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#San_Marino> (<http://www.movieontology.org/2009/10/01/movieontology.owl#San_Marino>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:San_Marino)
+ClassAssertion(owl:Thing movieontology:San_Marino)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sao_Tome_and_Principe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sao_Tome_and_Principe>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Sao_Tome_and_Principe)
+ClassAssertion(owl:Thing movieontology:Sao_Tome_and_Principe)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Saudi_Arabia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Saudi_Arabia>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Saudi_Arabia)
+ClassAssertion(owl:Thing movieontology:Saudi_Arabia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sci-Fi> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sci-Fi>)
+
+ClassAssertion(movieontology:SciFi_and_Fantasy movieontology:Sci-Fi)
+ClassAssertion(owl:Thing movieontology:Sci-Fi)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Senegal> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Senegal>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Senegal)
+ClassAssertion(owl:Thing movieontology:Senegal)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Serbia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Serbia>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Serbia)
+ClassAssertion(owl:Thing movieontology:Serbia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Serbia_and_Montenegro> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Serbia_and_Montenegro>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Serbia_and_Montenegro)
+ClassAssertion(owl:Thing movieontology:Serbia_and_Montenegro)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Seychelles> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Seychelles>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Seychelles)
+ClassAssertion(owl:Thing movieontology:Seychelles)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Short> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Short>)
+
+ClassAssertion(movieontology:Genre movieontology:Short)
+ClassAssertion(owl:Thing movieontology:Short)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sierra_Leone> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sierra_Leone>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Sierra_Leone)
+ClassAssertion(owl:Thing movieontology:Sierra_Leone)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Singapore> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Singapore>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Singapore)
+ClassAssertion(owl:Thing movieontology:Singapore)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Slovakia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Slovakia>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Slovakia)
+ClassAssertion(owl:Thing movieontology:Slovakia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Slovenia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Slovenia>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Slovenia)
+ClassAssertion(owl:Thing movieontology:Slovenia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Solomon_Island> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Solomon_Island>)
+
+ClassAssertion(movieontology:Melanesia movieontology:Solomon_Island)
+ClassAssertion(owl:Thing movieontology:Solomon_Island)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Somalia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Somalia>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Somalia)
+ClassAssertion(owl:Thing movieontology:Somalia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#South_Africa> (<http://www.movieontology.org/2009/10/01/movieontology.owl#South_Africa>)
+
+ClassAssertion(movieontology:Southern_Africa movieontology:South_Africa)
+ClassAssertion(owl:Thing movieontology:South_Africa)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#South_Korea> (<http://www.movieontology.org/2009/10/01/movieontology.owl#South_Korea>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:South_Korea)
+ClassAssertion(owl:Thing movieontology:South_Korea)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Spain> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Spain>)
+
+ClassAssertion(movieontology:Southern_Europe movieontology:Spain)
+ClassAssertion(owl:Thing movieontology:Spain)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sport> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sport>)
+
+ClassAssertion(movieontology:Entertaining_Information movieontology:Sport)
+ClassAssertion(owl:Thing movieontology:Sport)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sri_Lanka> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sri_Lanka>)
+
+ClassAssertion(movieontology:Southern_Asia movieontology:Sri_Lanka)
+ClassAssertion(owl:Thing movieontology:Sri_Lanka)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sudan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sudan>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Sudan)
+ClassAssertion(owl:Thing movieontology:Sudan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Suriname> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Suriname>)
+
+ClassAssertion(movieontology:South_America movieontology:Suriname)
+ClassAssertion(owl:Thing movieontology:Suriname)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Svalbard_and_Jan_Mayen_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Svalbard_and_Jan_Mayen_Islands>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Svalbard_and_Jan_Mayen_Islands)
+ClassAssertion(owl:Thing movieontology:Svalbard_and_Jan_Mayen_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Swaziland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Swaziland>)
+
+ClassAssertion(movieontology:Southern_Africa movieontology:Swaziland)
+ClassAssertion(owl:Thing movieontology:Swaziland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Sweden> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Sweden>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:Sweden)
+ClassAssertion(owl:Thing movieontology:Sweden)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Switzerland> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Switzerland>)
+
+ClassAssertion(movieontology:Western_Europe movieontology:Switzerland)
+ClassAssertion(owl:Thing movieontology:Switzerland)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Syria> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Syria>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Syria)
+ClassAssertion(owl:Thing movieontology:Syria)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Taiwan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Taiwan>)
+
+ClassAssertion(movieontology:Eastern_Asia movieontology:Taiwan)
+ClassAssertion(owl:Thing movieontology:Taiwan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tajikistan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tajikistan>)
+
+ClassAssertion(movieontology:Central_Asia movieontology:Tajikistan)
+ClassAssertion(owl:Thing movieontology:Tajikistan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Talk-Show> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Talk-Show>)
+
+ClassAssertion(movieontology:Info-TV movieontology:Talk-Show)
+ClassAssertion(owl:Thing movieontology:Talk-Show)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tanzania> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tanzania>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Tanzania)
+ClassAssertion(owl:Thing movieontology:Tanzania)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Thailand> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Thailand>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Thailand)
+ClassAssertion(owl:Thing movieontology:Thailand)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Thriller> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Thriller>)
+
+ClassAssertion(movieontology:Sensible_Thrilling movieontology:Thriller)
+ClassAssertion(owl:Thing movieontology:Thriller)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Timor-Leste> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Timor-Leste>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Timor-Leste)
+ClassAssertion(owl:Thing movieontology:Timor-Leste)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Togo> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Togo>)
+
+ClassAssertion(movieontology:Western_Africa movieontology:Togo)
+ClassAssertion(owl:Thing movieontology:Togo)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tokelau> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tokelau>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Tokelau)
+ClassAssertion(owl:Thing movieontology:Tokelau)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tonga> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tonga>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Tonga)
+ClassAssertion(owl:Thing movieontology:Tonga)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Trinidad_and_Tobago> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Trinidad_and_Tobago>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Trinidad_and_Tobago)
+ClassAssertion(owl:Thing movieontology:Trinidad_and_Tobago)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tunisia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tunisia>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Tunisia)
+ClassAssertion(owl:Thing movieontology:Tunisia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Turkey> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Turkey>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Turkey)
+ClassAssertion(owl:Thing movieontology:Turkey)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Turkmenistan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Turkmenistan>)
+
+ClassAssertion(movieontology:Central_Asia movieontology:Turkmenistan)
+ClassAssertion(owl:Thing movieontology:Turkmenistan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Turks_and_Caicos_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Turks_and_Caicos_Islands>)
+
+ClassAssertion(movieontology:Caribbean movieontology:Turks_and_Caicos_Islands)
+ClassAssertion(owl:Thing movieontology:Turks_and_Caicos_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Tuvalu> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Tuvalu>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Tuvalu)
+ClassAssertion(owl:Thing movieontology:Tuvalu)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#USA> (<http://www.movieontology.org/2009/10/01/movieontology.owl#USA>)
+
+ClassAssertion(movieontology:Northern_America movieontology:USA)
+ClassAssertion(owl:Thing movieontology:USA)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#USA_Passed> (<http://www.movieontology.org/2009/10/01/movieontology.owl#USA_Passed>)
+
+ClassAssertion(movieontology:Certification movieontology:USA_Passed)
+ClassAssertion(owl:Thing movieontology:USA_Passed)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Uganda> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Uganda>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Uganda)
+ClassAssertion(owl:Thing movieontology:Uganda)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Ukraine> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Ukraine>)
+
+ClassAssertion(movieontology:Eastern_Europe movieontology:Ukraine)
+ClassAssertion(owl:Thing movieontology:Ukraine)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#United_Arab_Emirates> (<http://www.movieontology.org/2009/10/01/movieontology.owl#United_Arab_Emirates>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:United_Arab_Emirates)
+ClassAssertion(owl:Thing movieontology:United_Arab_Emirates)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#United_Kingdom> (<http://www.movieontology.org/2009/10/01/movieontology.owl#United_Kingdom>)
+
+ClassAssertion(movieontology:Northern_Europe movieontology:United_Kingdom)
+ClassAssertion(owl:Thing movieontology:United_Kingdom)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#United_States_Virgin_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#United_States_Virgin_Islands>)
+
+ClassAssertion(movieontology:Caribbean movieontology:United_States_Virgin_Islands)
+ClassAssertion(owl:Thing movieontology:United_States_Virgin_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Uruguay> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Uruguay>)
+
+ClassAssertion(movieontology:South_America movieontology:Uruguay)
+ClassAssertion(owl:Thing movieontology:Uruguay)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Uzbekistan> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Uzbekistan>)
+
+ClassAssertion(movieontology:Central_Asia movieontology:Uzbekistan)
+ClassAssertion(owl:Thing movieontology:Uzbekistan)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Vanuatu> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Vanuatu>)
+
+ClassAssertion(movieontology:Melanesia movieontology:Vanuatu)
+ClassAssertion(owl:Thing movieontology:Vanuatu)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Venezuela> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Venezuela>)
+
+ClassAssertion(movieontology:South_America movieontology:Venezuela)
+ClassAssertion(owl:Thing movieontology:Venezuela)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Vietnam> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Vietnam>)
+
+ClassAssertion(movieontology:Southeastern_Asia movieontology:Vietnam)
+ClassAssertion(owl:Thing movieontology:Vietnam)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Wallis_and_Futuna_Islands> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Wallis_and_Futuna_Islands>)
+
+ClassAssertion(movieontology:Polynesia movieontology:Wallis_and_Futuna_Islands)
+ClassAssertion(owl:Thing movieontology:Wallis_and_Futuna_Islands)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#War> (<http://www.movieontology.org/2009/10/01/movieontology.owl#War>)
+
+ClassAssertion(movieontology:Brute_Action movieontology:War)
+ClassAssertion(owl:Thing movieontology:War)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Western> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Western>)
+
+ClassAssertion(movieontology:Old_Action movieontology:Western)
+ClassAssertion(owl:Thing movieontology:Western)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Sahara> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Sahara>)
+
+ClassAssertion(movieontology:Northern_Africa movieontology:Western_Sahara)
+ClassAssertion(owl:Thing movieontology:Western_Sahara)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Yemen> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Yemen>)
+
+ClassAssertion(movieontology:Western_Asia movieontology:Yemen)
+ClassAssertion(owl:Thing movieontology:Yemen)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Zaire> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Zaire>)
+
+ClassAssertion(movieontology:Middle_Africa movieontology:Zaire)
+ClassAssertion(owl:Thing movieontology:Zaire)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Zambia> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Zambia>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Zambia)
+ClassAssertion(owl:Thing movieontology:Zambia)
+
+# Individual: <http://www.movieontology.org/2009/10/01/movieontology.owl#Zimbabwe> (<http://www.movieontology.org/2009/10/01/movieontology.owl#Zimbabwe>)
+
+ClassAssertion(movieontology:Eastern_Africa movieontology:Zimbabwe)
+ClassAssertion(owl:Thing movieontology:Zimbabwe)
+
+
+DisjointClasses(ontology:Language movieontology:Colorinfo movieontology:Sound_Mix)
+DisjointClasses(movieontology:Africa movieontology:America movieontology:Asia movieontology:Europe movieontology:Oceania)
+DisjointClasses(movieontology:Australia_and_New_Zealand movieontology:Melanesia movieontology:Micronesia movieontology:Polynesia)
+DisjointClasses(movieontology:Caribbean movieontology:LatinAmerica movieontology:Northern_America)
+DisjointClasses(movieontology:Central_Asia movieontology:Eastern_Asia movieontology:Southeastern_Asia movieontology:Southern_Asia movieontology:Western_Asia)
+DisjointClasses(movieontology:Eastern_Africa movieontology:Middle_Africa movieontology:Northern_Africa movieontology:Southern_Africa movieontology:Western_Africa)
+DisjointClasses(movieontology:Eastern_Europe movieontology:Northern_Europe movieontology:Southern_Europe movieontology:Western_Europe)
+)
